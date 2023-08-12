@@ -1,0 +1,4 @@
+= TP Laboratorio de Construcción de Software
+
+Investigación de conceptos: IA, Machine Learning, Deep Learning.
+Investigación de proyectos de Data Science o Big Data.
