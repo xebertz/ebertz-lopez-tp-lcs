@@ -27,7 +27,9 @@ Acá va el link.
 
 === IA
 
-Acá va la info de IA.
+Le llamamos "inteligencia artificial" a un conjunto de sistemas informáticos que tienen como objetivo imitar a la inteligencia humana. [...]
+Estas tecnologías necesitan de datos para "entrenarse", y una forma de entrenamiento. Existen dos formas de
+entrenamiento: Machine Learning y Deep Learning.
 
 === Machine Learning
 
