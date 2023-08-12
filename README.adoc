@@ -1,5 +1,52 @@
 = TP Laboratorio de Construcción de Software
+Ebertz, Ximena <xebertz@campus.ungs.edu.ar>; Gross, Pablo <...>; López, Gonzalo <...>
+v1, {docdate}
+:toc:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: coderay
+:tabsize: 4
+:nofooter:
+
+
+== Introducción
 
 Investigación de conceptos: IA, Machine Learning, Deep Learning.
 
 Investigación de proyectos de Data Science o Big Data.
+
+== Objetivo
+
+Acá va el objetivo.
+
+== Repositorio
+
+Acá va el link.
+
+== Desarrollo
+
+=== IA
+
+Acá va la info de IA.
+
+=== Machine Learning
+
+Acá va la info de Mach Learning.
+
+=== Deep Learning
+
+Acá va la info de Deep Learning.
+
+=== Proyectos de Data Science ó Big Data
+
+==== Data Science vs Big Data, ¿estamos hablando de lo mismo?
+
+Acá va la info de Data Science y Big Data.
+
+==== ¿Cómo se gestiona un proyecto de Data Science o Big Data?
+
+Acá ponemos sarasa.
+
+== Conclusiones / dificultades
+
+Acá ponemos más sarasa.
