@@ -31,8 +31,15 @@ Le llamamos "inteligencia artificial" o "IA" a los sistemas informáticos que ti
 
 Estos sistemas están entrenados para resolver problemas utilizando algoritmos, aprender de los datos y utilizar ese aprendizaje en el futuro. De esta manera, la inteligencia artificial va ganando "conocimiento".
 
+Se reconocen cuatro etapas o niveles de inteligencia artificial:
+
+*   Máquinas reactivas:
+*   de Memoria Limitada:
+*   de Teoría de la Mente:
+*   de Autoconocimiento:
+
 Los sistemas de inteligencia artificial tienen una particularidad: son para un uso específico. Es decir, no existen
-sistemas en los que se pueda hacer reconocimiento de voz, jugar al ajedez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el opbjetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de ajedrez sobre la que forjará su aprendizaje.
+sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de ajedrez sobre la que forjará su aprendizaje.
 
 El entrenamiento de una inteligencia artificial consiste en brindarle datos y analizar su comportamiento, para poder mejorarla. El sistema también aprenderá de sus errores, lo que acelera su entrenamiento y hace que funcione cada vez más acertadamente. Existen dos formas de entrenamiento: Machine Learning y Deep Learning.
 
