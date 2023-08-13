@@ -22,7 +22,7 @@ Acá va el objetivo.
 
 == Repositorio
 
-https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git
+Para ir al repositorio del proyecto puede darle click https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git[aquí].
 
 == Desarrollo
 
@@ -69,7 +69,7 @@ En el modelo de aprendizaje no supervisado los datos que se incorporan no se eti
 
 El "Deep Learning" o "Aprendizaje Reforzado" es un subconjunto de lo que es "Machine learning" que igual que el ya mencionado propone el analisis de patrones para poder aplicarlas en diferentes tareas de manera mas eficiente. Este se distinge del "Machine learning" en el sentido que consume datos de manera cruda, sin tener que haber un paso intermedio para ordenar y recibir y procesar datos sin supervicion humana.
 
-Esta manera de procesar datos permite el entrenamiento del modelo en cantidades grandes a traves de la automatizacion de la lectura de informacion que tiene a mano. A su ves esto agiliza el entrenamiento y permite un entrenamiento mas riguroso. Ejemplos de uso de esta teconologia serian identificadores de fotos, rostros u texto. 
+Esta manera de procesar datos permite el entrenamiento del modelo en cantidades grandes a traves de la automatizacion de la lectura de informacion que tiene a mano. A su ves esto agiliza el entrenamiento y permite un entrenamiento mas riguroso. Ejemplos de uso de esta teconología serían identificadores de fotos, rostros u texto. 
 
 Este puede separarse en dos formas de aplicación:
 
