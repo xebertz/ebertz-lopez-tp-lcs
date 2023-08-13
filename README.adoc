@@ -1,5 +1,5 @@
 = TP Inicial - Laboratorio de Construcción de Software
-Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Gross Pablo <...>; López Gonzalo <gonzagonzalopez20@gmail.com>
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Gross Pablo <pablorubengross@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>
 v1, {docdate}
 :toc:
 :title-page:
@@ -22,26 +22,28 @@ Acá va el objetivo.
 
 == Repositorio
 
-Acá va el link.
+https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git
 
 == Desarrollo
 
 === Inteligencia Artificial (IA)
 
-Le llamamos "inteligencia artificial" o "IA" a los sistemas informáticos que tienen como objetivo imitar o incluso superar la inteligencia humana replicando sus funciones cognitivas, tales como razonar, aprender y resolver problemas.
+Conocemos como Inteligencia Artificial o IA a los agentes computacionales racionales existentes. Es decir, IA es cualquier software capaz de percibir su entorno, persistir durante un periodo de tiempo, adaptarse al cambio y responder o actuar de manera racional. Muchos de estos sistemas tienen como objetivo imitar o incluso superar la inteligencia humana, replicando sus funciones cognitivas tales como razonar, aprender y resolver problemas.
 
-Estos sistemas están entrenados para resolver problemas utilizando algoritmos, aprender de los datos y utilizar ese aprendizaje en el futuro. De esta manera, la inteligencia artificial va ganando "conocimiento".
+Estos sistemas están entrenados para resolver problemas utilizando algoritmos, aprender de los datos brindados y de sus errores, y utilizar ese aprendizaje en el futuro. De esta manera, la inteligencia artificial va ganando conocimiento.
 
-Se reconocen cuatro etapas o niveles de inteligencia artificial:
+Dentro de la inteligencia artificial tenemos dos tipos: la inteligencia artificial débil, y la inteligencia artificial fuerte. La inteligencia artificial débil es la que no pretende parecerse a la inteligencia humana en su totalidad. Su finalidad es resolver un problema, y no más de uno. La inteligencia artificial fuerte es la que pretende parecerse o superar a la inteligencia humana, de forma que podría resolver cualquier problema que un ser humano puede resolver. Este tipo de inteligencia artificial en la actualidad se mantiene como hipotética.
 
-*   Máquinas reactivas:
-*   de Memoria Limitada:
-*   de Teoría de la Mente:
-*   de Autoconocimiento:
+Se reconocen cuatro etapas o niveles de desarrollo de inteligencia artificial:
 
-Los sistemas de inteligencia artificial tienen una particularidad: son para un uso específico. Es decir, no existen sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de ajedrez sobre la que forjará su aprendizaje.
+*   máquinas reactivas: es un tipo de inteligencia artificial que no puede aprender ya que no utiliza memoria, pero sabe reaccionar ante ciertos estímulos, ya que lo tiene preprogramado.
+*   de memoria limitada: es un tipo de inteligencia artificial que puede aprender, ya que utiliza memoria. Para generar su conocimiento se la entrena brindándole datos nuevos.
+*   de teoría de la mente: es un tipo de inteligencia artificial que puede emular la mente humana, lo que le da la capacidad de tener sentimientos y emociones.
+*   de autoconocimiento: es una inteligencia artificial de teoría de la mente con autoconocimiento.
 
-El entrenamiento de una inteligencia artificial consiste en brindarle datos y analizar su comportamiento, para poder mejorarla. El sistema también aprenderá de sus errores, lo que acelera su entrenamiento y hace que funcione cada vez más acertadamente. Existen dos formas de entrenamiento: Machine Learning y Deep Learning.
+Los sistemas de inteligencia artificial actuales tienen una particularidad: son para un uso específico. Es decir, son inteligencias artificiales débiles, y, en particular, de memoria limitada. No existen sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedrez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de este tema sobre la que forjará su aprendizaje.
+
+El entrenamiento de una inteligencia artificial consiste en brindarle datos y analizar su comportamiento, con la finalidad de ajustar sus parámetros y alcanzar cierto umbral de satisfacción. El sistema también aprenderá de sus errores, lo que acelera su entrenamiento y hace que funcione cada vez más acertadamente. Existen dos formas de entrenamiento: Machine Learning y Deep Learning.
 
 === Machine Learning
 
@@ -65,7 +67,19 @@ En el modelo de aprendizaje no supervisado los datos que se incorporan no se eti
 
 ==== Deep Learning
 
-Acá va la info de Deep Learning.
+El "Deep Learning" es un subconjunto de lo que es "Machine learning" que igual que el ya mencionado propone el analisis de patrones para poder aplicarlas en diferentes tareas de manera mas eficiente. Este se distinge del "Machine learning" en el sentido que consume datos de manera cruda, sin tener que haber un paso intermedio para ordenar y recibir y procesar datos sin supervicion humana.
+
+Esta manera de procesar datos permite el entrenamiento del modelo en cantidades grandes a traves de la automatizacion de la lectura de informacion que tiene a mano. A su ves esto agiliza el entrenamiento y permite un entrenamiento mas riguroso. Ejemplos de uso de esta teconologia serian identificadores de fotos, rostros u texto. 
+
+Este puede separarse en dos formas de aplicacion
+
+*   Las redes neuronales convolucionales (CNN, por sus siglas en inglés)
+
+    Esta se utiliza para el reconocimiento y clasificacion de imagenes y videos para identificar elementos que se encuentren en los mismos
+
+*   Las redes neuronales recurrentes (RNN, por sus siglas en inglés)
+
+    Esta se utlia para el reconocimiento de vos y del lenguaje natural
 
 === Proyectos de Data Science ó Big Data
 
