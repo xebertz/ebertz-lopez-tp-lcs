@@ -82,6 +82,8 @@ En el modelo de aprendizaje no supervisado los datos que se incorporan no se eti
 
 *   Reducción dimensional: Se procesan datos complejos al reducir redundancias y agrupar por características similares, generando información valiosa. Se aplica en estrategias de marketing para definir nichos de mercado, como al seleccionar clientes potenciales basados en comportamientos en redes sociales.
 
+==== Aprendizaje semisupervisado
+
 ==== Deep Learning
 
 El Deep Learning o Aprendizaje Reforzado es un subconjunto de lo que es Machine learning que igual que el ya mencionado propone el analisis de patrones para poder aplicarlas en diferentes tareas de manera mas eficiente. Este se distinge del "Machine learning" en el sentido que consume datos de manera cruda, sin tener que haber un paso intermedio para ordenar y recibir y procesar datos sin supervicion humana.
