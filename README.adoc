@@ -28,9 +28,7 @@ Para ir al repositorio del proyecto puede darle click https://github.com/ximeeb/
 
 === Inteligencia Artificial (IA)
 
-Conocemos como Inteligencia Artificial o IA a los agentes computacionales racionales existentes. Es decir, IA es cualquier software capaz de percibir su entorno, persistir durante un periodo de tiempo, adaptarse al cambio y responder o actuar de manera racional. Muchos de estos sistemas tienen como objetivo imitar o incluso superar la inteligencia humana, replicando sus funciones cognitivas tales como razonar, aprender y resolver problemas.
-
-Estos sistemas están entrenados para resolver problemas utilizando algoritmos, aprender de los datos brindados y de sus errores, y utilizar ese aprendizaje en el futuro. De esta manera, la inteligencia artificial va ganando conocimiento.
+Conocemos como _Inteligencia Artificial_ o _IA_ a los agentes computacionales racionales existentes. Es decir, IA es cualquier software capaz de percibir su entorno, persistir durante un periodo de tiempo, adaptarse al cambio y responder o actuar de manera racional. Muchos de estos sistemas tienen como objetivo imitar o incluso superar la inteligencia humana, replicando sus funciones cognitivas tales como razonar, aprender y resolver problemas.
 
 Dentro de la inteligencia artificial tenemos dos tipos: la inteligencia artificial débil, y la inteligencia artificial fuerte. La inteligencia artificial débil es la que no pretende parecerse a la inteligencia humana en su totalidad. Su finalidad es resolver un problema, y no más de uno. La inteligencia artificial fuerte es la que pretende parecerse o superar a la inteligencia humana, de forma que podría resolver cualquier problema que un ser humano puede resolver. Este tipo de inteligencia artificial en la actualidad se mantiene como hipotética.
 
@@ -43,10 +41,13 @@ Se reconocen cuatro etapas o niveles de desarrollo de inteligencia artificial:
 
 Los sistemas de inteligencia artificial actuales tienen una particularidad: son para un uso específico. Es decir, son inteligencias artificiales débiles, y, en particular, de memoria limitada. No existen sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedrez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de este tema sobre la que forjará su aprendizaje.
 
-El entrenamiento de una inteligencia artificial consiste en brindarle datos y analizar su comportamiento, con la finalidad de ajustar sus parámetros y alcanzar cierto umbral de satisfacción. El sistema también aprenderá de sus errores, lo que acelera su entrenamiento y hace que funcione cada vez más acertadamente. Existen dos formas de entrenamiento: Machine Learning y Deep Learning.
+Las IA están entrenadas para resolver problemas utilizando algoritmos, aprender de los datos brindados y de sus errores, y utilizar ese aprendizaje en el futuro. De esta manera, la inteligencia artificial va ganando conocimiento.
+
+El entrenamiento de una inteligencia artificial consiste en brindarle datos y analizar su comportamiento, con la finalidad de ajustar sus parámetros y alcanzar cierto umbral de satisfacción. El sistema también aprenderá de sus errores, lo que acelera su entrenamiento y hace que funcione cada vez más acertadamente. Existen dos formas de entrenamiento: _Machine Learning_ y _Deep Learning_.
 
 === Machine Learning
 
+//podemos decir que es una forma de entrenamiento de IAs, para conectar con lo anterior?
 El Machine Learning o Aprendizaje Automático es un subcampo de la Inteligencia Artificial que se centra en dotar a las máquinas de la habilidad para identificar patrones en conjuntos de datos masivos y utilizar esos patrones para mejorar su rendimiento en tareas específicas.
 
 Una de las características destacadas del "machine learning" es su capacidad para hacer predicciones precisas basadas en el análisis de datos, lo que lo convierte en una herramienta poderosa en una amplia variedad de aplicaciones, desde el procesamiento del lenguaje natural hasta el análisis de imágenes y la toma de decisiones automatizada.
