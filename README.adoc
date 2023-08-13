@@ -45,17 +45,25 @@ El entrenamiento de una inteligencia artificial consiste en brindarle datos y an
 
 === Machine Learning
 
-El "machine learning" o "aprendizaje automático" es un subcampo de la Inteligencia Artificial que se centra en dotar a las máquinas de la habilidad para identificar patrones en conjuntos de datos masivos y utilizar esos patrones para mejorar su rendimiento en tareas específicas.
+El Machine Learning o Aprendizaje Automático es un subcampo de la Inteligencia Artificial que se centra en dotar a las máquinas de la habilidad para identificar patrones en conjuntos de datos masivos y utilizar esos patrones para mejorar su rendimiento en tareas específicas.
 
 Una de las características destacadas del "machine learning" es su capacidad para hacer predicciones precisas basadas en el análisis de datos, lo que lo convierte en una herramienta poderosa en una amplia variedad de aplicaciones, desde el procesamiento del lenguaje natural hasta el análisis de imágenes y la toma de decisiones automatizada.
 
-Existen tres distintos modelos de predicción de Machine Learning:
+Existen tres distintos modelos de predicción de Machine Learning: Aprendizaje supervisado, aprendizaje no supervisado y Deep Learning (aprendizaje reforzado).
 
-*   Aprendizaje supervisado:
-*   Aprendizaje no supervisado:
-*   Aprendizaje reforzado:
+==== Aprendizaje supervisado
 
-=== Deep Learning
+El Aprendizaje supervisado implica usar ejemplos etiquetados para que el algoritmo se ajuste y aprenda patrones. Requiere intervención humana para clasificar y etiquetar datos. Ejemplo: filtrado de spam en correos, donde el algoritmo aprende de correos marcados como spam para identificar patrones y dirigir futuros correos similares a la carpeta de spam.
+
+==== Aprendizaje no supervisado
+
+En el modelo de aprendizaje no supervisado los datos que se incorporan no se etiquetan, ya que se desconoce su estructura. El algoritmo clasifica la información por sí solo. El aprendizaje no supervisado se clasifica en:
+
+    * Clustering: Se agrupan datos sin conocimiento previo de su estructura en grupos con características similares. Los grupos obtenidos destacan patrones inherentes en los datos.
+
+    * Reducción dimensional: Se procesan datos complejos al reducir redundancias y agrupar por características similares, generando información valiosa. Se aplica en estrategias de marketing para definir nichos de mercado, como al seleccionar clientes potenciales basados en comportamientos en redes sociales.
+
+==== Deep Learning
 
 Acá va la info de Deep Learning.
 
