@@ -1,5 +1,5 @@
 = TP Inicial - Laboratorio de Construcción de Software
-Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Gross Pablo <...>; López Gonzalo <gonzagonzalopez20@gmail.com>
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Gross Pablo <pablorubengross@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>
 v1, {docdate}
 :toc:
 :title-page:
@@ -22,7 +22,7 @@ Acá va el objetivo.
 
 == Repositorio
 
-Acá va el link.
+https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git
 
 == Desarrollo
 
@@ -57,7 +57,19 @@ Existen tres distintos modelos de predicción de Machine Learning:
 
 === Deep Learning
 
-Acá va la info de Deep Learning.
+El "Deep Learning" es un subconjunto de lo que es "Machine learning" que igual que el ya mencionado propone el analisis de patrones para poder aplicarlas en diferentes tareas de manera mas eficiente. Este se distinge del "Machine learning" en el sentido que consume datos de manera cruda, sin tener que haber un paso intermedio para ordenar y recibir y procesar datos sin supervicion humana.
+
+Esta manera de procesar datos permite el entrenamiento del modelo en cantidades grandes a traves de la automatizacion de la lectura de informacion que tiene a mano. A su ves esto agiliza el entrenamiento y permite un entrenamiento mas riguroso. Ejemplos de uso de esta teconologia serian identificadores de fotos, rostros u texto. 
+
+Este puede separarse en dos formas de aplicacion
+
+*   Las redes neuronales convolucionales (CNN, por sus siglas en inglés)
+
+    Esta se utiliza para el reconocimiento y clasificacion de imagenes y videos para identificar elementos que se encuentren en los mismos
+
+*   Las redes neuronales recurrentes (RNN, por sus siglas en inglés)
+
+    Esta se utlia para el reconocimiento de vos y del lenguaje natural
 
 === Proyectos de Data Science ó Big Data
 
