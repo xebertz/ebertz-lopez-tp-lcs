@@ -30,16 +30,16 @@ Para ir al repositorio del proyecto puede darle click https://github.com/ximeeb/
 
 Antes de profundizar en el concepto de _Inteligencia Artificial_, debemos entender qué es un _agente_. La definición de este término es sencilla: un _agente_ es "alguien" hace algo. En el ámbito informático extendemos esta definción a la de _agentes computacionales_, que son programas que pueden operar autónomamente, percibir su entorno, persisitir durante un período de tiempo, adaptarse al cambio, y crear y perseguir metas. Por esto, podemos observar que no todos los sistemas informáticos son agentes.
 
-En este contexto, conocemos como _Inteligencia Artificial_ o _IA_ a los *agentes computacionales racionales existentes*. Es decir, IA es cualquier software capaz de percibir su entorno, persistir durante un periodo de tiempo, adaptarse al cambio, y realizar cualquier cosa de la que es capaz un agente computacional, pero con la característica de que responde y actúa de manera racional, buscando la mejor opción para cada situación. Muchos de estos sistemas tienen como objetivo imitar o incluso superar la inteligencia humana, replicando sus funciones cognitivas tales como razonar, aprender y resolver problemas.
+En este contexto, conocemos como _Inteligencia Artificial_ o _IA_ a los *agentes computacionales racionales* existentes. Es decir, IA es cualquier software capaz de percibir su entorno, persistir durante un periodo de tiempo, adaptarse al cambio, y realizar cualquier cosa de la que es capaz un agente computacional, pero con la característica de que responde y actúa de manera racional, buscando la mejor opción para cada situación. Muchos de estos sistemas tienen como objetivo imitar o incluso superar la inteligencia humana, replicando sus funciones cognitivas tales como razonar, aprender y resolver problemas.
 
 Dentro de la inteligencia artificial tenemos dos tipos: la _inteligencia artificial débil_, y la _inteligencia artificial fuerte_. La inteligencia artificial débil es la que no pretende parecerse a la inteligencia humana en su totalidad. Su finalidad es resolver un problema, y no más de uno. La inteligencia artificial fuerte es la que pretende parecerse o superar a la inteligencia humana, de forma que podría resolver cualquier problema que un ser humano puede resolver. Este tipo de inteligencia artificial en la actualidad se mantiene como hipotética.
 
 Se reconocen cuatro etapas o niveles de desarrollo de inteligencia artificial:
 
-*   máquinas reactivas: es un tipo de inteligencia artificial que no puede aprender ya que no utiliza memoria, pero sabe reaccionar ante ciertos estímulos, ya que lo tiene preprogramado.
-*   de memoria limitada: es un tipo de inteligencia artificial que puede aprender, ya que utiliza memoria. Para generar su conocimiento se la entrena brindándole datos nuevos.
-*   de teoría de la mente: es un tipo de inteligencia artificial que puede emular la mente humana, lo que le da la capacidad de tener sentimientos y emociones.
-*   de autoconocimiento: es una inteligencia artificial de teoría de la mente con autoconocimiento.
+*   *máquinas reactivas:* es un tipo de inteligencia artificial que no puede aprender ya que no utiliza memoria, pero sabe reaccionar ante ciertos estímulos, ya que lo tiene preprogramado.
+*   *de memoria limitada:* es un tipo de inteligencia artificial que puede aprender, ya que utiliza memoria. Para generar su conocimiento se la entrena brindándole datos nuevos.
+*   *de teoría de la mente:* es un tipo de inteligencia artificial que puede emular la mente humana, lo que le da la capacidad de tener sentimientos y emociones.
+*   *de autoconocimiento:* es una inteligencia artificial de teoría de la mente con autoconocimiento.
 
 Los sistemas de inteligencia artificial actuales tienen una particularidad: son para un uso específico. Es decir, son inteligencias artificiales débiles, y, en particular, de memoria limitada. No existen sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedrez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de este tema sobre la que forjará su aprendizaje.
 
