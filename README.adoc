@@ -69,7 +69,7 @@ La IA deberá descubir una función stem:[h(x)] llamada _hipótesis_ que aproxim
 
 Cuando el _output_ stem:[y_j] es parte de un conjunto finito de valores, el aprendizaje supervisado es llamado _clasificación_. Si el _output_ stem:[y_j] es un número, es llamado _regresión_.
 
-Podemos tener distintas funciones stem:[h(x)] consistentes debemos elegir entre una de las dos candidatas. En este caso, se debe elegir la más simple, ya que en su implementación implica una menor complejidad computacional.
+Podemos tener distintas funciones stem:[h(x)] consistentes, por lo que debemos elegir entre una de las candidatas. En este caso, se debe elegir la más simple, ya que en su implementación implica una menor complejidad computacional.
 
 Este tipo de aprendizaje e puede utilizar para filtrado de spam en correos, por ejemplo. En este caso, el algoritmo aprende de correos marcados como spam para identificar patrones y dirigir futuros correos similares a la carpeta de spam.
 
