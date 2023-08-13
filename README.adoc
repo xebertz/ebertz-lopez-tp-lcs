@@ -8,6 +8,7 @@ v1, {docdate}
 :source-highlighter: coderay
 :tabsize: 4
 :nofooter:
+:stem: asciimath
 
 
 == Introducción
@@ -36,10 +37,10 @@ Dentro de la inteligencia artificial tenemos dos tipos: la _inteligencia artific
 
 Se reconocen cuatro etapas o niveles de desarrollo de inteligencia artificial:
 
-*   *máquinas reactivas:* es un tipo de inteligencia artificial que no puede aprender ya que no utiliza memoria, pero sabe reaccionar ante ciertos estímulos, ya que lo tiene preprogramado.
-*   *de memoria limitada:* es un tipo de inteligencia artificial que puede aprender, ya que utiliza memoria. Para generar su conocimiento se la entrena brindándole datos nuevos.
-*   *de teoría de la mente:* es un tipo de inteligencia artificial que puede emular la mente humana, lo que le da la capacidad de tener sentimientos y emociones.
-*   *de autoconocimiento:* es una inteligencia artificial de teoría de la mente con autoconocimiento.
+*   _máquinas reactivas:_ es un tipo de inteligencia artificial que no puede aprender ya que no utiliza memoria, pero sabe reaccionar ante ciertos estímulos, ya que lo tiene preprogramado.
+*   _de memoria limitada:_ es un tipo de inteligencia artificial que puede aprender, ya que utiliza memoria. Para generar su conocimiento se la entrena brindándole datos nuevos.
+*   _de teoría de la mente:_ es un tipo de inteligencia artificial que puede emular la mente humana, lo que le da la capacidad de tener sentimientos y emociones.
+*   _de autoconocimiento:_ es una inteligencia artificial de teoría de la mente con autoconocimiento.
 
 Los sistemas de inteligencia artificial actuales tienen una particularidad: son para un uso específico. Es decir, son inteligencias artificiales débiles, y, en particular, de memoria limitada. No existen sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedrez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de este tema sobre la que forjará su aprendizaje.
 
@@ -58,7 +59,21 @@ Existen tres distintos modelos de predicción de Machine Learning: Aprendizaje S
 
 ==== Aprendizaje supervisado
 
-El Aprendizaje supervisado implica usar ejemplos etiquetados para que el algoritmo se ajuste y aprenda patrones. Requiere intervención humana para clasificar y etiquetar datos. Ejemplo: filtrado de spam en correos, donde el algoritmo aprende de correos marcados como spam para identificar patrones y dirigir futuros correos similares a la carpeta de spam.
+El aprendizaje supervisado implica usar ejemplos etiquetados para que el algoritmo se ajuste y aprenda patrones. Para entrenar, se le provee a la IA un conjunto de datos etiquetados de a pares _input - output_ de forma
+
+stem:[(x_1, y_1), (x_2, y_2),...(x_N, y_N)]
+
+En la que cada _output_ stem:[y_j] fue generado por una función desconocida stem:[y = f(x)].
+
+La IA deberá descubir una función stem:[h(x)] llamada _hipótesis_ que aproxime a stem:[f(x)] lo mejor posible. De esta forma, podrá predecir valores stem:[y] para nuevos stem:[x]. Esta función debe ser  _consistente_, es decir, debe funcionar para todos los datos de entrenamiento. Observemos que esto requiere intervención humana para clasificar y etiquetar datos.
+
+Cuando el _output_ stem:[y_j] es parte de un conjunto finito de valores, el aprendizaje supervisado es llamado _clasificación_. Si el _output_ stem:[y_j] es un número, es llamado _regresión_.
+
+Podemos tener distintas funciones stem:[h(x)] consistentes debemos elegir entre una de las dos candidatas. En este caso, se debe elegir la más simple, ya que en su implementación implica una menor complejidad computacional.
+
+Este tipo de aprendizaje e puede utilizar para filtrado de spam en correos, por ejemplo. En este caso, el algoritmo aprende de correos marcados como spam para identificar patrones y dirigir futuros correos similares a la carpeta de spam.
+
+//acá va árboles de decisión?
 
 ==== Aprendizaje no supervisado
 
