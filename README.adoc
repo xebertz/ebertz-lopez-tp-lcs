@@ -58,7 +58,7 @@ Existen tres distintos modelos de predicción de _Machine Learning_: Aprendizaje
 
 ==== Aprendizaje supervisado
 
-El aprendizaje supervisado implica usar ejemplos etiquetados para que el algoritmo se ajuste y aprenda patrones. Para entrenar, se le provee a la IA un conjunto de datos etiquetados de a pares _input - output_ de forma
+El modelo de aprendizaje supervisado implica usar ejemplos etiquetados para que el algoritmo se ajuste y aprenda patrones. Para entrenar, se le provee a la IA un conjunto de datos etiquetados de a pares _input - output_ de forma
 
 stem:[(x_1, y_1), (x_2, y_2),...(x_N, y_N)]
 
@@ -91,6 +91,10 @@ En el modelo de aprendizaje no supervisado los datos que se incorporan no se eti
 *   Reducción dimensional: Se procesan datos complejos al reducir redundancias y agrupar por características similares, generando información valiosa. Se aplica en estrategias de marketing para definir nichos de mercado, como al seleccionar clientes potenciales basados en comportamientos en redes sociales.
 
 ==== Aprendizaje semisupervisado
+
+El modelo de aprendizaje semisupervisado es una combinación entre aprendizaje supervisado y aprendizaje no supervisado. Para llevar a cabo el entrenamiento, se le brinda a la IA un conjunto de datos etiquetados y un conjunto de datos sin etiquetar. Incluso, muchos datos pueden estar etiquetados erróneamente.
+
+Este modelo se utiliza cuando no disponemos de suficientes datos etiquetados para entrenar a la IA.
 
 ==== Deep Learning
 
