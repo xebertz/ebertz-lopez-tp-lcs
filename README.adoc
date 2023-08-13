@@ -26,7 +26,7 @@ Acá va el link.
 
 == Desarrollo
 
-=== IA
+=== Inteligencia Artificial (IA)
 
 Le llamamos "inteligencia artificial" o "IA" a los sistemas informáticos que
 Conocemos como Inteligencia Artificial o IA a los agentes computacionales racionales existentes. Es decir, IA es cualquier software capaz de percibir su entorno, persistir durante un periodo de tiempo, adaptarse al cambio y responder o actuar de manera racional. Muchos de estos sistemas tienen como objetivo imitar o incluso superar la inteligencia humana, replicando sus funciones cognitivas tales como razonar, aprender y resolver problemas.
@@ -41,14 +41,21 @@ Se reconocen cuatro etapas o niveles de inteligencia artificial:
 *   de Teoría de la Mente:
 *   de Autoconocimiento:
 
-Los sistemas de inteligencia artificial tienen una particularidad: son para un uso específico. Es decir, no existen
-sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de ajedrez sobre la que forjará su aprendizaje.
+Los sistemas de inteligencia artificial tienen una particularidad: son para un uso específico. Es decir, no existen sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de ajedrez sobre la que forjará su aprendizaje.
 
 El entrenamiento de una inteligencia artificial consiste en brindarle datos y analizar su comportamiento, para poder mejorarla. El sistema también aprenderá de sus errores, lo que acelera su entrenamiento y hace que funcione cada vez más acertadamente. Existen dos formas de entrenamiento: Machine Learning y Deep Learning.
 
 === Machine Learning
 
-Acá va la info de Mach Learning.
+El "machine learning" o "aprendizaje automático" es un subcampo de la Inteligencia Artificial que se centra en dotar a las máquinas de la habilidad para identificar patrones en conjuntos de datos masivos y utilizar esos patrones para mejorar su rendimiento en tareas específicas.
+
+Una de las características destacadas del "machine learning" es su capacidad para hacer predicciones precisas basadas en el análisis de datos, lo que lo convierte en una herramienta poderosa en una amplia variedad de aplicaciones, desde el procesamiento del lenguaje natural hasta el análisis de imágenes y la toma de decisiones automatizada.
+
+Existen tres distintos modelos de predicción de Machine Learning:
+
+*   Aprendizaje supervisado:
+*   Aprendizaje no supervisado:
+*   Aprendizaje reforzado:
 
 === Deep Learning
 
