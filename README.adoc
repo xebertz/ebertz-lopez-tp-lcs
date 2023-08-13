@@ -32,20 +32,16 @@ Conocemos como Inteligencia Artificial o IA a los agentes computacionales racion
 
 Estos sistemas están entrenados para resolver problemas utilizando algoritmos, aprender de los datos brindados y de sus errores, y utilizar ese aprendizaje en el futuro. De esta manera, la inteligencia artificial va ganando conocimiento.
 
-Dentro de la inteligencia artificial tenemos dos tipos: la inteligencia artificial débil, y la inteligencia artificial fuerte.
-
-La inteligencia artificial débil es la que no pretende parecerse a la inteligencia humana en su totalidad. Su finalidad es resolver un problema, y no más de uno. Esta es la única desarrollada hasta el momento.
-
-La inteligencia artificial fuerte es la que pretende parecerse o superar a la inteligencia humana, de forma que podría resolver cualquier problema que un ser humano puede resolver. Este tipo de inteligencia artificial en la actualidad se mantiene como hipotética.
+Dentro de la inteligencia artificial tenemos dos tipos: la inteligencia artificial débil, y la inteligencia artificial fuerte. La inteligencia artificial débil es la que no pretende parecerse a la inteligencia humana en su totalidad. Su finalidad es resolver un problema, y no más de uno. La inteligencia artificial fuerte es la que pretende parecerse o superar a la inteligencia humana, de forma que podría resolver cualquier problema que un ser humano puede resolver. Este tipo de inteligencia artificial en la actualidad se mantiene como hipotética.
 
 Se reconocen cuatro etapas o niveles de desarrollo de inteligencia artificial:
 
 *   máquinas reactivas: es un tipo de inteligencia artificial que no puede aprender ya que no utiliza memoria, pero sabe reaccionar ante ciertos estímulos, ya que lo tiene preprogramado.
 *   de memoria limitada: es un tipo de inteligencia artificial que puede aprender, ya que utiliza memoria. Para generar su conocimiento se la entrena brindándole datos nuevos.
-*   de teoría de la mente: es un tipo de inteligencia artificial que puede emular la mente humana, lo que le daría capacidad de tener sentimientos y emociones. Esta inteligencia artificial no existe en la actualidad.
-*   de autoconocimiento: es una inteligencia artificial de teoría de la mente con autoconocimiento. Esta inteligencia artificial tampoco existe en la actualidad.
+*   de teoría de la mente: es un tipo de inteligencia artificial que puede emular la mente humana, lo que le da la capacidad de tener sentimientos y emociones.
+*   de autoconocimiento: es una inteligencia artificial de teoría de la mente con autoconocimiento.
 
-Los sistemas de inteligencia artificial tienen una particularidad: son para un uso específico. Es decir, no existen sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedrez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de este tema sobre la que forjará su aprendizaje.
+Los sistemas de inteligencia artificial actuales tienen una particularidad: son para un uso específico. Es decir, son inteligencias artificiales débiles, y, en particular, de memoria limitada. No existen sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedrez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de este tema sobre la que forjará su aprendizaje.
 
 El entrenamiento de una inteligencia artificial consiste en brindarle datos y analizar su comportamiento, con la finalidad de ajustar sus parámetros y alcanzar cierto umbral de satisfacción. El sistema también aprenderá de sus errores, lo que acelera su entrenamiento y hace que funcione cada vez más acertadamente. Existen dos formas de entrenamiento: Machine Learning y Deep Learning.
 
