@@ -73,7 +73,15 @@ Podemos tener distintas funciones stem:[h(x)] consistentes, por lo que debemos e
 
 Este tipo de aprendizaje e puede utilizar para filtrado de spam en correos, por ejemplo. En este caso, el algoritmo aprende de correos marcados como spam para identificar patrones y dirigir futuros correos similares a la carpeta de spam.
 
-//acá va árboles de decisión?
+//checkear que va acá
+Otra forma de aprendizaje supervisado son los algoritmos de _árboles de decisión_, siendo ésta la forma más exitosa de machine learning.
+
+Esta técnica consiste en crear un árbol cuyos nodos sean atributos a considerar al tomar una decisión, y cuyas hojas sean la decisión final.
+De esta forma, el algoritmo recibe un vector de valores para los atributos, y devuelve una decisión.
+
+Preferentemente, el árbol no debe tener mucha altura, por lo que se debe elegir el más óptimo. Para evitar calcular todos los árboles, el algoritmo utiliza una estrategia de _divide and conquer_: le asigna a cada atributo un nivel de _entropía_, para luego clasificarlos. Los atributos con menor nivel de entropía producen una mayor _ganancia de información_, ya que hacen una mejor división de clases, por lo que son evaluados al inicio. Es decir, el árbol se forma con los nodos ordenados de menor a mayor según su entropía. Luego, en cada decisión se van dividiendo y se repite el proceso para cada subárbol. Si la rama generada es de poca importancia se poda, para no tenerla en cuenta en el proceso de toma de decisiónes.
+
+Para calcular la entropía y obtener la ganancia de información de un atributo, el algoritmo se basa en ejemplos. Para entrenarlo, se debe seleccionar un conjunto de ejemplos no homogéneo, para que el aprendizaje sea lo mas correcto posible. De esta forma se puede evitar la mala clasificación de los atributos.
 
 ==== Aprendizaje no supervisado
 
