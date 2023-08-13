@@ -31,7 +31,7 @@ Acá va el link.
 Conocemos como Inteligencia Artificial o IA a los agentes computacionales racionales existentes. Es decir, IA es cualquier software capaz de percibir su entorno, persistir durante un periodo de tiempo, adaptarse al cambio y responder o actuar de manera racional. Muchos de estos sistemas tienen como objetivo imitar o incluso superar la inteligencia humana, replicando sus funciones cognitivas tales como razonar, aprender y resolver problemas.
 
 
-Estos sistemas están entrenados para resolver problemas utilizando algoritmos, aprender de los datos y utilizar ese aprendizaje en el futuro. De esta manera, la inteligencia artificial va ganando "conocimiento".
+Estos sistemas están entrenados para resolver problemas utilizando algoritmos, aprender de los datos y sus errores, y utilizar ese aprendizaje en el futuro. De esta manera, la inteligencia artificial va ganando conocimiento.
 
 Se reconocen cuatro etapas o niveles de inteligencia artificial:
 
@@ -40,7 +40,7 @@ Se reconocen cuatro etapas o niveles de inteligencia artificial:
 *   de Teoría de la Mente:
 *   de Autoconocimiento:
 
-Los sistemas de inteligencia artificial tienen una particularidad: son para un uso específico. Es decir, no existen sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de ajedrez sobre la que forjará su aprendizaje.
+Los sistemas de inteligencia artificial tienen una particularidad: son para un uso específico. Es decir, no existen sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedrez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de este tema sobre la que forjará su aprendizaje.
 
 El entrenamiento de una inteligencia artificial consiste en brindarle datos y analizar su comportamiento, para poder mejorarla. El sistema también aprenderá de sus errores, lo que acelera su entrenamiento y hace que funcione cada vez más acertadamente. Existen dos formas de entrenamiento: Machine Learning y Deep Learning.
 
