@@ -28,7 +28,9 @@ Acá va el link.
 
 === IA
 
-Le llamamos "inteligencia artificial" o "IA" a los sistemas informáticos que tienen como objetivo imitar o incluso superar la inteligencia humana replicando sus funciones cognitivas, tales como razonar, aprender y resolver problemas.
+Le llamamos "inteligencia artificial" o "IA" a los sistemas informáticos que
+Conocemos como Inteligencia Artificial o IA a los agentes computacionales racionales existentes. Es decir, IA es cualquier software capaz de percibir su entorno, persistir durante un periodo de tiempo, adaptarse al cambio y responder o actuar de manera racional. Muchos de estos sistemas tienen como objetivo imitar o incluso superar la inteligencia humana, replicando sus funciones cognitivas tales como razonar, aprender y resolver problemas.
+
 
 Estos sistemas están entrenados para resolver problemas utilizando algoritmos, aprender de los datos y utilizar ese aprendizaje en el futuro. De esta manera, la inteligencia artificial va ganando "conocimiento".
 
