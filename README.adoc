@@ -50,15 +50,16 @@ El entrenamiento de una inteligencia artificial consiste en brindarle datos y an
 
 === Machine Learning
 
-El _Machine Learning_ o _Aprendizaje Automático_ es una forma de entrenar a las inteligencias artificiales (IA). En lugar de programar explícitamente reglas o instrucciones para realizar una tarea, se utilizan algoritmos que pueden ajustar automáticamente sus parámetros en función de los datos proporcionados. Esto les permite reconocer patrones, hacer predicciones y tomar decisiones basadas en ejemplos pasados.
+//podemos decir que es una forma de entrenamiento de IAs, para conectar con lo anterior?
+El Machine Learning o Aprendizaje Automático es un subcampo de la Inteligencia Artificial que se centra en dotar a las máquinas de la habilidad para identificar patrones en conjuntos de datos masivos y utilizar esos patrones para mejorar su rendimiento en tareas específicas.
 
-Una de las características destacadas del _Machine Learning_ es su capacidad para hacer predicciones precisas basadas en el análisis de datos, lo que lo convierte en una herramienta poderosa en una amplia variedad de aplicaciones, desde el procesamiento del lenguaje natural hasta el análisis de imágenes y la toma de decisiones automatizada.
+Una de las características destacadas del "machine learning" es su capacidad para hacer predicciones precisas basadas en el análisis de datos, lo que lo convierte en una herramienta poderosa en una amplia variedad de aplicaciones, desde el procesamiento del lenguaje natural hasta el análisis de imágenes y la toma de decisiones automatizada.
 
-Existen tres distintos modelos de predicción de _Machine Learning_: Aprendizaje Supervisado, Aprendizaje No Supervisado y Deep Learning (Aprendizaje Reforzado).
+Existen tres distintos modelos de predicción de Machine Learning: Aprendizaje Supervisado, Aprendizaje No Supervisado y Deep Learning (Aprendizaje Reforzado).
 
 ==== Aprendizaje supervisado
 
-El modelo de aprendizaje supervisado implica usar ejemplos etiquetados para que el algoritmo se ajuste y aprenda patrones. Para entrenar, se le provee a la IA un conjunto de datos etiquetados de a pares _input - output_ de forma
+El aprendizaje supervisado implica usar ejemplos etiquetados para que el algoritmo se ajuste y aprenda patrones. Para entrenar, se le provee a la IA un conjunto de datos etiquetados de a pares _input - output_ de forma
 
 stem:[(x_1, y_1), (x_2, y_2),...(x_N, y_N)]
 
@@ -72,15 +73,7 @@ Podemos tener distintas funciones stem:[h(x)] consistentes, por lo que debemos e
 
 Este tipo de aprendizaje e puede utilizar para filtrado de spam en correos, por ejemplo. En este caso, el algoritmo aprende de correos marcados como spam para identificar patrones y dirigir futuros correos similares a la carpeta de spam.
 
-//checkear que va acá
-Otra forma de aprendizaje supervisado son los algoritmos de _árboles de decisión_, siendo ésta la forma más exitosa de machine learning.
-
-Esta técnica consiste en crear un árbol cuyos nodos sean atributos a considerar al tomar una decisión, y cuyas hojas sean la decisión final.
-De esta forma, el algoritmo recibe un vector de valores para los atributos, y devuelve una decisión.
-
-Preferentemente, el árbol no debe tener mucha altura, por lo que se debe elegir el más óptimo. Para evitar calcular todos los árboles, el algoritmo utiliza una estrategia de _divide and conquer_: le asigna a cada atributo un nivel de _entropía_, para luego clasificarlos. Los atributos con menor nivel de entropía producen una mayor _ganancia de información_, ya que hacen una mejor división de clases, por lo que son evaluados al inicio. Es decir, el árbol se forma con los nodos ordenados de menor a mayor según su entropía. Luego, en cada decisión se van dividiendo y se repite el proceso para cada subárbol. Si la rama generada es de poca importancia se poda, para no tenerla en cuenta en el proceso de toma de decisiónes.
-
-Para calcular la entropía y obtener la ganancia de información de un atributo, el algoritmo se basa en ejemplos. Para entrenarlo, se debe seleccionar un conjunto de ejemplos no homogéneo, para que el aprendizaje sea lo mas correcto posible. De esta forma se puede evitar la mala clasificación de los atributos.
+//acá va árboles de decisión?
 
 ==== Aprendizaje no supervisado
 
@@ -92,13 +85,22 @@ En el modelo de aprendizaje no supervisado los datos que se incorporan no se eti
 
 ==== Aprendizaje semisupervisado
 
-El modelo de aprendizaje semisupervisado es una combinación entre aprendizaje supervisado y aprendizaje no supervisado. Para llevar a cabo el entrenamiento, se le brinda a la IA un conjunto de datos etiquetados y un conjunto de datos sin etiquetar. Incluso, muchos datos pueden estar etiquetados erróneamente.
+Este paradigma de "machine learning" permite tomar datos etiquedados junto con elementos no etiquetados para poder mejorar exactitud del algoritmo, pudiendo usar de ejemplos los datos etiquetados manualmente por una persona y aplicar los conocimientos adquiridos en los datos sin etiquetar.
 
-Este modelo se utiliza cuando no disponemos de suficientes datos etiquetados para entrenar a la IA.
+Esto permite trabajar al algoritmos tomando las siguiente suposiciones:
+
+*   Suposicion de continuidad
+Esta suposicion permite generar preferencias en las decisiones tomadas utilizando los elementos etiquetados para asi consumir datos no etiquetados con una base de como interpretarlos. De esta manera permite tener limites de decisiones en redes neuronales de baja densidad.
+
+*   Suposicion de grupo
+Esta suposicion implica que la data consumida genera grupos discretos, y en estos grupos es consistente que varios nodos compartan etiquetas. Lo que le permite entrenar al algoritmo en nuevos casos futuros
+
+*   Suposiciones multiples
+Esta suposicion trabaja bajo el principio de que al consumir data para el entrenamiento se puede delimitar el modelo presentado para poder trabajar con campos de nodos de grandes dimenciones sin tener que consumir datos que no sean necesarios para el modelo presentado. Esto permite al algoritmo a procesar elementos con mucha informacion sin tener consumir los "Datasets" completos. ejemplos de esto son algoritmos de reconocimiento de vos o facial. Esto se debe a que solo es necesario reconocer patrones de vos especificos de una vos humana en ves de tener que procesar todo el espectro de audio.
 
 ==== Deep Learning
 
-El Deep Learning o Aprendizaje Reforzado es un subconjunto de lo que es Machine learning que igual que el ya mencionado propone el analisis de patrones para poder aplicarlas en diferentes tareas de manera mas eficiente. Este se distinge del "Machine learning" en el sentido que consume datos de manera cruda, sin tener que haber un paso intermedio para ordenar y recibir y procesar datos sin supervicion humana.
+El "Deep Learning" o "Aprendizaje Reforzado" es un subconjunto de lo que es "Machine learning" que igual que el ya mencionado propone el analisis de patrones para poder aplicarlas en diferentes tareas de manera mas eficiente. Este se distinge del "Machine learning" en el sentido que consume datos de manera cruda, sin tener que haber un paso intermedio para ordenar y recibir y procesar datos sin supervicion humana.
 
 Esta manera de procesar datos permite el entrenamiento del modelo en cantidades grandes a traves de la automatizacion de la lectura de informacion que tiene a mano. A su ves esto agiliza el entrenamiento y permite un entrenamiento mas riguroso. Ejemplos de uso de esta teconología serían identificadores de fotos, rostros u texto. 
 
