@@ -50,7 +50,7 @@ El entrenamiento de una inteligencia artificial consiste en brindarle datos y an
 
 === Machine Learning
 
-El _Machine Learning_ o _Aprendizaje Automático_ es una forma de entrenar a las inteligencias artificiales (IA). Es una disciplina dentro del campo más amplio de la inteligencia artificial que se centra en el desarrollo de algoritmos y modelos que permiten a las máquinas aprender a partir de datos y mejorar su rendimiento en tareas específicas con la experiencia.
+El _Machine Learning_ o _Aprendizaje Automático_ es una forma de entrenar a las inteligencias artificiales (IA). En lugar de programar explícitamente reglas o instrucciones para realizar una tarea, se utilizan algoritmos que pueden ajustar automáticamente sus parámetros en función de los datos proporcionados. Esto les permite reconocer patrones, hacer predicciones y tomar decisiones basadas en ejemplos pasados.
 
 Una de las características destacadas del _Machine Learning_ es su capacidad para hacer predicciones precisas basadas en el análisis de datos, lo que lo convierte en una herramienta poderosa en una amplia variedad de aplicaciones, desde el procesamiento del lenguaje natural hasta el análisis de imágenes y la toma de decisiones automatizada.
 
