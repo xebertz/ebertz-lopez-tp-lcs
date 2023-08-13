@@ -1,5 +1,5 @@
 = TP Inicial - Laboratorio de Construcción de Software
-Ebertz, Ximena <xebertz@campus.ungs.edu.ar>; Gross, Pablo <...>; López, Gonzalo <gonzagonzalopez20@gmail.com>
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Gross Pablo <...>; López Gonzalo <gonzagonzalopez20@gmail.com>
 v1, {docdate}
 :toc:
 :title-page:
