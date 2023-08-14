@@ -112,18 +112,42 @@ Se considera que este enfoque es uno de los más prometedores dentro del campo d
 
 === Deep Learning
 
-El Deep Learning es un subconjunto de lo que es Machine learning que igual que el ya mencionado propone el análisis de patrones para poder aplicarlas en diferentes tareas de manera mas eficiente. 
+_Deep Learning_ es una forma de Machine Learning que se implementa mediante una _red neuronal_ de tres o más niveles. Esta red neuronal pretende simular el comportamiento del cerebro humano, aprendiendo de grandes volúmenes de datos, como en otras formas de Machine Learning.
+
+Las redes neuronales son grafos dirigidos sin ciclos. Estan compuestas por por nodos o _unidades_, conectadas por aristas o _links_ que tienen un peso y una dirección. Cada capa de la red tiene sus nodos interconectados, y sirve para refinar la predicción de la capa anterior.
+
+Como cualquier forma de Machine Learning, el objetivo de la red neuronal es descubir o aproximar una función _h(x)_ a otra _f(x)_, que determina la relación entre los datos de entrada. Esta función será más compleja, ya que el resultado estará en funcion de los datos de entrada y los pesos de las aristas, lo que la probablemente la hará no lineal. Es decir, la función a descubrir es de la forma _h(x, y)_.
+
+
+//El Deep Learning es un subconjunto de lo que es Machine learning que igual que el ya mencionado propone el análisis de patrones para poder aplicarlas en diferentes tareas de manera mas eficiente.
 //Este se distingue del "Machine learning" en el sentido que consume datos de manera cruda, sin tener que haber un paso intermedio para ordenar y recibir y procesar datos sin supervisión humana.
 
-Los algoritmos de deep learning se utilizan en redes neuronales artificiales organizadas en capas, que constan de la capa de entrada (input), capas ocultas (hidden) y capa de salida (output). Los datos ingresan a través de la primera capa, donde múltiples neuronas artificiales se activan o desactivan según los datos presentados.
+Los algoritmos de deep learning implementan sus capas de la siguiente manera:
+*   la capa de entrada o _input_, donde se ingresan los datos. Cada unidad representa un atributo.
+*   las capas ocultas o _hidden_, que procesan los datos.
+*   la capa de salida o _output_, donde se producen las predicciones finales. Cada unidad representa una clase, valor o etiqueta que la red esté tratando de predecir.
 
-Esta manera de procesar datos permite el entrenamiento del modelo en cantidades grandes a través de la automatización de la lectura de información que tiene a mano. A su vez esto agiliza el entrenamiento y permite un entrenamiento mas riguroso. Ejemplos de uso de esta tecnología serían identificadores de fotos, rostros u texto. 
+Los datos ingresan a través de la primera capa, donde múltiples neuronas artificiales se activan o desactivan según los datos presentados, y se devuelve el resultado en la última capa.
 
-Este puede separarse en dos formas de aplicación:
+Muchas veces la cantidad de capas es importante. Una red neuronal de una sola capa puede lograr predicciones aproximadas, pero si se le agregan capas ocultas se puede refinar la eficacia y la eficiencia, logrando predicciones cada vez más exactas, en poco tiempo de ejecución.
 
-*   Las redes neuronales convolucionales (CNN, por sus siglas en inglés). Esta se utiliza para el reconocimiento y clasificación de imágenes y videos para identificar elementos que se encuentren en los mismos.
+Los datos de entrenamiento, en este caso, no pasan por un proceso de pre-procesamiento. El entrenamiento de la red consta en dos etapas: la de _propagación hacia adelante_ y la de _retropropagación_.
 
-*   Las redes neuronales recurrentes (RNN, por sus siglas en inglés). Esta se utiliza para el reconocimiento de voz y del lenguaje natural.
+Primero se propaga hacia adelante, introduciendo datos en la capa de _input_, permitiendo que se propaguen hasta la capa de _output_. En las capas ocultas se determina si cada unidad debe activarse o no, mediante una _función de activación_. Esta función determina la activación de un nodo según la suma ponderada de los pesos de sus entradas. Luego, se devuelve el resultado obtenido.
+
+El problema de la propagación hacia adelante es que puede propagar errores en las predicciones, lo que hace que se obtenga un resultado erróneo. Mientras más niveles se tiene, más errores se propagan.
+
+Para solucionar esto, utilizamos retropropagación. Este proceso utiliza algortimos que calculan estos errores, como el de _descenso del gradiente_ y ajusta los pesos de las aristas desde la capa final hasta la inicial.
+
+El entrenamiento se repite hasta que la red sea lo más precisa posible sobre datos nuevos.
+
+Esta manera de procesar datos permite el entrenamiento del modelo en cantidades grandes a través de la automatización de la lectura de información que tiene a su alcance. A su vez, agiliza el entrenamiento y permite que sea más riguroso. Ejemplos de uso de esta tecnología serían identificadores de fotos, rostros o texto.
+
+Existen diversos tipos de redes neuronales, pero los más utilizados son:
+
+*   Las redes neuronales convolucionales o _CNN_, que se utilizan para el reconocimiento y clasificación de imágenes y videos, con la finalidad de identificar elementos que se encuentren en los mismos.
+
+*   Las redes neuronales recurrentes o _RNN_, que se utilizan para el reconocimiento de voz y del lenguaje natural.
 
 === Proyectos de Data Science ó Big Data
 
