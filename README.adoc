@@ -24,7 +24,7 @@ A lo largo de este trabajo, se explorarán las definiciones, características y 
 
 El propósito central de este proyecto práctico consiste en desarrollar un sistema destinado a la detección de enfermedades oculares a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de 5000 pacientes reales.
 
-Dicho conjunto de datos lo obtuvimos de la página web https://www.kaggle.com/[Kagle], este se encuentra https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k?resource=download[aquí].
+Dicho conjunto de datos lo obtuvimos de la página web https://www.kaggle.com/[Kaggle], este se encuentra https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k?resource=download[aquí].
 
 Con el fin de cumplir dicho propósito, emplearemos la modalidad de Maching Learning conocida como Deep Learning, específicamente utilizando el enfoque de aprendizaje supervisado.
 
