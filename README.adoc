@@ -179,6 +179,6 @@ Acá ponemos sarasa.
 
 La gran dificultad para este trabajo fue encontrar información confiable y detallada sobre los conceptos abordados. Muchos sitios web tenían información, pero no tan profunda como la que necesitábamos. Finalmente, utilizamos como referencia a el libro _Artificial Intelligence: A Modern Approach_ de Stuart Russel y Peter Norvig, y complementamos con diversos sitios web, como el de _IBM_.
 
-== Conclusiones
+== Conclusión
 
-En conclusión, ??????
+En conclusión, este trabajo nos ha proporcionado una visión integral de las tecnologías que están impulsando la transformación digital en nuestra sociedad. Desde la Inteligencia Artificial hasta el Deep Learning, Data Science y Big Data, estas herramientas están remodelando la manera en que interactuamos con la información y cómo abordamos los desafíos en campos tan diversos como la medicina, la industria y la investigación. A medida que continuamos avanzando en este emocionante viaje tecnológico, es esencial mantenernos actualizados y adaptarnos a las nuevas oportunidades que estas innovaciones nos brindan.
