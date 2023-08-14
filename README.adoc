@@ -123,6 +123,7 @@ Como cualquier forma de Machine Learning, el objetivo de la red neuronal es desc
 //Este se distingue del "Machine learning" en el sentido que consume datos de manera cruda, sin tener que haber un paso intermedio para ordenar y recibir y procesar datos sin supervisión humana.
 
 Los algoritmos de deep learning implementan sus capas de la siguiente manera:
+
 *   la capa de entrada o _input_, donde se ingresan los datos. Cada unidad representa un atributo.
 *   las capas ocultas o _hidden_, que procesan los datos.
 *   la capa de salida o _output_, donde se producen las predicciones finales. Cada unidad representa una clase, valor o etiqueta que la red esté tratando de predecir.
