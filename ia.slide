@@ -1,0 +1,57 @@
+Conceptos de Inteligencia Artificial
+
+Gonzalo López
+gonzagonzalopez20@gmail.com
+
+Pablo Gross
+pablorubengross@gmail.
+
+Ximena Ebertz
+xebertz@campus.ungs.edu.ar
+
+* ¿Qué es la Inteligencia Artificial?
+
+- Agente computacional racional
+- Inteligencia artificial débil: máquinas reactivas, IA de memoria limitada
+- Inteligencia artificial fuerte: IA de teoría de la mente, IA de autoconocimiento
+
+* Importante: para funcionar, las IA se deben entrenar
+
+* Machine Learning
+
+Analizamos datos para hacer predicciones
+
+Tipos de Machine Learning:
+
+- Aprendizaje Supervisado: regresión, árboles de decisión, deep learning
+- Aprendizaje No Supervisado: clustering, reducción dimensional
+- Aprendizaje Semisupervisado
+- Aprendizaje Reforzado
+
+* Deep Learning
+
+Utilizamos redes neuronales para emular comportamiento del cerebro humano
+
+- Tiene tres capas: input, hidden y output
+- Entrenamiento: propagación hacia adelante y retropropagación
+
+* ¿Y los datos?
+
+* Data Science
+
+blabla
+
+5 etapas:
+
+* Big Data
+
+Grandes volúmenes de datos que superan la capacidad de las herramientas convencionales de gestión y análisis de datos
+
+Caracterizado por las tres V: Volumen, Velocidad, Variedad
+
+*
+Preguntas?
+#imagen de pregunta
+
+
+
