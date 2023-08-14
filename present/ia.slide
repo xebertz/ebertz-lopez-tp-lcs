@@ -41,13 +41,20 @@ Utilizamos redes neuronales para emular comportamiento del cerebro humano
 
 * Data Science
 
-blabla
+Obtenemos conocimiento a partir de datos
 
-5 etapas:
+Etapas:
+
+1. Adquisición de datos
+2. Limpieza y preparación de datos
+3. Exploración de datos
+4. Modelado y análisis
+5. Comunicación de resultados
+
 
 * Big Data
 
-Grandes volúmenes de datos que superan la capacidad de las herramientas convencionales de gestión y análisis de datos
+Grandes volúmenes de datos
 
 Caracterizado por las tres V: Volumen, Velocidad, Variedad
 
