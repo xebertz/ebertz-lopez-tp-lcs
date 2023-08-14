@@ -24,7 +24,7 @@ A lo largo de este trabajo, se explorarán las definiciones, características y 
 
 == Repositorio
 
-Para ir al repositorio del proyecto puede darle click https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git[aquí].
+El repositorio del proyecto se encuentra https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git[aquí].
 
 == Desarrollo
 
