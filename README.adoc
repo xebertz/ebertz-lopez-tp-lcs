@@ -14,9 +14,9 @@ v1, {docdate}
 
 == Introducción
 
-Investigación de conceptos: IA, Machine Learning, Deep Learning.
+En este trabajo, exploraremos en profundidad los conceptos clave de la Inteligencia Artificial, Machine Learning y Deep Learning. También nos adentraremos en el terreno de la Ciencia de Datos (Data Science) y Big Data, campos relacionados pero distintos.
 
-Investigación de proyectos de Data Science o Big Data.
+A lo largo de este trabajo, se explorarán las definiciones, características y aplicaciones de estos conceptos, arrojando luz sobre su impacto en el mundo actual y el potencial que tienen para moldear nuestro futuro tecnológico y científico.
 
 == Objetivo
 
