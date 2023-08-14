@@ -13,13 +13,14 @@ v1, {docdate}
 
 == Introducción
 
-En este trabajo, exploraremos en profundidad los conceptos clave de la Inteligencia Artificial, Machine Learning y Deep Learning. También nos adentraremos en el terreno de la Ciencia de Datos (Data Science) y Big Data, campos relacionados pero distintos.
-
-A lo largo de este trabajo, se explorarán las definiciones, características y aplicaciones de estos conceptos, arrojando luz sobre su impacto en el mundo actual y el potencial que tienen para moldear nuestro futuro tecnológico y científico.
+La inteligencia artificial está siendo cada vez más relevante en diversos campos, ya que realiza diversas tareas que para los humanos son complejas o repetitivas, lo que la convierte en una poderosa herramienta para nuestro día a día.
+Es compleja en su contrucción y tiene diversas ramas que se pueden abordar. Por esto, ante
 
 == Objetivo
 
-Acá va el objetivo.
+En este trabajo, exploraremos en profundidad los conceptos clave de la Inteligencia Artificial, Machine Learning y Deep Learning, para entender sus diferencias y particularidades. También, nos adentraremos en el terreno de la Data Science y Big Data, y veremos que son campos muy relacionados pero distintos.
+
+A lo largo de este trabajo, se explorarán las definiciones, características y aplicaciones de estos conceptos, arrojando luz sobre su impacto en el mundo actual y el potencial que tienen para moldear nuestro futuro tecnológico y científico.
 
 == Repositorio
 
