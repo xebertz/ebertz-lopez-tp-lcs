@@ -30,7 +30,7 @@ Para ir al repositorio del proyecto puede darle click https://github.com/ximeeb/
 
 === Inteligencia Artificial (IA)
 
-Antes de profundizar en el concepto de _Inteligencia Artificial_, debemos entender qué es un _agente_. La definición de este término es sencilla: un _agente_ es "alguien" hace algo. En el ámbito informático extendemos esta definción a la de _agentes computacionales_, que son programas que pueden operar autónomamente, percibir su entorno, persisitir durante un período de tiempo, adaptarse al cambio, y crear y perseguir metas. Por esto, podemos observar que no todos los sistemas informáticos son agentes.
+Antes de profundizar en el concepto de _Inteligencia Artificial_, debemos entender qué es un _agente_. La definición de este término es sencilla: un _agente_ es "alguien" que realiza una acción. En el ámbito informático extendemos esta definición a la de _agentes computacionales_, que son programas que pueden operar autónomamente, percibir su entorno, persistir durante un período de tiempo, adaptarse al cambio, y crear y perseguir metas. Por esto, podemos observar que no todos los sistemas informáticos son agentes.
 
 En este contexto, conocemos como _Inteligencia Artificial_ o _IA_ a los *agentes computacionales racionales* existentes. Es decir, IA es cualquier software capaz de percibir su entorno, persistir durante un periodo de tiempo, adaptarse al cambio, y realizar cualquier cosa de la que es capaz un agente computacional, pero con la característica de que responde y actúa de manera racional, buscando la mejor opción para cada situación. Muchos de estos sistemas tienen como objetivo imitar o incluso superar la inteligencia humana, replicando sus funciones cognitivas tales como razonar, aprender y resolver problemas.
 
@@ -65,7 +65,7 @@ stem:[(x_1, y_1), (x_2, y_2),...(x_N, y_N)]
 
 En la que cada _output_ stem:[y_j] fue generado por una función desconocida stem:[y = f(x)].
 
-La IA deberá descubir una función stem:[h(x)] llamada _hipótesis_ que aproxime a stem:[f(x)] lo mejor posible. De esta forma, podrá predecir valores stem:[y] para nuevos stem:[x]. Esta función debe ser  _consistente_, es decir, debe funcionar para todos los datos de entrenamiento. Observemos que esto requiere intervención humana para clasificar y etiquetar datos.
+La IA deberá descubrir una función stem:[h(x)] llamada _hipótesis_ que aproxime a stem:[f(x)] lo mejor posible. De esta forma, podrá predecir valores stem:[y] para nuevos stem:[x]. Esta función debe ser  _consistente_, es decir, debe funcionar para todos los datos de entrenamiento. Observemos que esto requiere intervención humana para clasificar y etiquetar datos.
 
 Cuando el _output_ stem:[y_j] es parte de un conjunto finito de valores, el aprendizaje supervisado es llamado _clasificación_. Si el _output_ stem:[y_j] es un número, es llamado _regresión_.
 
@@ -79,7 +79,7 @@ Otra forma de aprendizaje supervisado son los algoritmos de _árboles de decisi�
 Esta técnica consiste en crear un árbol cuyos nodos sean atributos a considerar al tomar una decisión, y cuyas hojas sean la decisión final.
 De esta forma, el algoritmo recibe un vector de valores para los atributos, y devuelve una decisión.
 
-Preferentemente, el árbol no debe tener mucha altura, por lo que se debe elegir el más óptimo. Para evitar calcular todos los árboles, el algoritmo utiliza una estrategia de _divide and conquer_: le asigna a cada atributo un nivel de _entropía_, para luego clasificarlos. Los atributos con menor nivel de entropía producen una mayor _ganancia de información_, ya que hacen una mejor división de clases, por lo que son evaluados al inicio. Es decir, el árbol se forma con los nodos ordenados de menor a mayor según su entropía. Luego, en cada decisión se van dividiendo y se repite el proceso para cada subárbol. Si la rama generada es de poca importancia se poda, para no tenerla en cuenta en el proceso de toma de decisiónes.
+Preferentemente, el árbol no debe tener mucha altura, por lo que se debe elegir el más óptimo. Para evitar calcular todos los árboles, el algoritmo utiliza una estrategia de _divide and conquer_: le asigna a cada atributo un nivel de _entropía_, para luego clasificarlos. Los atributos con menor nivel de entropía producen una mayor _ganancia de información_, ya que hacen una mejor división de clases, por lo que son evaluados al inicio. Es decir, el árbol se forma con los nodos ordenados de menor a mayor según su entropía. Luego, en cada decisión se van dividiendo y se repite el proceso para cada subárbol. Si la rama generada es de poca importancia se poda, para no tenerla en cuenta en el proceso de toma de decisiones.
 
 Para calcular la entropía y obtener la ganancia de información de un atributo, el algoritmo se basa en ejemplos. Para entrenarlo, se debe seleccionar un conjunto de ejemplos no homogéneo, para que el aprendizaje sea lo mas correcto posible. De esta forma se puede evitar la mala clasificación de los atributos.
 
@@ -97,24 +97,21 @@ El modelo de aprendizaje semisupervisado es una combinación entre aprendizaje s
 
 El aprendizaje semisupervisado permite trabajar al algoritmos tomando las siguiente suposiciones:
 
-*   Suposición de continuidad
-Esta suposición permite generar preferencias en las decisiones tomadas utilizando los elementos etiquetados para, así, consumir datos no etiquetados con una base de cómo interpretarlos. De esta manera permite tener limites de decisiones en redes neuronales de baja densidad.
+*   Suposición de continuidad: Esta suposición permite generar preferencias en las decisiones tomadas utilizando los elementos etiquetados para, así, consumir datos no etiquetados con una base de cómo interpretarlos. De esta manera permite tener limites de decisiones en redes neuronales de baja densidad.
 
-*   Suposición de grupo
-Esta suposición implica que la data consumida genera grupos discretos, y en estos grupos es consistente que varios nodos compartan etiquetas. Lo que le permite entrenar al algoritmo en nuevos casos futuros.
+*   Suposición de grupo: Esta suposición implica que la data consumida genera grupos discretos, y en estos grupos es consistente que varios nodos compartan etiquetas. Lo que le permite entrenar al algoritmo en nuevos casos futuros.
 
-*   Suposiciones múltiples
-￼Esta suposicion trabaja bajo el principio de que al consumir data para el entrenamiento se puede delimitar el modelo presentado para poder trabajar con campos de nodos de grandes dimensiones sin tener que consumir datos que no sean necesarios para el modelo presentado. Esto permite al algoritmo a procesar elementos con mucha información sin tener consumir los datasets completos. Ejemplos de esto son algoritmos de reconocimiento de voz o facial, ya que sólo es necesario reconocer patrones de voz específicos de una voz humana, sin la necesidad de procesar todo el espectro de audio.
+*   Suposiciones múltiples: Esta suposición trabaja bajo el principio de que al consumir data para el entrenamiento se puede delimitar el modelo presentado para poder trabajar con campos de nodos de grandes dimensiones sin tener que consumir datos que no sean necesarios para el modelo presentado. Esto permite al algoritmo a procesar elementos con mucha información sin tener consumir los datasets completos. Ejemplos de esto son algoritmos de reconocimiento de voz o facial, ya que sólo es necesario reconocer patrones de voz específicos de una voz humana, sin la necesidad de procesar todo el espectro de audio.
 
 ==== Deep Learning
 
-El Deep Learning o Aprendizaje Reforzado es un subconjunto de lo que es Machine learning que igual que el ya mencionado propone el analisis de patrones para poder aplicarlas en diferentes tareas de manera mas eficiente. Este se distinge del "Machine learning" en el sentido que consume datos de manera cruda, sin tener que haber un paso intermedio para ordenar y recibir y procesar datos sin supervicion humana.
+El Deep Learning o Aprendizaje Reforzado es un subconjunto de lo que es Machine learning que igual que el ya mencionado propone el análisis de patrones para poder aplicarlas en diferentes tareas de manera mas eficiente. Este se distingue del "Machine learning" en el sentido que consume datos de manera cruda, sin tener que haber un paso intermedio para ordenar y recibir y procesar datos sin supervisión humana.
 
-Esta manera de procesar datos permite el entrenamiento del modelo en cantidades grandes a traves de la automatizacion de la lectura de informacion que tiene a mano. A su ves esto agiliza el entrenamiento y permite un entrenamiento mas riguroso. Ejemplos de uso de esta teconología serían identificadores de fotos, rostros u texto. 
+Esta manera de procesar datos permite el entrenamiento del modelo en cantidades grandes a través de la automatización de la lectura de información que tiene a mano. A su ves esto agiliza el entrenamiento y permite un entrenamiento mas riguroso. Ejemplos de uso de esta tecnología serían identificadores de fotos, rostros u texto. 
 
 Este puede separarse en dos formas de aplicación:
 
-*   Las redes neuronales convolucionales (CNN, por sus siglas en inglés). Esta se utiliza para el reconocimiento y clasificacion de imágenes y videos para identificar elementos que se encuentren en los mismos
+*   Las redes neuronales convolucionales (CNN, por sus siglas en inglés). Esta se utiliza para el reconocimiento y clasificación de imágenes y videos para identificar elementos que se encuentren en los mismos
 
 *   Las redes neuronales recurrentes (RNN, por sus siglas en inglés). Esta se utiliza para el reconocimiento de vos y del lenguaje natural
 
