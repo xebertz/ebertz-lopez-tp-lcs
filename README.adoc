@@ -8,7 +8,6 @@ v1, {docdate}
 :source-highlighter: coderay
 :tabsize: 4
 :nofooter:
-:stem: asciimath
 
 
 == Introducción
@@ -60,17 +59,17 @@ Existen tres distintos modelos de predicción de _Machine Learning_: Aprendizaje
 
 El modelo de aprendizaje supervisado implica usar ejemplos etiquetados para que el algoritmo se ajuste y aprenda patrones. Para entrenar, se le provee a la IA un conjunto de datos etiquetados de a pares _input - output_ de forma
 
-stem:[(x_1, y_1), (x_2, y_2),...(x_N, y_N)]
+_(x_1, y_1), (x_2, y_2),...(x_N, y_N)_
 
-En la que cada _output_ stem:[y_j] fue generado por una función desconocida stem:[y = f(x)].
+En la que cada _output_ _y_j_ fue generado por una función desconocida _y = f(x)_.
 
-La IA deberá descubir una función stem:[h(x)] llamada _hipótesis_ que aproxime a stem:[f(x)] lo mejor posible. De esta forma, podrá predecir valores stem:[y] para nuevos stem:[x]. Esta función debe ser  _consistente_, es decir, debe funcionar para todos los datos de entrenamiento. Observemos que esto requiere intervención humana para clasificar y etiquetar datos.
+La IA deberá descubir una función _h(x)_ llamada _hipótesis_ que aproxime a _f(x)]_ lo mejor posible. De esta forma, podrá predecir valores _y_ para nuevos _x_. Esta función debe ser  _consistente_, es decir, debe funcionar para todos los datos de entrenamiento. Observemos que esto requiere intervención humana para clasificar y etiquetar datos.
 
-Cuando el _output_ stem:[y_j] es parte de un conjunto finito de valores, el aprendizaje supervisado es llamado _clasificación_. Si el _output_ stem:[y_j] es un número, es llamado _regresión_.
+Cuando el _output_ _y_j_ es parte de un conjunto finito de valores, el aprendizaje supervisado es llamado _clasificación_. Si el _output_ _y_j_ es un número, es llamado _regresión_.
 
-Podemos tener distintas funciones stem:[h(x)] consistentes, por lo que debemos elegir entre una de las candidatas. En este caso, se debe elegir la más simple, ya que en su implementación implica una menor complejidad computacional.
+Podemos tener distintas funciones _h(x)_ consistentes, por lo que debemos elegir entre una de las candidatas. En este caso, se debe elegir la más simple, ya que en su implementación implica una menor complejidad computacional.
 
-Este tipo de aprendizaje e puede utilizar para filtrado de spam en correos, por ejemplo. En este caso, el algoritmo aprende de correos marcados como spam para identificar patrones y dirigir futuros correos similares a la carpeta de spam.
+Este tipo de aprendizaje se puede utilizar para filtrado de spam en correos, por ejemplo. En este caso, el algoritmo aprende de correos marcados como spam para identificar patrones y dirigir futuros correos similares a la carpeta de spam.
 
 //checkear que va acá
 Otra forma de aprendizaje supervisado son los algoritmos de _árboles de decisión_, siendo ésta la forma más exitosa de machine learning.
