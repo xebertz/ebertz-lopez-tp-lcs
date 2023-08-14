@@ -130,7 +130,21 @@ Este puede separarse en dos formas de aplicación:
 
 ==== Data Science vs Big Data, ¿estamos hablando de lo mismo?
 
-Acá va la info de Data Science y Big Data.
+Data Science y Big Data son conceptos relacionados pero no son lo mismo. Ambos están relacionados con el manejo, análisis y extracción de conocimiento a partir de datos, pero se enfocan en aspectos diferentes del proceso. Para llegar a una mejor comprensión definamos ambos conceptos.
+
+La Ciencia de Datos (Data Science) es un campo interdisciplinario que combina técnicas, métodos y procesos de diversas disciplinas, como estadísticas, matemáticas, informática y dominios específicos, para extraer conocimiento y perspicacia a partir de conjuntos de datos. El objetivo principal de la Ciencia de Datos es analizar datos para identificar patrones, tendencias y relaciones que puedan ayudar a tomar decisiones informadas y generar valor en diversos campos, como negocios, investigación, salud, entre otros.
+
+El proceso de Ciencia de Datos generalmente incluye:
+
+1. Adquisición de datos: Recopilar y obtener los datos necesarios para el análisis.
+2. Limpieza y preparación de datos: Asegurarse de que los datos estén limpios, completos y estructurados de manera adecuada.
+3. Exploración de datos: Realizar análisis exploratorios para entender las características y relaciones en los datos.
+4. Modelado y análisis: Aplicar técnicas de modelado estadístico y de aprendizaje automático para obtener información y hacer predicciones.
+5. Comunicación de resultados: Presentar los resultados y hallazgos de manera comprensible para tomadores de decisiones.
+
+Por otro lado, el término Big Data hace referencia a grandes volúmenes de datos que superan la capacidad de las herramientas convencionales de gestión y análisis de datos. El Big Data se caracteriza por tres "V": Volumen (cantidad masiva de datos), Velocidad (rapidez en la generación y transmisión de datos) y Variedad (diversidad de tipos de datos, como texto, imágenes, videos, etc.). Además, en algunos casos, se añaden otras "V" como Variabilidad y Veracidad.
+
+La Ciencia de Datos y el Big Data se relacionan de manera intrínseca debido a su naturaleza complementaria y a cómo se abordan conjuntamente los desafíos relacionados con la gestión y el análisis de grandes volúmenes de datos.
 
 ==== ¿Cómo se gestiona un proyecto de Data Science o Big Data?
 
