@@ -26,6 +26,8 @@ El propósito central de este proyecto práctico consiste en desarrollar un sist
 
 Dicho conjunto de datos lo obtuvimos de la página web https://www.kaggle.com/[Kagle], este se encuentra https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k?resource=download[aquí].
 
+Con el fin de cumplir dicho propósito, emplearemos la modalidad de Maching Learning conocida como Deep Learning, específicamente utilizando el enfoque de aprendizaje supervisado.
+
 == Repositorio
 
 El repositorio del proyecto se encuentra https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git[aquí].
