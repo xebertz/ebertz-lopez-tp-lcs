@@ -22,6 +22,10 @@ En este trabajo, exploraremos en profundidad los conceptos clave de la Inteligen
 
 A lo largo de este trabajo, se explorarán las definiciones, características y aplicaciones de estos conceptos, arrojando luz sobre su impacto en el mundo actual y el potencial que tienen para moldear nuestro futuro tecnológico y científico.
 
+El propósito central de este proyecto práctico consiste en desarrollar un sistema destinado a la detección de enfermedades oculares a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de 5000 pacientes reales.
+
+Dicho conjunto de datos lo obtuvimos de la página web https://www.kaggle.com/[Kagle], este se encuentra https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k?resource=download[aquí].
+
 == Repositorio
 
 El repositorio del proyecto se encuentra https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git[aquí].
