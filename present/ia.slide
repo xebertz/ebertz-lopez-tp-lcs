@@ -10,7 +10,6 @@ López, Gonzalo
 gonzagonzalopez20@gmail.com
 
 
-
 * ¿Qué es la Inteligencia Artificial?
 
 - Agente computacional racional
@@ -60,7 +59,9 @@ Caracterizado por las tres V: Volumen, Velocidad, Variedad
 
 * Objetivo del trabajo
 
-acá va el objetivo
+Detección de enfermedades oculares
+
+.link www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k?resource=download
 
 * Repositorio
 
