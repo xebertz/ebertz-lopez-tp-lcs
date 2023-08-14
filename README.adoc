@@ -120,9 +120,9 @@ Se considera que este enfoque es uno de los más prometedores dentro del campo d
 
 _Deep Learning_ es una forma de Machine Learning que se implementa mediante una _red neuronal_ de tres o más niveles. Esta red neuronal pretende simular el comportamiento del cerebro humano, aprendiendo de grandes volúmenes de datos, como en otras formas de Machine Learning.
 
-Las redes neuronales son grafos dirigidos sin ciclos. Estan compuestas por por nodos o _unidades_, conectadas por aristas o _links_ que tienen un peso y una dirección. Cada capa de la red tiene sus nodos interconectados, y sirve para refinar la predicción de la capa anterior.
+Las redes neuronales son grafos dirigidos sin ciclos. Están compuestas por por nodos o _unidades_, conectadas por aristas o _links_ que tienen un peso y una dirección. Cada capa de la red tiene sus nodos interconectados, y sirve para refinar la predicción de la capa anterior.
 
-Como cualquier forma de Machine Learning, el objetivo de la red neuronal es descubir o aproximar una función _h(x)_ a otra _f(x)_, que determina la relación entre los datos de entrada. Esta función será más compleja, ya que el resultado estará en funcion de los datos de entrada y los pesos de las aristas, lo que la probablemente la hará no lineal. Es decir, la función a descubrir es de la forma _h(x, y)_.
+Como cualquier forma de Machine Learning, el objetivo de la red neuronal es descubrir o aproximar una función _h(x)_ a otra _f(x)_, que determina la relación entre los datos de entrada. Esta función será más compleja, ya que el resultado estará en función de los datos de entrada y los pesos de las aristas, lo que la probablemente la hará no lineal. Es decir, la función a descubrir es de la forma _h(x, y)_.
 
 Los algoritmos de deep learning implementan sus capas de la siguiente manera:
 
@@ -140,7 +140,7 @@ Primero se propaga hacia adelante, introduciendo datos en la capa de _input_, pe
 
 El problema de la propagación hacia adelante es que puede propagar errores en las predicciones, lo que hace que se obtenga un resultado erróneo. Mientras más niveles se tiene, más errores se propagan.
 
-Para solucionar esto, utilizamos retropropagación. Este proceso utiliza algortimos que calculan estos errores, como el de _descenso del gradiente_ y ajusta los pesos de las aristas desde la capa final hasta la inicial.
+Para solucionar esto, utilizamos retropropagación. Este proceso utiliza algoritmos que calculan estos errores, como el de _descenso del gradiente_ y ajusta los pesos de las aristas desde la capa final hasta la inicial.
 
 El entrenamiento se repite hasta que la red sea lo más precisa posible sobre datos nuevos.
 
