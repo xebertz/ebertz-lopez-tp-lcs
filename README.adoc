@@ -39,9 +39,9 @@ Dentro de la inteligencia artificial tenemos dos tipos: la _inteligencia artific
 Se reconocen cuatro etapas o niveles de desarrollo de inteligencia artificial:
 
 *   _máquinas reactivas:_ es un tipo de inteligencia artificial que no puede aprender ya que no utiliza memoria, pero sabe reaccionar ante ciertos estímulos, ya que lo tiene preprogramado.
-*   _de memoria limitada:_ es un tipo de inteligencia artificial que puede aprender, ya que utiliza memoria. Para generar su conocimiento se la entrena brindándole datos nuevos.
-*   _de teoría de la mente:_ es un tipo de inteligencia artificial que puede emular la mente humana, lo que le da la capacidad de tener sentimientos y emociones.
-*   _de autoconocimiento:_ es una inteligencia artificial de teoría de la mente con autoconocimiento.
+*   _IA de memoria limitada:_ es un tipo de inteligencia artificial que puede aprender, ya que utiliza memoria. Para generar su conocimiento se la entrena brindándole datos nuevos.
+*   _IA de teoría de la mente:_ es un tipo de inteligencia artificial que puede emular la mente humana, lo que le da la capacidad de tener sentimientos y emociones.
+*   _IA de autoconocimiento:_ es una inteligencia artificial de teoría de la mente con autoconocimiento.
 
 Los sistemas de inteligencia artificial actuales tienen una particularidad: son para un uso específico. Es decir, son inteligencias artificiales débiles, y, en particular, de memoria limitada. No existen sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedrez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de este tema sobre la que forjará su aprendizaje.
 
@@ -53,9 +53,9 @@ El entrenamiento de una inteligencia artificial consiste en brindarle datos y an
 
 El _Machine Learning_ o _Aprendizaje Automático_ es una forma de entrenar a las inteligencias artificiales (IA). En lugar de programar explícitamente reglas o instrucciones para realizar una tarea, se utilizan algoritmos que pueden ajustar automáticamente sus parámetros en función de los datos proporcionados. Esto les permite reconocer patrones, hacer predicciones y tomar decisiones basadas en ejemplos pasados.
 
-Una de las características destacadas del _Machine Learning_ es su capacidad para hacer predicciones precisas basadas en el análisis de datos, lo que lo convierte en una herramienta poderosa en una amplia variedad de aplicaciones, desde el procesamiento del lenguaje natural hasta el análisis de imágenes y la toma de decisiones automatizada.
+Una de las características destacadas del aprendizaje por _Machine Learning_ es que la IA logra predicciones precisas basadas en el análisis de datos, lo que lo convierte en una herramienta poderosa en una amplia variedad de aplicaciones, desde el procesamiento del lenguaje natural hasta el análisis de imágenes y la toma de decisiones automatizada.
 
-Existen distintos modelos de _Machine Learning_: Aprendizaje Supervisado, Aprendizaje Semisupervisado, Aprendizaje No Supervisado y Aprendizaje Reforzado.
+Existen distintos modelos de _Machine Learning_: Aprendizaje Supervisado, Aprendizaje No Supervisado, Aprendizaje Semisupervisado y Aprendizaje Reforzado.
 
 ==== Aprendizaje supervisado
 
@@ -73,7 +73,6 @@ Podemos tener distintas funciones _h(x)_ consistentes, por lo que debemos elegir
 
 Este tipo de aprendizaje e puede utilizar para filtrado de spam en correos, por ejemplo. En este caso, el algoritmo aprende de correos marcados como spam para identificar patrones y dirigir futuros correos similares a la carpeta de spam.
 
-//checkear que va acá
 Otra forma de aprendizaje supervisado son los algoritmos de _árboles de decisión_, siendo esta la forma más exitosa de machine learning.
 
 Esta técnica consiste en crear un árbol cuyos nodos sean atributos a considerar al tomar una decisión, y cuyas hojas sean la decisión final.
@@ -87,9 +86,9 @@ Para calcular la entropía y obtener la ganancia de información de un atributo,
 
 En el modelo de aprendizaje no supervisado los datos que se incorporan no se etiquetan, ya que se desconoce su estructura. El algoritmo clasifica la información por sí solo. El aprendizaje no supervisado se clasifica en:
 
-*   Clustering: Se agrupan datos sin conocimiento previo de su estructura en grupos con características similares. Los grupos obtenidos destacan patrones inherentes en los datos.
+*   _Clustering:_ Se agrupan datos sin conocimiento previo de su estructura en grupos con características similares. Los grupos obtenidos destacan patrones inherentes en los datos.
 
-*   Reducción dimensional: Se procesan datos complejos al reducir redundancias y agrupar por características similares, generando información valiosa. Se aplica en estrategias de marketing para definir nichos de mercado, como al seleccionar clientes potenciales basados en comportamientos en redes sociales.
+*   _Reducción dimensional:_ Se procesan datos complejos al reducir redundancias y agrupar por características similares, generando información valiosa. Se aplica en estrategias de marketing para definir nichos de mercado, como al seleccionar clientes potenciales basados en comportamientos en redes sociales.
 
 ==== Aprendizaje semisupervisado
 
@@ -97,11 +96,11 @@ El modelo de aprendizaje semisupervisado es una combinación entre aprendizaje s
 
 El aprendizaje semisupervisado permite trabajar al algoritmos tomando las siguiente suposiciones:
 
-*   Suposición de continuidad: Esta suposición permite generar preferencias en las decisiones tomadas utilizando los elementos etiquetados para, así, consumir datos no etiquetados con una base de cómo interpretarlos. De esta manera permite tener limites de decisiones en redes neuronales de baja densidad.
+*   _Suposición de continuidad:_ Esta suposición permite generar preferencias en las decisiones tomadas utilizando los elementos etiquetados para, así, consumir datos no etiquetados con una base de cómo interpretarlos. De esta manera permite tener limites de decisiones en redes neuronales de baja densidad.
 
-*   Suposición de grupo: Esta suposición implica que la data consumida genera grupos discretos, y en estos grupos es consistente que varios nodos compartan etiquetas. Lo que le permite entrenar al algoritmo en nuevos casos futuros.
+*   _Suposición de grupo:_ Esta suposición implica que las datos consumidos generan grupos discretos, y en estos grupos es consistente que varios nodos compartan etiquetas. Esto le permite entrenar al algoritmo en nuevos casos futuros.
 
-*   Suposiciones múltiples: Esta suposición trabaja bajo el principio de que al consumir data para el entrenamiento se puede delimitar el modelo presentado para poder trabajar con campos de nodos de grandes dimensiones sin tener que consumir datos que no sean necesarios para el modelo presentado. Esto permite al algoritmo a procesar elementos con mucha información sin tener consumir los datasets completos. Ejemplos de esto son algoritmos de reconocimiento de voz o facial, ya que sólo es necesario reconocer patrones de voz específicos de una voz humana, sin la necesidad de procesar todo el espectro de audio.
+*   _Suposiciones múltiples:_ Esta suposición trabaja bajo el principio de que al consumir datos para el entrenamiento se puede delimitar el modelo presentado para poder trabajar con campos de nodos de grandes dimensiones sin tener que consumir datos que no sean necesarios para el modelo presentado. Esto permite al algoritmo a procesar elementos con mucha información sin tener consumir los datasets completos. Ejemplos de esto son algoritmos de reconocimiento de voz o facial, ya que sólo es necesario reconocer patrones de voz específicos de una voz humana, sin la necesidad de procesar todo el espectro de audio.
 
 ==== Aprendizaje Reforzado
 
@@ -118,10 +117,6 @@ _Deep Learning_ es una forma de Machine Learning que se implementa mediante una 
 Las redes neuronales son grafos dirigidos sin ciclos. Estan compuestas por por nodos o _unidades_, conectadas por aristas o _links_ que tienen un peso y una dirección. Cada capa de la red tiene sus nodos interconectados, y sirve para refinar la predicción de la capa anterior.
 
 Como cualquier forma de Machine Learning, el objetivo de la red neuronal es descubir o aproximar una función _h(x)_ a otra _f(x)_, que determina la relación entre los datos de entrada. Esta función será más compleja, ya que el resultado estará en funcion de los datos de entrada y los pesos de las aristas, lo que la probablemente la hará no lineal. Es decir, la función a descubrir es de la forma _h(x, y)_.
-
-
-//El Deep Learning es un subconjunto de lo que es Machine learning que igual que el ya mencionado propone el análisis de patrones para poder aplicarlas en diferentes tareas de manera mas eficiente.
-//Este se distingue del "Machine learning" en el sentido que consume datos de manera cruda, sin tener que haber un paso intermedio para ordenar y recibir y procesar datos sin supervisión humana.
 
 Los algoritmos de deep learning implementan sus capas de la siguiente manera:
 
@@ -157,7 +152,7 @@ Existen diversos tipos de redes neuronales, pero los más utilizados son:
 
 Data Science y Big Data son conceptos relacionados pero no son lo mismo. Ambos están relacionados con el manejo, análisis y extracción de conocimiento a partir de datos, pero se enfocan en aspectos diferentes del proceso. Para llegar a una mejor comprensión definamos ambos conceptos.
 
-La Ciencia de Datos (Data Science) es un campo interdisciplinario que combina técnicas, métodos y procesos de diversas disciplinas, como estadísticas, matemáticas, informática y dominios específicos, para extraer conocimiento y perspicacia a partir de conjuntos de datos. El objetivo principal de la Ciencia de Datos es analizar datos para identificar patrones, tendencias y relaciones que puedan ayudar a tomar decisiones informadas y generar valor en diversos campos, como negocios, investigación, salud, entre otros.
+La Ciencia de Datos o _Data Science_ es un campo interdisciplinario que combina técnicas, métodos y procesos de diversas disciplinas, como estadísticas, matemáticas, informática y dominios específicos, para extraer conocimiento y perspicacia a partir de conjuntos de datos. El objetivo principal de la Ciencia de Datos es analizar datos para identificar patrones, tendencias y relaciones que puedan ayudar a tomar decisiones informadas y generar valor en diversos campos, como negocios, investigación, salud, entre otros.
 
 El proceso de Ciencia de Datos generalmente incluye:
 
@@ -167,7 +162,7 @@ El proceso de Ciencia de Datos generalmente incluye:
 4. Modelado y análisis: Aplicar técnicas de modelado estadístico y de aprendizaje automático para obtener información y hacer predicciones.
 5. Comunicación de resultados: Presentar los resultados y hallazgos de manera comprensible para tomadores de decisiones.
 
-Por otro lado, el término Big Data hace referencia a grandes volúmenes de datos que superan la capacidad de las herramientas convencionales de gestión y análisis de datos. El Big Data se caracteriza por tres "V": Volumen (cantidad masiva de datos), Velocidad (rapidez en la generación y transmisión de datos) y Variedad (diversidad de tipos de datos, como texto, imágenes, videos, etc.). Además, en algunos casos, se añaden otras "V" como Variabilidad y Veracidad.
+Por otro lado, el término _Big Data_ hace referencia a grandes volúmenes de datos que superan la capacidad de las herramientas convencionales de gestión y análisis de datos. El Big Data se caracteriza por tres "V": Volumen, ya que tenemos una cantidad masiva de datos; Velocidad, ya que queremos rapidez en la generación y transmisión de datos; y Variedad, ya que queremos procesar diversos tipos de datos, como texto, imágenes, videos, etc. Además, en algunos casos, se añaden otras "V" como Variabilidad y Veracidad.
 
 La Ciencia de Datos y el Big Data se relacionan de manera intrínseca debido a su naturaleza complementaria y a cómo se abordan conjuntamente los desafíos relacionados con la gestión y el análisis de grandes volúmenes de datos.
 
