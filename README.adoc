@@ -5,7 +5,7 @@ v1, {docdate}
 :title-page:
 :toc-title: Secciones
 :numbered:
-:source-highlighter: coderay
+:source-highlighter: highlight.js
 :tabsize: 4
 :nofooter:
 :pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
@@ -168,7 +168,7 @@ El proceso de Ciencia de Datos generalmente incluye:
 4. Modelado y análisis: Aplicar técnicas de modelado estadístico y de aprendizaje automático para obtener información y hacer predicciones.
 5. Comunicación de resultados: Presentar los resultados y hallazgos de manera comprensible para tomadores de decisiones.
 
-Por otro lado, el término _Big Data_ hace referencia a grandes volúmenes de datos que superan la capacidad de las herramientas convencionales de gestión y análisis de datos. El Big Data se caracteriza por tres "V": Volumen, ya que tenemos una cantidad masiva de datos; Velocidad, ya que queremos rapidez en la generación y transmisión de datos; y Variedad, ya que queremos procesar diversos tipos de datos, como texto, imágenes, videos, etc. Además, en algunos casos, se añaden otras "V" como Variabilidad y Veracidad.
+Por otro lado, el término _Big Data_ hace referencia a grandes volúmenes de datos que superan la capacidad de las herramientas convencionales de gestión y análisis de datos. El Big Data se caracteriza por tres "V": Volumen, ya que tenemos una cantidad masiva de datos; Velocidad, ya que queremos rapidez en la generación y transmisión de datos; y Variedad, ya que queremos procesar diversos tipos de datos, como texto, imágenes, videos, etc. Además, en algunos casos, se añaden otras "V" como Veracidad y Valor.
 
 La Ciencia de Datos y el Big Data se relacionan de manera intrínseca debido a su naturaleza complementaria y a cómo se abordan conjuntamente los desafíos relacionados con la gestión y el análisis de grandes volúmenes de datos.
 
