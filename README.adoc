@@ -12,13 +12,7 @@ v1, {docdate}
 
 == Introducción
 
-Explicamos de manera simplificada:
-
-* El sistema a desarrollar.
-
-* Los datos que tenemos.
-
-* El modelo a usar.
+En el transcurso de este documento, se abordará de manera exhaustiva el proceso de preparación de los datos destinados a alimentar un sistema de detección de enfermedades oculares. Además, se proporcionarán argumentos sólidos que respaldan la elección de un modelo de Machine Learning específico. Finalmente, se arrojará luz sobre el funcionamiento intrínseco del proceso de entrenamiento de dicho modelo.
 
 == Desarrollo
 
@@ -27,6 +21,8 @@ Explicamos de manera simplificada:
 En este proyecto desarrollaremos un sistema destinado a la detección de enfermedades oculares a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de datos de pacientes reales.
 
 === Preparación de datos
+
+Cómo son los datos?
 
 Los pasos que realizamos para prepararlos.
 
