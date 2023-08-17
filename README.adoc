@@ -22,9 +22,11 @@ Explicamos de manera simplificada:
 
 == Desarrollo
 
-=== Preparación de datos
+=== Detección de enfermedades oculares
 
-Cómo son los datos?
+En este proyecto desarrollaremos un sistema destinado a la detección de enfermedades oculares a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de datos de pacientes reales.
+
+=== Preparación de datos
 
 Los pasos que realizamos para prepararlos.
 
