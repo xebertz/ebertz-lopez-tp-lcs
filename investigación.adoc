@@ -1,0 +1,180 @@
+= TP Inicial - Laboratorio de Construcción de Software
+Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Gross Pablo <pablorubengross@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>
+v1, {docdate}
+:toc:
+:title-page:
+:toc-title: Secciones
+:numbered:
+:source-highlighter: highlight.js
+:tabsize: 4
+:nofooter:
+:pdf-page-margin: [3cm, 3cm, 3cm, 3cm]
+
+== Introducción
+
+La inteligencia artificial está siendo cada vez más relevante en diversos campos, ya que realiza diversas tareas que para los humanos son complejas o repetitivas, lo que la convierte en una poderosa herramienta para nuestro día a día.
+Es compleja en su contrucción y tiene diversas ramas que se pueden abordar, con distintos objetivos.
+
+== Objetivo
+
+En este trabajo, exploraremos en profundidad los conceptos clave de la Inteligencia Artificial, Machine Learning y Deep Learning, para entender sus diferencias y particularidades. También, nos adentraremos en el terreno de la Data Science y Big Data, y veremos que son campos muy relacionados pero distintos.
+
+A lo largo de este trabajo, se explorarán las definiciones, características y aplicaciones de estos conceptos, arrojando luz sobre su impacto en el mundo actual y el potencial que tienen para moldear nuestro futuro tecnológico y científico.
+
+El propósito central de este proyecto práctico consiste en desarrollar un sistema destinado a la detección de enfermedades oculares a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de 5000 pacientes reales.
+
+Dicho conjunto de datos lo obtuvimos de la página web https://www.kaggle.com/[Kaggle], este se encuentra https://www.kaggle.com/datasets/andrewmvd/ocular-disease-recognition-odir5k?resource=download[aquí].
+
+Con el fin de cumplir dicho propósito, emplearemos la modalidad de Maching Learning conocida como Deep Learning, específicamente utilizando el enfoque de aprendizaje supervisado.
+
+== Repositorio
+
+El repositorio del proyecto se encuentra https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git[aquí].
+
+== Desarrollo
+
+=== Inteligencia Artificial (IA)
+
+Antes de profundizar en el concepto de _Inteligencia Artificial_, debemos entender qué es un _agente_. La definición de este término es sencilla: un _agente_ es "alguien" que realiza una acción. En el ámbito informático extendemos esta definición a la de _agentes computacionales_, que son programas que pueden operar autónomamente, percibir su entorno, persistir durante un período de tiempo, adaptarse al cambio, y crear y perseguir metas. Por esto, podemos observar que no todos los sistemas informáticos son agentes.
+
+En este contexto, conocemos como _Inteligencia Artificial_ o _IA_ a los *agentes computacionales racionales* existentes. Es decir, IA es cualquier software capaz de percibir su entorno, persistir durante un periodo de tiempo, adaptarse al cambio, y realizar cualquier cosa de la que es capaz un agente computacional, pero con la característica de que responde y actúa de manera racional, buscando la mejor opción para cada situación. Muchos de estos sistemas tienen como objetivo imitar o incluso superar la inteligencia humana, replicando sus funciones cognitivas tales como razonar, aprender y resolver problemas.
+
+Dentro de la inteligencia artificial tenemos dos tipos: la _inteligencia artificial débil_, y la _inteligencia artificial fuerte_. La inteligencia artificial débil es la que no pretende parecerse a la inteligencia humana en su totalidad. Su finalidad es resolver un problema, y no más de uno. La inteligencia artificial fuerte es la que pretende parecerse o superar a la inteligencia humana, de forma que podría resolver cualquier problema que un ser humano puede resolver. Este tipo de inteligencia artificial en la actualidad se mantiene como hipotética.
+
+Se reconocen cuatro etapas o niveles de desarrollo de inteligencia artificial:
+
+*   _máquinas reactivas:_ es un tipo de inteligencia artificial que no puede aprender ya que no utiliza memoria, pero sabe reaccionar ante ciertos estímulos, ya que lo tiene preprogramado.
+*   _IA de memoria limitada:_ es un tipo de inteligencia artificial que puede aprender, ya que utiliza memoria. Para generar su conocimiento se la entrena brindándole datos nuevos.
+*   _IA de teoría de la mente:_ es un tipo de inteligencia artificial que puede emular la mente humana, lo que le da la capacidad de tener sentimientos y emociones.
+*   _IA de autoconocimiento:_ es una inteligencia artificial de teoría de la mente con autoconocimiento.
+
+Los sistemas de inteligencia artificial actuales tienen una particularidad: son para un uso específico. Es decir, son inteligencias artificiales débiles, y, en particular, de memoria limitada. No existen sistemas en los que se pueda hacer por ejemplo, reconocimiento de voz, jugar al ajedrez y realizar predicciones de un tema específico. Cada inteligencia artificial tiene un objetivo bien definido. Si el objetivo es jugar al ajedrez, la inteligencia artificial será entrenada para esto solamente, por lo que recibirá una fuente grande de datos de este tema sobre la que forjará su aprendizaje.
+
+Las IA están entrenadas para resolver problemas utilizando algoritmos, aprender de los datos que se le brindaron, aprender de sus errores, y utilizar ese conocimiento en el futuro.
+
+El entrenamiento de una inteligencia artificial consiste en brindarle datos y analizar su comportamiento, con la finalidad de ajustar sus parámetros y alcanzar cierto umbral de satisfacción. Existen dos formas de entrenamiento: _Machine Learning_ y _Deep Learning_.
+
+=== Machine Learning
+
+El _Machine Learning_ o _Aprendizaje Automático_ es una forma de entrenar a las inteligencias artificiales (IA). En lugar de programar explícitamente reglas o instrucciones para realizar una tarea, se utilizan algoritmos que pueden ajustar automáticamente sus parámetros en función de los datos proporcionados. Esto les permite reconocer patrones, hacer predicciones y tomar decisiones basadas en ejemplos pasados.
+
+Una de las características destacadas del aprendizaje por _Machine Learning_ es que la IA logra predicciones precisas basadas en el análisis de datos, lo que lo convierte en una herramienta poderosa en una amplia variedad de aplicaciones, desde el procesamiento del lenguaje natural hasta el análisis de imágenes y la toma de decisiones automatizada.
+
+Existen distintos modelos de _Machine Learning_: Aprendizaje Supervisado, Aprendizaje No Supervisado, Aprendizaje Semisupervisado y Aprendizaje Reforzado.
+
+==== Aprendizaje supervisado
+
+El modelo de aprendizaje supervisado implica usar ejemplos etiquetados para que el algoritmo se ajuste y aprenda patrones. Para entrenar, se le provee a la IA un conjunto de datos etiquetados de a pares _input - output_ de forma
+
+_(x₁, y₁), (x₂, y₂),...(xₙ, yₙ), n ∈ ℕ_
+
+En la que cada _output yₖ_ fue generado por una función desconocida _y = f(x)_.
+
+La IA deberá descubrir una función _h(x)_ llamada _hipótesis_ que aproxime a _f(x)_ lo mejor posible. De esta forma, podrá predecir valores _y_ para nuevos _x_. Esta función debe ser  _consistente_, es decir, debe funcionar para todos los datos de entrenamiento. Observemos que esto requiere intervención humana para clasificar y etiquetar datos.
+
+Cuando el _output yₖ, k ∈ ℕ_ es parte de un conjunto finito de valores, el aprendizaje supervisado es llamado _clasificación_. Si el _output yₖ_ es un número, es llamado _regresión_.
+
+Podemos tener distintas funciones _h(x)_ consistentes, por lo que debemos elegir entre una de las candidatas. En este caso, se debe elegir la más simple, ya que en su implementación implica una menor complejidad computacional.
+
+Este tipo de aprendizaje e puede utilizar para filtrado de spam en correos, por ejemplo. En este caso, el algoritmo aprende de correos marcados como spam para identificar patrones y dirigir futuros correos similares a la carpeta de spam.
+
+Otra forma de aprendizaje supervisado son los algoritmos de _árboles de decisión_, siendo esta la forma más exitosa de machine learning.
+
+Esta técnica consiste en crear un árbol cuyos nodos sean atributos a considerar al tomar una decisión, y cuyas hojas sean la decisión final.
+De esta forma, el algoritmo recibe un vector de valores para los atributos, y devuelve una decisión.
+
+Preferentemente, el árbol no debe tener mucha altura, por lo que se debe elegir el más óptimo. Para evitar calcular todos los árboles, el algoritmo utiliza una estrategia de _divide and conquer_: le asigna a cada atributo un nivel de _entropía_, para luego clasificarlos. Los atributos con menor nivel de entropía producen una mayor _ganancia de información_, ya que hacen una mejor división de clases, por lo que son evaluados al inicio. Es decir, el árbol se forma con los nodos ordenados de menor a mayor según su entropía. Luego, en cada decisión se van dividiendo y se repite el proceso para cada subárbol. Si la rama generada es de poca importancia se poda, para no tenerla en cuenta en el proceso de toma de decisiones.
+
+Para calcular la entropía y obtener la ganancia de información de un atributo, el algoritmo se basa en ejemplos. Para entrenarlo, se debe seleccionar un conjunto de ejemplos no homogéneo, para que el aprendizaje sea lo mas correcto posible. De esta forma se puede evitar la mala clasificación de los atributos.
+
+==== Aprendizaje no supervisado
+
+En el modelo de aprendizaje no supervisado los datos que se incorporan no se etiquetan, ya que se desconoce su estructura. El algoritmo clasifica la información por sí solo. El aprendizaje no supervisado se clasifica en:
+
+*   _Clustering:_ Se agrupan datos sin conocimiento previo de su estructura en grupos con características similares. Los grupos obtenidos destacan patrones inherentes en los datos.
+
+*   _Reducción dimensional:_ Se procesan datos complejos al reducir redundancias y agrupar por características similares, generando información valiosa. Se aplica en estrategias de marketing para definir nichos de mercado, como al seleccionar clientes potenciales basados en comportamientos en redes sociales.
+
+==== Aprendizaje semisupervisado
+
+El modelo de aprendizaje semisupervisado es una combinación entre aprendizaje supervisado y aprendizaje no supervisado. Para llevar a cabo el entrenamiento, se le brinda a la IA un conjunto de datos etiquetados y un conjunto de datos sin etiquetar. Incluso, muchos datos pueden estar etiquetados erróneamente. Este paradigma permite mejorar exactitud del algoritmo, pudiendo usar de ejemplos los datos etiquetados manualmente por una persona y aplicar los conocimientos adquiridos en los datos sin etiquetar. Se utiliza mayormente cuando no disponemos de suficientes datos etiquetados para entrenar a la IA.
+
+El aprendizaje semisupervisado permite trabajar al algoritmos tomando las siguiente suposiciones:
+
+*   _Suposición de continuidad:_ Esta suposición permite generar preferencias en las decisiones tomadas utilizando los elementos etiquetados para, así, consumir datos no etiquetados con una base de cómo interpretarlos. De esta manera permite tener limites de decisiones en redes neuronales de baja densidad.
+
+*   _Suposición de grupo:_ Esta suposición implica que las datos consumidos generan grupos discretos, y en estos grupos es consistente que varios nodos compartan etiquetas. Esto le permite entrenar al algoritmo en nuevos casos futuros.
+
+*   _Suposiciones múltiples:_ Esta suposición trabaja bajo el principio de que al consumir datos para el entrenamiento se puede delimitar el modelo presentado para poder trabajar con campos de nodos de grandes dimensiones sin tener que consumir datos que no sean necesarios para el modelo presentado. Esto permite al algoritmo a procesar elementos con mucha información sin tener consumir los datasets completos. Ejemplos de esto son algoritmos de reconocimiento de voz o facial, ya que sólo es necesario reconocer patrones de voz específicos de una voz humana, sin la necesidad de procesar todo el espectro de audio.
+
+==== Aprendizaje Reforzado
+
+En el aprendizaje reforzado el proceso de construcción de modelos se basa en el análisis de los resultados de cada interacción, utilizando la recompensa como factor determinante. Las máquinas adquieren conocimiento de manera autónoma, donde los éxitos conllevan a recompensas mientras que los fallos resultan en penalizaciones. Este enfoque encuentra sus raíces en la psicología conductista, buscando guiar a un agente de software hacia elecciones adecuadas.
+
+Cuando una decisión arroja beneficios, se interioriza automáticamente para ser repetida en ocasiones futuras. Por otro lado, si la decisión no resulta favorable, se evita su repetición para evitar caer en el mismo patrón.
+
+Se considera que este enfoque es uno de los más prometedores dentro del campo de la inteligencia artificial en términos de su potencial a futuro.
+
+=== Deep Learning
+
+_Deep Learning_ es una forma de Machine Learning que se implementa mediante una _red neuronal_ de tres o más niveles. Esta red neuronal pretende simular el comportamiento del cerebro humano, aprendiendo de grandes volúmenes de datos, como en otras formas de Machine Learning.
+
+Las redes neuronales son grafos dirigidos sin ciclos. Están compuestas por por nodos o _unidades_, conectadas por aristas o _links_ que tienen un peso y una dirección. Cada capa de la red tiene sus nodos interconectados, y sirve para refinar la predicción de la capa anterior.
+
+Como cualquier forma de Machine Learning, el objetivo de la red neuronal es descubrir o aproximar una función _h(x)_ a otra _f(x)_, que determina la relación entre los datos de entrada. Esta función será más compleja, ya que el resultado estará en función de los datos de entrada y los pesos de las aristas, lo que la probablemente la hará no lineal. Es decir, la función a descubrir es de la forma _h(x, y)_.
+
+Los algoritmos de deep learning implementan sus capas de la siguiente manera:
+
+*   la capa de entrada o _input_, donde se ingresan los datos. Cada unidad representa un atributo.
+*   las capas ocultas o _hidden_, que procesan los datos.
+*   la capa de salida o _output_, donde se producen las predicciones finales. Cada unidad representa una clase, valor o etiqueta que la red esté tratando de predecir.
+
+Los datos ingresan a través de la primera capa, donde múltiples neuronas artificiales se activan o desactivan según los datos presentados, y se devuelve el resultado en la última capa.
+
+Muchas veces la cantidad de capas es importante. Una red neuronal de una sola capa puede lograr predicciones aproximadas, pero si se le agregan capas ocultas se puede refinar la eficacia y la eficiencia, logrando predicciones cada vez más exactas, en poco tiempo de ejecución.
+
+Los datos de entrenamiento, en este caso, no pasan por un proceso de pre-procesamiento. El entrenamiento de la red consta en dos etapas: la de _propagación hacia adelante_ y la de _retropropagación_.
+
+Primero se propaga hacia adelante, introduciendo datos en la capa de _input_, permitiendo que se propaguen hasta la capa de _output_. En las capas ocultas se determina si cada unidad debe activarse o no, mediante una _función de activación_. Esta función determina la activación de un nodo según la suma ponderada de los pesos de sus entradas. Luego, se devuelve el resultado obtenido.
+
+El problema de la propagación hacia adelante es que puede propagar errores en las predicciones, lo que hace que se obtenga un resultado erróneo. Mientras más niveles se tiene, más errores se propagan.
+
+Para solucionar esto, utilizamos retropropagación. Este proceso utiliza algoritmos que calculan estos errores, como el de _descenso del gradiente_ y ajusta los pesos de las aristas desde la capa final hasta la inicial.
+
+El entrenamiento se repite hasta que la red sea lo más precisa posible sobre datos nuevos.
+
+Esta manera de procesar datos permite el entrenamiento del modelo en cantidades grandes a través de la automatización de la lectura de información que tiene a su alcance. A su vez, agiliza el entrenamiento y permite que sea más riguroso. Ejemplos de uso de esta tecnología serían identificadores de fotos, rostros o texto.
+
+Existen diversos tipos de redes neuronales, pero los más utilizados son:
+
+*   Las redes neuronales convolucionales o _CNN_, que se utilizan para el reconocimiento y clasificación de imágenes y videos, con la finalidad de identificar elementos que se encuentren en los mismos.
+
+*   Las redes neuronales recurrentes o _RNN_, que se utilizan para el reconocimiento de voz y del lenguaje natural.
+
+=== Proyectos de Data Science ó Big Data
+
+==== Data Science vs Big Data, ¿estamos hablando de lo mismo?
+
+Data Science y Big Data son conceptos relacionados pero no son lo mismo. Ambos están relacionados con el manejo, análisis y extracción de conocimiento a partir de datos, pero se enfocan en aspectos diferentes del proceso. Para llegar a una mejor comprensión definamos ambos conceptos.
+
+La Ciencia de Datos o _Data Science_ es un campo interdisciplinario que combina técnicas, métodos y procesos de diversas disciplinas, como estadísticas, matemáticas, informática y dominios específicos, para extraer conocimiento y perspicacia a partir de conjuntos de datos. El objetivo principal de la Ciencia de Datos es analizar datos para identificar patrones, tendencias y relaciones que puedan ayudar a tomar decisiones informadas y generar valor en diversos campos, como negocios, investigación, salud, entre otros.
+
+El proceso de Ciencia de Datos generalmente incluye:
+
+1. Adquisición de datos: Recopilar y obtener los datos necesarios para el análisis.
+2. Limpieza y preparación de datos: Asegurarse de que los datos estén limpios, completos y estructurados de manera adecuada.
+3. Exploración de datos: Realizar análisis exploratorios para entender las características y relaciones en los datos.
+4. Modelado y análisis: Aplicar técnicas de modelado estadístico y de aprendizaje automático para obtener información y hacer predicciones.
+5. Comunicación de resultados: Presentar los resultados y hallazgos de manera comprensible para tomadores de decisiones.
+
+Por otro lado, el término _Big Data_ hace referencia a grandes volúmenes de datos que superan la capacidad de las herramientas convencionales de gestión y análisis de datos. El Big Data se caracteriza por tres "V": Volumen, ya que tenemos una cantidad masiva de datos; Velocidad, ya que queremos rapidez en la generación y transmisión de datos; y Variedad, ya que queremos procesar diversos tipos de datos, como texto, imágenes, videos, etc. Además, en algunos casos, se añaden otras "V" como Veracidad y Valor.
+
+La Ciencia de Datos y el Big Data se relacionan de manera intrínseca debido a su naturaleza complementaria y a cómo se abordan conjuntamente los desafíos relacionados con la gestión y el análisis de grandes volúmenes de datos.
+
+== Dificultades
+
+La gran dificultad para este trabajo fue encontrar información confiable y detallada sobre los conceptos abordados. Muchos sitios web tenían información, pero no tan profunda como la que necesitábamos. Finalmente, utilizamos como referencia a el libro _Artificial Intelligence: A Modern Approach_ de Stuart Russel y Peter Norvig, y complementamos con diversos sitios web, como el de _IBM_.
+
+== Conclusión
+
+En conclusión, este trabajo nos ha proporcionado una visión integral de las tecnologías que están impulsando la transformación digital en nuestra sociedad. Desde la Inteligencia Artificial hasta el Machine Learning, Deep Learning, Data Science y Big Data, estas herramientas están remodelando la manera en que interactuamos con la información y cómo abordamos los desafíos en campos tan diversos como la medicina, la industria y la investigación. A medida que continuamos avanzando en este emocionante viaje tecnológico, es esencial mantenernos actualizados y adaptarnos a las nuevas oportunidades que estas innovaciones nos brindan.
