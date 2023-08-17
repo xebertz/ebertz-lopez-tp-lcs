@@ -12,7 +12,7 @@ v1, {docdate}
 
 == Introducción
 
-En el transcurso de este documento, se abordará de manera exhaustiva el proceso de preparación de los datos destinados a alimentar un sistema de detección de enfermedades oculares. Además, se proporcionarán argumentos sólidos que respaldan la elección de un modelo de Machine Learning específico. Finalmente, se arrojará luz sobre el funcionamiento intrínseco del proceso de entrenamiento de dicho modelo.
+En el transcurso de este documento, se abordará de manera exhaustiva el proceso de preparación de los datos destinados a alimentar un sistema de detección de enfermedades oculares. Además, se proporcionarán argumentos sólidos que respaldan la elección de un modelo de _Machine Learning_ específico. Finalmente, se arrojará luz sobre el funcionamiento intrínseco del proceso de entrenamiento de dicho modelo.
 
 == Desarrollo
 
