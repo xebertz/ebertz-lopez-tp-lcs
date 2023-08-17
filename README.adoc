@@ -12,13 +12,29 @@ v1, {docdate}
 
 == Introducción
 
+Explicamos de manera simplificada:
+
+* El sistema a desarrollar.
+
+* Los datos que tenemos.
+
+* El modelo a usar.
+
 == Desarrollo
 
 === Preparación de datos
 
+Cómo son los datos?
+
+Los pasos que realizamos para prepararlos.
+
 === Selección de modelo
 
+Explicamos el por qué elegimos ese modelo.
+
 === Entrenamiento de modelo
+
+🤔
 
 == Dificultades
 
