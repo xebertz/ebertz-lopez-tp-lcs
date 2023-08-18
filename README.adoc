@@ -20,9 +20,15 @@ En el transcurso de este documento, se abordará de manera exhaustiva el proceso
 
 En este proyecto desarrollaremos un sistema destinado a la detección de enfermedades oculares a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de datos de pacientes reales.
 
-=== Preparación de datos
+=== Datos
 
-Cómo son los datos?
+=== Exploración de datos
+
+El conjunto de datos del que disponemos consta de 7 mil imágenes de fondos de ojos pertenecientes a 3500 pacientes, junto con los diagnósticos correspondientes proporcionados por médicos especializados. Estos diagnósticos se encuentran registrados en el archivo 'data.xlsx', el cual está almacenado en el repositorio.
+
+Además, poseemos mil imágenes adicionales de fondos de ojos tomadas de pacientes que aún no han sido diagnosticados. Estas imágenes serán utilizadas con el propósito de que nuestro sistema de inteligencia artificial genere sus propios diagnósticos en relación a las mismas posteriormente.
+
+=== Preparación de datos
 
 Los pasos que realizamos para prepararlos.
 
