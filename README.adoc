@@ -24,7 +24,7 @@ En este proyecto desarrollaremos un sistema destinado a la detección de enferme
 
 === Exploración de datos
 
-El conjunto de datos del que disponemos consta de 7 mil imágenes de fondos de ojos pertenecientes a 3500 pacientes, junto con los diagnósticos correspondientes proporcionados por médicos especializados. Estos diagnósticos se encuentran registrados en el archivo `data.xlsx`, el cual está almacenado en el repositorio.
+El conjunto de datos del que disponemos consta de 7 mil imágenes de fondos de ojos pertenecientes a 3500 pacientes, junto con los diagnósticos correspondientes proporcionados por médicos especializados. Estos diagnósticos se encuentran registrados en el archivo `data.xlsx`, el cual está almacenado en el https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs[repositorio].
 
 Además, poseemos mil imágenes adicionales de fondos de ojos tomadas de pacientes que aún no han sido diagnosticados. Estas imágenes serán utilizadas con el propósito de que nuestro sistema de inteligencia artificial genere sus propios diagnósticos en relación a las mismas posteriormente.
 
