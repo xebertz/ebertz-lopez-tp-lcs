@@ -96,7 +96,7 @@ El archivo mencionado anteriormente cuenta con 15 columnas, las cuales se detall
 |===
 
 
-Además, poseemos mil imágenes adicionales de fondos de ojos tomadas de pacientes que aún no han sido diagnosticados. Estas imágenes serán utilizadas con el propósito de que nuestro sistema de inteligencia artificial genere sus propios diagnósticos en relación a las mismas posteriormente.
+Por otra parte, poseemos mil imágenes adicionales de fondos de ojos tomadas de pacientes que aún no han sido diagnosticados. Estas imágenes serán utilizadas con el propósito de que nuestro sistema de inteligencia artificial genere sus propios diagnósticos en relación a las mismas posteriormente.
 
 ==== Preparación de datos
 
