@@ -24,77 +24,11 @@ En este proyecto desarrollaremos un sistema destinado a la detección de enferme
 
 ==== Exploración de datos
 
-El conjunto de datos del que disponemos consta de 7 mil imágenes de fondos de ojos pertenecientes a 3500 pacientes, junto con los diagnósticos correspondientes proporcionados por médicos especializados. Estos diagnósticos se encuentran registrados en el archivo `data.xlsx`, el cual está almacenado en el https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs[repositorio].
+El conjunto de datos del que disponemos consta de 6392 imágenes de fondos de ojos pertenecientes a pacientes reales, junto con los diagnósticos correspondientes proporcionados por médicos especializados. Estos diagnósticos se encuentran registrados en el archivo `full_df.csv`.
 
-El archivo mencionado anteriormente cuenta con 15 columnas, las cuales se detallan en el siguiente cuadro:
+El archivo mencionado anteriormente cuenta con 19 columnas, las cuales son:
 
-[cols="3*", options="header"]
-|===
-|Columna
-|Detalle
-|Tipo
-
-|ID
-|identificador del paciente
-|int
-
-|Patiend Age
-|edad del paciente
-|int
-
-|Patient Sex
-|sexo del paciente
-|string
-
-|Left-Fundus
-|imagen de fondo del ojo izquierdo del paciente
-|string
-
-|Right-Fundus
-|imagen de fondo del ojo derecho del paciente
-|string
-
-|Left-Diagnostic Keywords
-|palabras claves del diagnóstico del ojo izquiedo del paciente
-|string
-
-|Right-Diagnostic Keywords
-|palabras claves del diagnóstico del ojo derecho del paciente
-|string
-
-|N
-|etiqueta normal
-|boolean
-
-|D
-|etiqueta de Diabetes
-|boolean
-
-|G
-|etiqueta de Glaucoma
-|boolean
-
-|C
-|etiqueta de Catarata
-|boolean
-
-|A
-|etiqueta de Degeneración macular relacionada con la edad
-|boolean
-
-|H
-|etiqueta de Hipertensión
-|boolean
-
-|M
-|etiqueta de Miopía Patológica
-|boolean
-
-|O
-|etiqueta de otras enfermedades/anomalías
-|boolean
-|===
-
+...
 
 Por otra parte, poseemos mil imágenes adicionales de fondos de ojos tomadas de pacientes que aún no han sido diagnosticados. Estas imágenes serán utilizadas con el propósito de que nuestro sistema de inteligencia artificial genere sus propios diagnósticos en relación a las mismas posteriormente.
 
