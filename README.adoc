@@ -12,13 +12,15 @@ v1, {docdate}
 
 == Introducción
 
-En el transcurso de este documento, se abordará de manera exhaustiva el proceso de preparación de los datos destinados a alimentar un sistema de detección de enfermedades oculares. Además, se proporcionarán argumentos sólidos que respaldan la elección de un modelo de _Machine Learning_ específico. Finalmente, se arrojará luz sobre el funcionamiento intrínseco del proceso de entrenamiento de dicho modelo.
+En el transcurso de este documento, se abordará de manera exhaustiva el proceso de preparación de los datos destinados a alimentar nuestri sistema de detección de enfermedades oculares. Además, se proporcionarán argumentos sólidos que respaldan la elección de un modelo de _Machine Learning_ específico. Finalmente, se arrojará luz sobre el funcionamiento intrínseco del proceso de entrenamiento de dicho modelo.
 
 == Desarrollo
 
 === Detección de enfermedades oculares
 
-En este proyecto desarrollaremos un sistema destinado a la detección de enfermedades oculares a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de datos de pacientes reales.
+Nuestro sistema está destinado a la detección de enfermedades oculares a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de datos de pacientes reales.
+
+Para desarrollar el sistema estamos utilizando Google Colab, el cual es un servicio en línea gratuito ofrecido por Google que permite a los usuarios escribir y ejecutar código de Python en un entorno de bloc de notas basado en la nube.
 
 === Datos
 
