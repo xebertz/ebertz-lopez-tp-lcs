@@ -40,41 +40,18 @@ Luego, teníamos que convertir las etiquetas del dataset un formato que pueda en
 
 Finalmente, decidimos utilizar transformaciones en las imágenes elegidas, para que la inteligencia artificial no aprenda a identificar la enfermedad en un solo tipo de imágen, y sea capaz de identificarla en imágenes con más o menos zoom, tamaño, opacidad, etcétera.
 
-=== Selección de modelo
-
-Debido a la estructura de nuestros datos, utilizamos un modelo de aprendizaje supervisado. Existen diversos tipos de modelos de aprendizaje supervisado, como árboles de decisión, regresión lineal, deep learning, entre otros. Decidimos que para nuestro caso, ya que analizamos imágenes, las mejores opciones serían _redes neuronales convolucionales_, pertenecientes al campo de deep learning, y _redes neuronales densas_. Sus característica son:
-
-- redes neuronales convolucionales:
-
-    La principal característica de una red neuronal convolucional es su capacidad para aprender y extraer automáticamente características relevantes de las imágenes. Esto se logra mediante el uso de capas de convolución, que aplican operaciones de convolución a las entradas y aprenden a reconocer patrones visuales como bordes, texturas y formas. Estas capas de convolución son seguidas a menudo por capas de agrupación (pooling), que reducen la dimensionalidad de las características extraídas mientras conservan la información más relevante.
-
-- redes neuronales densas:
-
-    Una Red Neuronal Densa, también conocida como Red Neuronal Totalmente Conectada, tiene conexiones completas entre las neuronas de cada capa, sin estructura jerárquica. Es utilizada en tareas como clasificación y regresión en datos unidimensionales. Cada neurona recibe entradas de todas las neuronas previas y envía salidas a todas las siguientes. Aprende patrones y relaciones en los datos, pero puede sobreajustar con conjuntos pequeños. Requiere gran cantidad de datos para un buen rendimiento. Entrenada con algoritmos como el gradiente descendente. Utilizada en visión por computadora, procesamiento de lenguaje natural y más. Riesgo de complejidad computacional y necesidad de técnicas de regularización. Su simplicidad y versatilidad son ideales para problemas donde no hay estructura espacial en los datos.
-
-Por este caso mismo de análisis de imágenes recurrimos a utilizar el modelo de _Deep Learning_ con redes neuronales convolucionales, el cual es optimo para estos mismos. Esto se debe a la capacidad de la red neuronal convolutiva de poder segmentar y enfocar aplicando contexto con ecuaciones en los nodos. Permitiendo así el análisis de una imagen compleja de manera rápida.
-
-El análisis completo de las imágenes es posible por las capas convolutivas de la red neuronal. Estas capas agarran un pixel de la imagen y se aplican filtros a los pixeles subyacentes para determinar su utilidad al modelo. Después se agrupan los pixeles en cuadrados del tamaño que uno determine (en nuestro caso 2x2) y en esos grupos de pixeles se extrae el de mayor valor, generando así una imagen de donde se resalten las características necesarias para el modelo.
-
-=== Entrenamiento de modelo
-
-El modelo que se encuentra en uso utiliza una red neuronal de 10 capas las cuales 4 de ellas son convolucionales. Este mismo modelo se encarga de consumir imágenes de fondos de ojos para poder determinar la seriedad de la retinopatía diabética a través del análisis de patrones encontrados en las imágenes con las cuales el modelo allá entrenado.
-
-Esto se produce al ingresar las imágenes a la red neuronal para que pueda distinguir patrones que se encuentren en varias imágenes presentadas con su diagnostico ya presente.
-
-
-=== Selección de modelo
+=== Selección de modelos
 
 Debido a la estructura de nuestros datos, utilizamos un modelo de aprendizaje supervisado. Existen diversos tipos de modelos de aprendizaje supervisado, como árboles de decisión, regresión lineal, deep learning, entre otros. Decidimos que para nuestro caso, ya que analizamos imágenes, las mejores opciones serían _redes neuronales convolucionales_, pertenecientes al campo de deep learning, y _redes neuronales densas_. Sus características son:
 
-- _redes neuronales convolucionales:_ estas redes tienen la particularidad de incluir en su arquitectura dos tipos más de neuronas en sus capas intermedias. Un tipo de neurona analiza un pixel de la imagen, aplicándole filtros a los pixeles subyacentes para determinar su utilidad al modelo; y otras agrupan estos pixeles en matrices de un tamaño determinado. En esos grupos de pixeles se extrae el de mayor valor, generando así una imagen de donde se resalten las características necesarias para el modelo.
-- _redes neuronales densas:_ este tipo de red es sencilla. En ella, cada neurona se conecta con todas las neuronas de su nivel anterior y posterior, y tiene la particularidad de que el análisis de datos es muy veloz y, en general, con poco nivel de error. Por este motivo, elegimos este modelo para comparar con el anterior.
+- _redes neuronales convolucionales:_ estas redes tienen la particularidad de incluir en su arquitectura dos tipos más de neuronas en sus capas intermedias. Las neuronas _convolutivas_ analizas un pixel de la imagen, aplicándole filtros a los pixeles subyacentes para determinar su utilidad al modelo; y las neuronas de _pooling_ agrupan estos pixeles en matrices de un tamaño determinado. En esos grupos de pixeles se extrae el de mayor valor, generando así una imagen de donde se resalten las características necesarias para el modelo.
+- _redes neuronales densas:_ este tipo de red es sencilla. Tiene conexiones completas entre las neuronas de cada capa, sin estructura jerárquica. Cada neurona recibe entradas de todas las neuronas previas y envía salidas a todas las siguientes, lo que le permite aprender patrones y relaciones en los datos. Requiere gran cantidad de datos para un buen rendimiento, y una vez entrenada, en general analiza datos de manera veloz, con poco nivel de error. Por este motivo, elegimos este modelo para comparar con el anterior
 
 Entrenamos ambos modelos, con la finalidad de observar cuál se adapta mejor.
 
-=== Entrenamiento de modelo
+=== Entrenamiento de modelos
 
-El modelo de red neuronal convolucional tiene trece capas, de las cuales cuatro son _convolucionales_, es decir, leen pixeles de la imagen; y dos son de tipo _max pooling_, que realizan el trabajo de agrupación y extracción de pixeles de mayor valor. Se completa con capas densas y de dropout, para mejorar la predicción.
+El modelo de red neuronal convolucional tiene trece capas, de las cuales cuatro son _convolucionales_, es decir, leen pixeles de la imagen; y dos son de tipo _max pooling_, que realizan el trabajo de agrupación y extracción de pixeles de mayor valor. Se completa con capas _densas_ y de _dropout_, para mejorar la predicción.
 
 El modelo de red neuronal densa, en cambio, tiene siete capas densas, con 869 neuronas en total, y una capa de entrada de tipo flatten.
 
@@ -86,13 +63,10 @@ Estos modelos fueron entrenados con los mismos datos.
 
 A lo largo de esta fase del proyecto, nos encontramos con diversas dificultades, entre las que se incluyen:
 
-* Entrada de datos para entrenar el modelo: Hubo conflictos con la manera en la que consumimos los datos, de tal forma que no se podía entrenar el modelo por que los datos no se encontraban en el formato que el modelo pedía.
-
-* Precisión de los modelos: Ambos modelos necesitan mucho entrenamiento para alcanzar los niveles deseados de precisión.
-
-* Limitaciones de hardware: Debido a la cantidad de imágenes, no podemos procesar imágenes de resoluciones mayores a 100 x 100 pixeles.
-
-* Ajuste de parámetros: En las redes neuronales hay muchos parámetros a ajustar, que juegan papeles importantes en la precisión de la red. Este ajuste, en general, es a base de prueba y error; por lo que todavía seguimos probando nuestras redes, para lograr una mayor precisión.
+* _entrada de datos para entrenar el modelo:_ hubo conflictos con la manera en la que consumimos los datos, de tal forma que no se podía entrenar el modelo por que los datos no se encontraban en el formato que el modelo pedía.
+* _precisión de los modelos:_ ambos modelos necesitan mucho entrenamiento para alcanzar los niveles deseados de precisión.
+* _limitaciones de hardware:_ debido a la cantidad de imágenes, no podemos procesar imágenes de resoluciones mayores a 100 x 100 pixeles.
+* _ajuste de parámetros:_ en las redes neuronales hay muchos parámetros a ajustar, que juegan papeles importantes en la precisión de la red. Este ajuste, en general, es a base de prueba y error; por lo que todavía seguimos probando nuestras redes, para lograr una mayor precisión.
 
 == Conclusión
 
