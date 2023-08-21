@@ -12,42 +12,37 @@ v1, {docdate}
 
 == Introducción
 
-En el transcurso de este documento, se abordará de manera exhaustiva el proceso de preparación de los datos destinados a alimentar nuestri sistema de detección de enfermedades oculares. Además, se proporcionarán argumentos sólidos que respaldan la elección de un modelo de _Machine Learning_ específico. Finalmente, se arrojará luz sobre el funcionamiento intrínseco del proceso de entrenamiento de dicho modelo.
+En el transcurso de este documento, se abordará de manera exhaustiva el proceso de preparación de los datos destinados a alimentar nuestro sistema de detección de enfermedades oculares. Además, se proporcionarán argumentos sólidos que respaldan la elección de un modelo de _Machine Learning_ específico. Finalmente, se arrojará luz sobre el funcionamiento intrínseco del proceso de entrenamiento de dicho modelo.
 
 == Desarrollo
 
-=== Detección de retinopatia diabetica
+=== Detección de Retinopatía Diabética
 
-Nuestro sistema está destinado a la detección de retinopatias diabeticas y su severidad a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de datos de pacientes reales.
+Nuestro sistema está destinado a la detección de retinopatías diabéticas y su severidad a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de datos de pacientes reales.
 
 Para desarrollar el sistema estamos utilizando Google Colab, el cual es un servicio en línea gratuito ofrecido por Google que permite a los usuarios escribir y ejecutar código de Python en un entorno de bloc de notas basado en la nube.
 
 === Datos
 
 ==== Exploración de datos
-El conjunto de datos que disponemos consta de 35.108 imagenes de fondo de ojos de paciente reales, junto con los niveles de severidad de la "rinopatia diabetica" diagnosticada por profecionales medicos. Estos datos se encuentran en el archivo trainLabels_cropped.csv trainLabels_cropped.csv.
 
-El archivo mencionado cueanta con 4 columnas las cuales la primera no tiene nombre, la Segunda es "unnamed:0", la tercera es "image" y la ultima se llama "level".
+El conjunto de datos que disponemos consta de 35.126 imágenes de fondo de ojos de paciente reales, junto con los niveles de severidad de la retinopatía diabética diagnosticada por profesionales médicos. Estos datos se encuentran en el archivo `trainLabels.csv`.
 
-A su ves dejamos 1.000 imagenes de fondo de ojos ya diagnosticadas aparte para poder verificar la precision del modelo que estamos presentando, al comparar le prediccion del modelo con el diagnostico actual.
+El archivo mencionado cuenta con 2 columnas, las cuales son `image` y `level`.
 
-//El conjunto de datos del que disponemos consta de 6392 imágenes de fondos de ojos pertenecientes a pacientes reales, junto con los diagnósticos correspondientes proporcionados por médicos especializados. Estos diagnósticos se encuentran registrados en el archivo `full_df.csv`.
-
-//El archivo mencionado anteriormente cuenta con 19 columnas, las cuales son: "ID", "Patient Age", "Patient Sex", "Left-Fundus", "Right-Fundus", "Left-Diagnostic Keywords", "Right-Diagnostic Keywords", "N", "D", "G", "C", "A", "H", "M", "O", "filepath", "labels", "target" y "filename".
-
-//Por otra parte, poseemos mil imágenes adicionales de fondos de ojos tomadas de pacientes que aún no han sido diagnosticados. Estas imágenes serán utilizadas con el propósito de que nuestro sistema de inteligencia artificial genere sus propios diagnósticos en relación a las mismas posteriormente.
+//A su vez, dejamos 1.000 imágenes de fondo de ojos ya diagnosticadas aparte para poder verificar la precisión del modelo que estamos presentando, al comparar le predicción del modelo con el diagnostico actual.
 
 ==== Preparación de datos
 
-A los datos presentes observamos que las primeras dos columans de informacion son superfluas ya que no aportan informacion util para el modelo. Por esto las sacamos del modelo y las ignoramos.
+//A los datos presentes observamos que las primeras dos columnas de información son superfluas ya que no aportan información útil para el modelo. Por esto las sacamos del modelo y las ignoramos.
 
-Con las otras dos columans de informacion que nos quedan podemos distinguir la imagen que se quiere analizar y la "severidad de la rinopatia diabetica", esta empieza desde 0, implicando que no la padece hasta 4 que la padece severamente.
+Con las dos columnas de información del archivo podemos distinguir la imagen que se quiere analizar y la "severidad de la retinopatía diabética", esta empieza desde 0, implicando que no la padece hasta 4 que la padece severamente.
 
 === Selección de modelo
 
-Por este caso mismo de analizis de imagenes recurrimos a utilizar el modelo de "Deep Learning con redes neuronales convolucionales" el cual es optimo para estos mismos. Esto se deve a la capacida de la red neuronal convolutiva de poder segmentar y enfocar aplicando contexto con ecuaciones en los nodos. Permitiendo asi el analisis de una imagen compleja de manera rapida.
+Por este caso mismo de análisis de imágenes recurrimos a utilizar el modelo de "Deep Learning con redes neuronales convolucionales" el cual es optimo para estos mismos. Esto se debe a la capacidad de la red neuronal convolutiva de poder segmentar y enfocar aplicando contexto con ecuaciones en los nodos. Permitiendo así el análisis de una imagen compleja de manera rápida.
 
-El analisis completo de las imagenes es posible por las capas convolutivas de la red neuronal. Estas capas agarran un pixel de la imagen y se aplican filtros a los pixeles subjasentes para determinar su utilidad al modelo. despues se agrupan los pixeles en cuadrados del tamaño que uno determine (en nuestro caso 2x2) y en esos grupos de pixeles se extrae el de mayor valor, generando asi una imagen de donde se resalten las caracteristicas necesarias para el modelo.
+El análisis completo de las imágenes es posible por las capas convolutivas de la red neuronal. Estas capas agarran un pixel de la imagen y se aplican filtros a los pixeles subyacentes para determinar su utilidad al modelo. Después se agrupan los pixeles en cuadrados del tamaño que uno determine (en nuestro caso 2x2) y en esos grupos de pixeles se extrae el de mayor valor, generando así una imagen de donde se resalten las características necesarias para el modelo.
 
 === Entrenamiento de modelo
 
@@ -56,12 +51,12 @@ El modelo que se encuentra en uso utiliza una red neuronal de 10 capas las cuale
 Esto se produce al ingresar las imagenes a la red neuronal para que pueda distinguir patrones que se enceuntren en varias imagenes presentadas con su diagnostico ya presente.
 
 == Dificultades
-(expandir despues)
+
+(expandir después)
 
 Entrada de datos para entrenar el modelo
 
 que los resultados tengan sentido en el modelo de la IA
-
 
 == Conclusión
 
