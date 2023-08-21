@@ -45,6 +45,12 @@ Explicamos el por qué elegimos ese modelo.
 🤔
 
 == Dificultades
+(expandir despues)
+
+Entrada de datos para entrenar el modelo
+
+que los resultados tengan sentido en el modelo de la IA
+
 
 == Conclusión
 
