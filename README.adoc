@@ -26,7 +26,7 @@ Para desarrollar el sistema estamos utilizando Google Colab, el cual es un servi
 
 ==== Exploración de datos
 
-El conjunto de datos que disponemos consta de 35.126 imágenes de fondo de ojos de paciente reales, junto con los niveles de severidad de la rinopatía diabética diagnosticada por profesionales médicos. Estos datos se encuentran en el archivo `trainLabels.csv`.
+El conjunto de datos que disponemos consta de 35.126 imágenes de fondo de ojos de paciente reales, junto con los niveles de severidad de la retinopatía diabética diagnosticada por profesionales médicos. Estos datos se encuentran en el archivo `trainLabels.csv`.
 
 El archivo mencionado cuenta con 2 columnas, las cuales son `image` y `level`.
 
@@ -36,7 +36,7 @@ El archivo mencionado cuenta con 2 columnas, las cuales son `image` y `level`.
 
 //A los datos presentes observamos que las primeras dos columnas de información son superfluas ya que no aportan informacion util para el modelo. Por esto las sacamos del modelo y las ignoramos.
 
-Con las otras dos columans de informacion que nos quedan podemos distinguir la imagen que se quiere analizar y la "severidad de la rinopatía diabética", esta empieza desde 0, implicando que no la padece hasta 4 que la padece severamente.
+Con las otras dos columans de informacion que nos quedan podemos distinguir la imagen que se quiere analizar y la "severidad de la retinopatía diabética", esta empieza desde 0, implicando que no la padece hasta 4 que la padece severamente.
 
 === Selección de modelo
 
