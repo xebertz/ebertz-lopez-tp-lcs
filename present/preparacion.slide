@@ -20,12 +20,11 @@ Objetivos:
 
 - Python
 - Tensorflow
-- Desarrollando en Google Colab
+- Google Colab
 
 * Datos
 
-- 35 mil imágenes de fondo de ojos
-- Obtenidos de Kaggle
+35000 imágenes de fondo de ojos clasificadas según la serveridad de la enfermedad
 
 * Modelo utilizado
 

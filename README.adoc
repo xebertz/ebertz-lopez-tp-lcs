@@ -58,20 +58,12 @@ A lo largo de esta fase del proyecto, nos encontramos con diversas dificultades,
 
     * Entrada de datos para entrenar el modelo: Hubo conflictos con la manera en la que consumimos los datos, de tal forma que no se podía entrenar el modelo por que los datos no se encontraban en el formato que el modelo pedía.
 
-    * Que los resultados tengan sentido en el modelo de la IA: Una vez entrenado el modelo se trato de verificar su precisión pero este en ves de dar resultados de 0 o 1 para determinar la enfermedad ocular presente daba un valor superior a 1
+* Que los resultados no tengan sentido en el modelo de la IA: Una vez entrenado el modelo se trato de verificar su precisión pero este en ves de dar resultados de 0 o 1 para determinar la enfermedad ocular presente daba un valor superior a 1.
 
     * Una ves entrenado el modelo se trato de verificar su precision pero este en ves de dar resultados de 0 o 1. Para determinar la enfermedad ocular presente daba un valor superior a 1
 
-    * Se cambio el dataset para poder tratar de generar un modelo mas preciso
-
-    * El modelo entrenado con el nuevo dataset presente puede entrenar por varias Epoch y aun no superar el 0,4624 de presicion
+* Precisión del modelo: El modelo entrenado con el nuevo dataset presente puede entrenar por varias "Epochs" y aún no puede superar el 0,4624 de precisión.
 
 == Conclusión
 
-    Tras el analisis de la actividad en general, podemos aclarar con sertesa la utilidad de las inteligencias artificiales en diferentes aplicaciones, como en el caso nuestro, sobre actividades medicas. lamentablemente se encontraron problemas a varios pasos del procesos, que terminaron en la generacion de un modelo funcional pero que su presicion no supera el 47% en sus predicciones.
-
-    Estos resultados indicca que si bien las IA tienen potencal de contribuir en el campo medico, existen varios obstaculos que se deben superar para poder tener mejor efectividad y confiabilidad.
-
-    Estas dificultades se puede encontrar tanto en la calidad de los datos obtenidos, como en la arquitectura del modelo utilizado.  
-     
-    Por ende en futuras entregas se buscaran mejores maneras de entrenar a la red neuronal profunda para generar mejores resultados.
+Se han identificado desafíos en el proceso de entrenamiento del modelo neuronal, y se reconoce la necesidad de realizar un mayor desarrollo con el objetivo de perfeccionar el modelo, permitiéndole captar de manera más efectiva los patrones necesarios para un aprendizaje óptimo.
