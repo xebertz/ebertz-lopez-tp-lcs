@@ -62,6 +62,26 @@ El modelo que se encuentra en uso utiliza una red neuronal de 10 capas las cuale
 
 Esto se produce al ingresar las imágenes a la red neuronal para que pueda distinguir patrones que se encuentren en varias imágenes presentadas con su diagnostico ya presente.
 
+
+=== Selección de modelo
+
+Debido a la estructura de nuestros datos, utilizamos un modelo de aprendizaje supervisado. Existen diversos tipos de modelos de aprendizaje supervisado, como árboles de decisión, regresión lineal, deep learning, entre otros. Decidimos que para nuestro caso, ya que analizamos imágenes, las mejores opciones serían _redes neuronales convolucionales_, pertenecientes al campo de deep learning, y _redes neuronales densas_. Sus características son:
+
+- _redes neuronales convolucionales:_ estas redes tienen la particularidad de incluir en su arquitectura dos tipos más de neuronas en sus capas intermedias. Un tipo de neurona analiza un pixel de la imagen, aplicándole filtros a los pixeles subyacentes para determinar su utilidad al modelo; y otras agrupan estos pixeles en matrices de un tamaño determinado. En esos grupos de pixeles se extrae el de mayor valor, generando así una imagen de donde se resalten las características necesarias para el modelo.
+- _redes neuronales densas:_ este tipo de red es sencilla. En ella, cada neurona se conecta con todas las neuronas de su nivel anterior y posterior, y tiene la particularidad de que el análisis de datos es muy veloz y, en general, con poco nivel de error. Por este motivo, elegimos este modelo para comparar con el anterior.
+
+Entrenamos ambos modelos, con la finalidad de observar cuál se adapta mejor.
+
+=== Entrenamiento de modelo
+
+El modelo de red neuronal convolucional tiene trece capas, de las cuales cuatro son _convolucionales_, es decir, leen pixeles de la imagen; y dos son de tipo _max pooling_, que realizan el trabajo de agrupación y extracción de pixeles de mayor valor. Se completa con capas densas y de dropout, para mejorar la predicción.
+
+El modelo de red neuronal densa, en cambio, tiene siete capas densas, con 869 neuronas en total, y una capa de entrada de tipo flatten.
+
+Ambos modelos implementan la función de activación _ReLu_, que permite mejoras en los ajustes de los pesos de la red; y están compilados con el optimizador "Adam", que permite una ejecución del entrenamiento con mayor velocidad.
+
+Estos modelos fueron entrenados con los mismos datos.
+
 == Dificultades
 
 A lo largo de esta fase del proyecto, nos encontramos con diversas dificultades, entre las que se incluyen:
