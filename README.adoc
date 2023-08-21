@@ -42,6 +42,14 @@ Finalmente, decidimos utilizar transformaciones en las imágenes elegidas, para 
 
 === Selección de modelo
 
+Debido a la estructura de nuestros datos, utilizamos un modelo de aprendizaje supervisado. Existen diversos tipos de modelos de aprendizaje supervisado, como árboles de decisión, regresión lineal, deep learning, entre otros. Decidimos que para nuestro caso, ya que analizamos imágenes, las mejores opciones serían _redes neuronales convolucionales_, pertenecientes al campo de deep learning, y _redes neuronales densas_. Sus característica son:
+
+- redes neuronales convolucionales:
+- redes neuronales densas:
+
+
+
+
 Por este caso mismo de análisis de imágenes recurrimos a utilizar el modelo de _Deep Learning_ con redes neuronales convolucionales, el cual es optimo para estos mismos. Esto se debe a la capacidad de la red neuronal convolutiva de poder segmentar y enfocar aplicando contexto con ecuaciones en los nodos. Permitiendo así el análisis de una imagen compleja de manera rápida.
 
 El análisis completo de las imágenes es posible por las capas convolutivas de la red neuronal. Estas capas agarran un pixel de la imagen y se aplican filtros a los pixeles subyacentes para determinar su utilidad al modelo. Después se agrupan los pixeles en cuadrados del tamaño que uno determine (en nuestro caso 2x2) y en esos grupos de pixeles se extrae el de mayor valor, generando así una imagen de donde se resalten las características necesarias para el modelo.
