@@ -52,12 +52,22 @@ Esto se produce al ingresar las imagenes a la red neuronal para que pueda distin
 
 == Dificultades
 
-(expandir después)
+=== Entrada de datos para entrenar el modelo
 
-Entrada de datos para entrenar el modelo
+    Hubo conflictos con la manera en la que consumiamos los datos, de tal forma que no se podia entrenar el modelo por que los datos no se encontraban en el formato que el modelo pedia
 
-que los resultados tengan sentido en el modelo de la IA
+=== Que los resultados tengan sentido en el modelo de la IA
+
+    Una ves entrenado el modelo se trato de verificar su precision pero este en ves de dar resultados de 0 o 1 para determinar la enfermedad ocular presente daba un valor superior a 1
+
+=== Cambio de Dataset
+
+    se cambio el dataset para poder tratar de generar un modelo mas preciso
+
+=== Presicion del modelo
+
+    El modelo entrenado con el nuevo dataset presente puede entrenar por varias Epoch y aun no superar el 0,4624 de presicion
 
 == Conclusión
 
-
+    
