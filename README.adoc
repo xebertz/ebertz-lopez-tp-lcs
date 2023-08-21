@@ -51,7 +51,9 @@ El analisis completo de las imagenes es posible por las capas convolutivas de la
 
 === Entrenamiento de modelo
 
-🤔
+El modelo que se encuentra en uso utiliza una red neuronal de 10 capas las cuales 4 de ellas son convolucionales. Este mismo modelo se encarga de consumir imagenes de fondos de ojos para poder determinar la seriedad de la rinopatia diabetica a traves del analizis de patrones encontrados en las imagenes con las cuales el modelo alla entrenado.
+
+Esto se produce al ingresar las imagenes a la red neuronal para que pueda distinguir patrones que se enceuntren en varias imagenes presentadas con su diagnostico ya presente.
 
 == Dificultades
 (expandir despues)
