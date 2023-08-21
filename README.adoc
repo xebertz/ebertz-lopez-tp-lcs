@@ -51,13 +51,7 @@ Entrenamos ambos modelos, con la finalidad de observar cuál se adapta mejor.
 
 === Entrenamiento de modelos
 
-El modelo de red neuronal convolucional tiene trece capas, de las cuales cuatro son _convolucionales_, es decir, leen pixeles de la imagen; y dos son de tipo _max pooling_, que realizan el trabajo de agrupación y extracción de pixeles de mayor valor. Se completa con capas _densas_ y de _dropout_, para mejorar la predicción.
-
-El modelo de red neuronal densa, en cambio, tiene siete capas densas, con 869 neuronas en total, y una capa de entrada de tipo flatten.
-
-Ambos modelos implementan la función de activación _ReLu_, que permite mejoras en los ajustes de los pesos de la red; y están compilados con el optimizador "Adam", que permite una ejecución del entrenamiento con mayor velocidad.
-
-Estos modelos fueron entrenados con los mismos datos.
+El modelo de red neuronal convolucional tiene trece capas, de las cuales cuatro son _convolucionales_, es decir, leen pixeles de la imagen; y dos son de tipo _max pooling_, que realizan el trabajo de agrupación y extracción de pixeles de mayor valor. Se completa con capas _densas_ y de _dropout_, para mejorar la predicción. El modelo de red neuronal densa, en cambio, tiene siete capas densas, con 869 neuronas en total, y una capa de entrada de tipo flatten. Ambos modelos implementan la función de activación _ReLu_, que permite mejoras en los ajustes de los pesos de la red; y están compilados con el optimizador "Adam", que permite una ejecución del entrenamiento con mayor velocidad.
 
 == Dificultades
 
