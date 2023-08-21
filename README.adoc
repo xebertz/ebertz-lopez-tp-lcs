@@ -24,11 +24,11 @@ Para desarrollar el sistema estamos utilizando Google Colab, el cual es un servi
 
 === Datos
 
-==== Exploración de datos
+==== Exploración y análisis de datos
 
 Del dataset elegido, utilizamos las imágenes pertenecientes a la carpeta `resized_train_cropped`, y las etiquetas del archivo `trainLabels.csv`.
 
-Sabemos que para entrenar a una Inteligencia Artificial con aprendizaje supervisado, necesitamos un conjunto de datos homogéneo y etiquetado. Observamos que en el dataset elegido había al rededor de 25.000 imágenes con la etiqueta 0. Esto es contraproducente, ya que por haber demasiadas muestras de una sola clase, la IA puede aprender incorrectamente. Por esto, decidimos utilizar 4.000 imágenes de esta clase, dejando un total de 13.306 imágenes para entrenamiento, testing y validación. Estas imágenes se convirtieron en tensores, para que puedan ser procesadas correctamente por la inteligencia artificial.
+Sabemos que para entrenar a una Inteligencia Artificial con aprendizaje supervisado, necesitamos un conjunto de datos homogéneo y etiquetado. Observamos que en el dataset elegido había al rededor de 25.000 imágenes con la etiqueta 0, lo que puede ser contraproducente. Si hay demasiadas muestras de una sola clase, la IA puede aprender incorrectamente. Por esto, decidimos utilizar 4.000 imágenes de esta clase, dejando un total de 13.306 imágenes para entrenamiento, testing y validación. Estas imágenes se convirtieron en tensores, para que puedan ser procesadas correctamente por la inteligencia artificial. Las analizamos en formato 100 x 100, con tres canales de color: RGB.
 
 Luego, teníamos que convertir las etiquetas del dataset un formato que pueda entender la IA. Para esto, transformamos cada etiqueta en un tensor de cinco posiciones, con todos sus valores en cero, y el valor de la posición correspondiente al número de etiqueta, en uno. De esta forma, tenemos los siguientes tipos de etiquetas:
 
@@ -38,15 +38,7 @@ Luego, teníamos que convertir las etiquetas del dataset un formato que pueda en
 - 3: `[0 0 0 1 0]`
 - 4: `[0 0 0 0 1]`
 
-El archivo mencionado cuenta con 2 columnas, las cuales son `image` y `level`.
-
-//A su vez, dejamos 1.000 imágenes de fondo de ojos ya diagnosticadas aparte para poder verificar la precisión del modelo que estamos presentando, al comparar le predicción del modelo con el diagnostico actual.
-
-==== Preparación de datos
-
-//A los datos presentes observamos que las primeras dos columnas de información son superfluas ya que no aportan información útil para el modelo. Por esto las sacamos del modelo y las ignoramos.
-
-Con las dos columnas de información del archivo podemos distinguir la imagen que se quiere analizar y la "severidad de la retinopatía diabética", esta empieza desde 0, implicando que no la padece hasta 4 que la padece severamente.
+Finalmente, decidimos utilizar transformaciones en las imágenes elegidas, para que la inteligencia artificial no aprenda a identificar la enfermedad en un solo tipo de imágen, y sea capaz de identificarla en imágenes con más o menos zoom, tamaño, opacidad, etcétera.
 
 === Selección de modelo
 
