@@ -34,9 +34,9 @@ El archivo mencionado cuenta con 2 columnas, las cuales son `image` y `level`.
 
 ==== Preparación de datos
 
-//A los datos presentes observamos que las primeras dos columnas de información son superfluas ya que no aportan informacion util para el modelo. Por esto las sacamos del modelo y las ignoramos.
+//A los datos presentes observamos que las primeras dos columnas de información son superfluas ya que no aportan información útil para el modelo. Por esto las sacamos del modelo y las ignoramos.
 
-Con las otras dos columans de informacion que nos quedan podemos distinguir la imagen que se quiere analizar y la "severidad de la retinopatía diabética", esta empieza desde 0, implicando que no la padece hasta 4 que la padece severamente.
+Con las dos columnas de información del archivo podemos distinguir la imagen que se quiere analizar y la "severidad de la retinopatía diabética", esta empieza desde 0, implicando que no la padece hasta 4 que la padece severamente.
 
 === Selección de modelo
 
@@ -55,7 +55,6 @@ El análisis completo de las imágenes es posible por las capas convolutivas de 
 Entrada de datos para entrenar el modelo
 
 que los resultados tengan sentido en el modelo de la IA
-
 
 == Conclusión
 
