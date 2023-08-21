@@ -45,10 +45,12 @@ Finalmente, decidimos utilizar transformaciones en las imágenes elegidas, para 
 Debido a la estructura de nuestros datos, utilizamos un modelo de aprendizaje supervisado. Existen diversos tipos de modelos de aprendizaje supervisado, como árboles de decisión, regresión lineal, deep learning, entre otros. Decidimos que para nuestro caso, ya que analizamos imágenes, las mejores opciones serían _redes neuronales convolucionales_, pertenecientes al campo de deep learning, y _redes neuronales densas_. Sus característica son:
 
 - redes neuronales convolucionales:
+
+    La principal característica de una red neuronal convolucional es su capacidad para aprender y extraer automáticamente características relevantes de las imágenes. Esto se logra mediante el uso de capas de convolución, que aplican operaciones de convolución a las entradas y aprenden a reconocer patrones visuales como bordes, texturas y formas. Estas capas de convolución son seguidas a menudo por capas de agrupación (pooling), que reducen la dimensionalidad de las características extraídas mientras conservan la información más relevante.
+
 - redes neuronales densas:
 
-
-
+    Una Red Neuronal Densa, también conocida como Red Neuronal Totalmente Conectada, tiene conexiones completas entre las neuronas de cada capa, sin estructura jerárquica. Es utilizada en tareas como clasificación y regresión en datos unidimensionales. Cada neurona recibe entradas de todas las neuronas previas y envía salidas a todas las siguientes. Aprende patrones y relaciones en los datos, pero puede sobreajustar con conjuntos pequeños. Requiere gran cantidad de datos para un buen rendimiento. Entrenada con algoritmos como el gradiente descendente. Utilizada en visión por computadora, procesamiento de lenguaje natural y más. Riesgo de complejidad computacional y necesidad de técnicas de regularización. Su simplicidad y versatilidad son ideales para problemas donde no hay estructura espacial en los datos.
 
 Por este caso mismo de análisis de imágenes recurrimos a utilizar el modelo de _Deep Learning_ con redes neuronales convolucionales, el cual es optimo para estos mismos. Esto se debe a la capacidad de la red neuronal convolutiva de poder segmentar y enfocar aplicando contexto con ecuaciones en los nodos. Permitiendo así el análisis de una imagen compleja de manera rápida.
 
