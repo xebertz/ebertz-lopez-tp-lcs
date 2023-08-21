@@ -86,13 +86,13 @@ Estos modelos fueron entrenados con los mismos datos.
 
 A lo largo de esta fase del proyecto, nos encontramos con diversas dificultades, entre las que se incluyen:
 
-    * Entrada de datos para entrenar el modelo: Hubo conflictos con la manera en la que consumimos los datos, de tal forma que no se podía entrenar el modelo por que los datos no se encontraban en el formato que el modelo pedía.
+* Entrada de datos para entrenar el modelo: Hubo conflictos con la manera en la que consumimos los datos, de tal forma que no se podía entrenar el modelo por que los datos no se encontraban en el formato que el modelo pedía.
 
-* Que los resultados no tengan sentido en el modelo de la IA: Una vez entrenado el modelo se trato de verificar su precisión pero este en ves de dar resultados de 0 o 1 para determinar la enfermedad ocular presente daba un valor superior a 1.
+* Precisión de los modelos: Ambos modelos necesitan mucho entrenamiento para alcanzar los niveles deseados de precisión.
 
-    * Una ves entrenado el modelo se trato de verificar su precision pero este en ves de dar resultados de 0 o 1. Para determinar la enfermedad ocular presente daba un valor superior a 1
+* Limitaciones de hardware: Debido a la cantidad de imágenes, no podemos procesar imágenes de resoluciones mayores a 100 x 100 pixeles.
 
-* Precisión del modelo: El modelo entrenado con el nuevo dataset presente puede entrenar por varias "Epochs" y aún no puede superar el 0,4624 de precisión.
+* Ajuste de parámetros: En las redes neuronales hay muchos parámetros a ajustar, que juegan papeles importantes en la precisión de la red. Este ajuste, en general, es a base de prueba y error; por lo que todavía seguimos probando nuestras redes, para lograr una mayor precisión.
 
 == Conclusión
 
