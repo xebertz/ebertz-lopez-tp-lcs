@@ -12,13 +12,13 @@ v1, {docdate}
 
 == Introducción
 
-En el transcurso de este documento, se abordará de manera exhaustiva el proceso de preparación de los datos destinados a alimentar nuestro sistema de detección de enfermedades oculares. Además, se proporcionarán argumentos sólidos que respaldan la elección de un modelo de _Machine Learning_ específico. Finalmente, se arrojará luz sobre el funcionamiento intrínseco del proceso de entrenamiento de dicho modelo.
+En el transcurso de este documento, se abordará el proceso de preparación de los datos destinados a alimentar nuestro sistema de detección de enfermedades oculares. Además, se proporcionarán argumentos sólidos que respaldan la elección de un modelo de _Machine Learning_ específico. Finalmente, se arrojará luz sobre el funcionamiento intrínseco del proceso de entrenamiento de dicho modelo.
 
 == Desarrollo
 
 === Detección de Retinopatía Diabética
 
-Nuestro sistema está destinado a la detección de retinopatías diabéticas y su severidad a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de datos de pacientes reales.
+Nuestro sistema está destinado a la detección de retinopatías diabéticas y su severidad a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de datos de pacientes reales. Este conjunto de datos cuenta con aproximadamente 32.000 imágenes, y las etiquetas de las mismas. Cada etiqueta corresponde a un nivel de retinopatía diabética ocular. Nuestro objetivo es, dada una imágen de fondo de ojo, poder detectar el nivel de esta enfermedad en el paciente.
 
 Para desarrollar el sistema estamos utilizando Google Colab, el cual es un servicio en línea gratuito ofrecido por Google que permite a los usuarios escribir y ejecutar código de Python en un entorno de bloc de notas basado en la nube.
 
