@@ -12,31 +12,33 @@ v1, {docdate}
 
 == Introducción
 
-En el transcurso de este documento, se abordará de manera exhaustiva el proceso de preparación de los datos destinados a alimentar nuestro sistema de detección de enfermedades oculares. Además, se proporcionarán argumentos sólidos que respaldan la elección de un modelo de _Machine Learning_ específico. Finalmente, se arrojará luz sobre el funcionamiento intrínseco del proceso de entrenamiento de dicho modelo.
+En el transcurso de este documento, se abordará el proceso de preparación de los datos destinados a alimentar nuestro sistema de detección de enfermedades oculares. Además, se proporcionarán argumentos sólidos que respaldan la elección de un modelo de _Machine Learning_ específico. Finalmente, se arrojará luz sobre el funcionamiento intrínseco del proceso de entrenamiento de dicho modelo.
 
 == Desarrollo
 
 === Detección de Retinopatía Diabética
 
-Nuestro sistema está destinado a la detección de retinopatías diabéticas y su severidad a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de datos de pacientes reales.
+Nuestro sistema está destinado a la detección de retinopatías diabéticas y su severidad a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de datos de pacientes reales. Este conjunto de datos cuenta con aproximadamente 35.000 imágenes, y las etiquetas de las mismas. Cada etiqueta corresponde a un nivel de retinopatía diabética ocular, que puede ser 0, 1, 2, 3 o 4. Nuestro objetivo es, dada una imágen de fondo de ojo, poder detectar el nivel de esta enfermedad en el paciente.
 
 Para desarrollar el sistema estamos utilizando Google Colab, el cual es un servicio en línea gratuito ofrecido por Google que permite a los usuarios escribir y ejecutar código de Python en un entorno de bloc de notas basado en la nube.
 
 === Datos
 
-==== Exploración de datos
+==== Exploración y análisis de datos
 
-El conjunto de datos que disponemos consta de 35.126 imágenes de fondo de ojos de paciente reales, junto con los niveles de severidad de la retinopatía diabética diagnosticada por profesionales médicos. Estos datos se encuentran en el archivo `trainLabels.csv`.
+Del dataset elegido, utilizamos las imágenes pertenecientes a la carpeta `resized_train_cropped`, y las etiquetas del archivo `trainLabels.csv`.
 
-El archivo mencionado cuenta con 2 columnas, las cuales son `image` y `level`.
+Sabemos que para entrenar a una Inteligencia Artificial con aprendizaje supervisado, necesitamos un conjunto de datos homogéneo y etiquetado. Observamos que en el dataset elegido había al rededor de 25.000 imágenes con la etiqueta 0, lo que puede ser contraproducente. Si hay demasiadas muestras de una sola clase, la IA puede aprender incorrectamente. Por esto, decidimos utilizar 4.000 imágenes de esta clase, dejando un total de 13.306 imágenes para entrenamiento, testing y validación. Estas imágenes se convirtieron en tensores, para que puedan ser procesadas correctamente por la inteligencia artificial. Las analizamos en formato 100 x 100, con tres canales de color: RGB.
 
-//A su vez, dejamos 1.000 imágenes de fondo de ojos ya diagnosticadas aparte para poder verificar la precisión del modelo que estamos presentando, al comparar le predicción del modelo con el diagnostico actual.
+Luego, teníamos que convertir las etiquetas del dataset un formato que pueda entender la IA. Para esto, transformamos cada etiqueta en un tensor de cinco posiciones, con todos sus valores en cero, y el valor de la posición correspondiente al número de etiqueta, en uno. De esta forma, tenemos los siguientes tipos de etiquetas:
 
-==== Preparación de datos
+- 0: `[1 0 0 0 0]`
+- 1: `[0 1 0 0 0]`
+- 2: `[0 0 1 0 0]`
+- 3: `[0 0 0 1 0]`
+- 4: `[0 0 0 0 1]`
 
-//A los datos presentes observamos que las primeras dos columnas de información son superfluas ya que no aportan información útil para el modelo. Por esto las sacamos del modelo y las ignoramos.
-
-Con las dos columnas de información del archivo podemos distinguir la imagen que se quiere analizar y la "severidad de la retinopatía diabética", esta empieza desde 0, implicando que no la padece hasta 4 que la padece severamente.
+Finalmente, decidimos utilizar transformaciones en las imágenes elegidas, para que la inteligencia artificial no aprenda a identificar la enfermedad en un solo tipo de imágen, y sea capaz de identificarla en imágenes con más o menos zoom, tamaño, opacidad, etcétera.
 
 === Selección de modelo
 

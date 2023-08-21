@@ -1,0 +1,49 @@
+Preparación de Datos y Entrenamiento de modelo
+
+Ebertz, Ximena
+xebertz@campus.ungs.edu.ar
+
+Gross, Pablo
+pablorubengross@gmail.com
+
+López, Gonzalo
+gonzagonzalopez20@gmail.com
+
+* Sistema de detección de Retinopatía Diabética
+
+Objetivos: 
+
+- Detectar Retinopatía Diabética
+- Clasificar su nivel de severidad
+
+* Qué utilizamos para desarrollarlo?
+
+- Python
+- Tensorflow
+- Desarrollando en Google Colab
+
+* Datos
+
+- 35 mil imágenes de fondo de ojos
+- Obtenidos de Kaggle
+
+* Modelo utilizado
+
+Deep Learning
+
+Redes neuronales convolucionales
+
+* Entrenamiento de modelo
+
+:(
+
+* Dataset
+
+.link https://www.kaggle.com/datasets/tanlikesmath/diabetic-retinopathy-resized?select=trainLabels.csv
+
+* ¿Preguntas?
+__
+__
+__
+__
+.image img/pregunta.png 200 _
