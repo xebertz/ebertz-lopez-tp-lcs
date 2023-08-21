@@ -12,13 +12,13 @@ v1, {docdate}
 
 == Introducción
 
-En el transcurso de este documento, se abordará el proceso de preparación de los datos destinados a alimentar nuestro sistema de detección de enfermedades oculares. Además, se proporcionarán argumentos sólidos que respaldan la elección de un modelo de _Machine Learning_ específico. Finalmente, se arrojará luz sobre el funcionamiento intrínseco del proceso de entrenamiento de dicho modelo.
+En el transcurso de este documento, se abordará de manera exhaustiva el proceso de preparación de los datos destinados a alimentar nuestro sistema de detección de enfermedades oculares. Además, se proporcionarán argumentos sólidos que respaldan la elección de un modelo de _Machine Learning_ específico. Finalmente, se arrojará luz sobre el funcionamiento intrínseco del proceso de entrenamiento de dicho modelo.
 
 == Desarrollo
 
 === Detección de Retinopatía Diabética
 
-Nuestro sistema está destinado a la detección de retinopatías diabéticas y su severidad a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de datos de pacientes reales. Este conjunto de datos cuenta con aproximadamente 35.000 imágenes, y las etiquetas de las mismas. Cada etiqueta corresponde a un nivel de retinopatía diabética ocular, que puede ser 0, 1, 2, 3 o 4. Nuestro objetivo es, dada una imágen de fondo de ojo, poder detectar el nivel de esta enfermedad en el paciente.
+Nuestro sistema está destinado a la detección de retinopatías diabéticas y su severidad a través del análisis de imágenes de fondo de ojo, tanto en el lado derecho como en el izquierdo, provenientes de un conjunto de datos de pacientes reales. Este conjunto de datos cuenta con aproximadamente 35.000 imágenes, y las etiquetas de las mismas. Cada etiqueta corresponde a un nivel de retinopatía diabética ocular, que puede ser 0, 1, 2, 3 o 4. Nuestro objetivo es, dada una imagen de fondo de ojo, poder detectar el nivel de esta enfermedad en el paciente.
 
 Para desarrollar el sistema estamos utilizando Google Colab, el cual es un servicio en línea gratuito ofrecido por Google que permite a los usuarios escribir y ejecutar código de Python en un entorno de bloc de notas basado en la nube.
 
@@ -42,34 +42,36 @@ Finalmente, decidimos utilizar transformaciones en las imágenes elegidas, para 
 
 === Selección de modelo
 
-Por este caso mismo de análisis de imágenes recurrimos a utilizar el modelo de "Deep Learning con redes neuronales convolucionales" el cual es optimo para estos mismos. Esto se debe a la capacidad de la red neuronal convolutiva de poder segmentar y enfocar aplicando contexto con ecuaciones en los nodos. Permitiendo así el análisis de una imagen compleja de manera rápida.
+Por este caso mismo de análisis de imágenes recurrimos a utilizar el modelo de _Deep Learning_ con redes neuronales convolucionales, el cual es optimo para estos mismos. Esto se debe a la capacidad de la red neuronal convolutiva de poder segmentar y enfocar aplicando contexto con ecuaciones en los nodos. Permitiendo así el análisis de una imagen compleja de manera rápida.
 
 El análisis completo de las imágenes es posible por las capas convolutivas de la red neuronal. Estas capas agarran un pixel de la imagen y se aplican filtros a los pixeles subyacentes para determinar su utilidad al modelo. Después se agrupan los pixeles en cuadrados del tamaño que uno determine (en nuestro caso 2x2) y en esos grupos de pixeles se extrae el de mayor valor, generando así una imagen de donde se resalten las características necesarias para el modelo.
 
 === Entrenamiento de modelo
 
-El modelo que se encuentra en uso utiliza una red neuronal de 10 capas las cuales 4 de ellas son convolucionales. Este mismo modelo se encarga de consumir imagenes de fondos de ojos para poder determinar la seriedad de la rinopatia diabetica a traves del analizis de patrones encontrados en las imagenes con las cuales el modelo alla entrenado.
+El modelo que se encuentra en uso utiliza una red neuronal de 10 capas las cuales 4 de ellas son convolucionales. Este mismo modelo se encarga de consumir imágenes de fondos de ojos para poder determinar la seriedad de la retinopatía diabética a través del análisis de patrones encontrados en las imágenes con las cuales el modelo allá entrenado.
 
-Esto se produce al ingresar las imagenes a la red neuronal para que pueda distinguir patrones que se enceuntren en varias imagenes presentadas con su diagnostico ya presente.
+Esto se produce al ingresar las imágenes a la red neuronal para que pueda distinguir patrones que se encuentren en varias imágenes presentadas con su diagnostico ya presente.
 
 == Dificultades
 
-=== Entrada de datos para entrenar el modelo
+A lo largo de esta fase del proyecto, nos encontramos con diversas dificultades, entre las que se incluyen:
 
-    Hubo conflictos con la manera en la que consumiamos los datos, de tal forma que no se podia entrenar el modelo por que los datos no se encontraban en el formato que el modelo pedia
+    * Entrada de datos para entrenar el modelo: Hubo conflictos con la manera en la que consumimos los datos, de tal forma que no se podía entrenar el modelo por que los datos no se encontraban en el formato que el modelo pedía.
 
-=== Que los resultados tengan sentido en el modelo de la IA
+    * Que los resultados tengan sentido en el modelo de la IA: Una vez entrenado el modelo se trato de verificar su precisión pero este en ves de dar resultados de 0 o 1 para determinar la enfermedad ocular presente daba un valor superior a 1
 
-    Una ves entrenado el modelo se trato de verificar su precision pero este en ves de dar resultados de 0 o 1. Para determinar la enfermedad ocular presente daba un valor superior a 1
+    * Una ves entrenado el modelo se trato de verificar su precision pero este en ves de dar resultados de 0 o 1. Para determinar la enfermedad ocular presente daba un valor superior a 1
 
-=== Cambio de Dataset
+    * Se cambio el dataset para poder tratar de generar un modelo mas preciso
 
-    Se cambio el dataset para poder tratar de generar un modelo mas preciso
-
-=== Presicion del modelo
-
-    El modelo entrenado con el nuevo dataset presente puede entrenar por varias Epoch y aun no superar el 0,4624 de presicion
+    * El modelo entrenado con el nuevo dataset presente puede entrenar por varias Epoch y aun no superar el 0,4624 de presicion
 
 == Conclusión
 
-    
+    Tras el analisis de la actividad en general, podemos aclarar con sertesa la utilidad de las inteligencias artificiales en diferentes aplicaciones, como en el caso nuestro, sobre actividades medicas. lamentablemente se encontraron problemas a varios pasos del procesos, que terminaron en la generacion de un modelo funcional pero que su presicion no supera el 47% en sus predicciones.
+
+    Estos resultados indicca que si bien las IA tienen potencal de contribuir en el campo medico, existen varios obstaculos que se deben superar para poder tener mejor efectividad y confiabilidad.
+
+    Estas dificultades se puede encontrar tanto en la calidad de los datos obtenidos, como en la arquitectura del modelo utilizado.  
+     
+    Por ende en futuras entregas se buscaran mejores maneras de entrenar a la red neuronal profunda para generar mejores resultados.
