@@ -58,11 +58,11 @@ Esto se produce al ingresar las imagenes a la red neuronal para que pueda distin
 
 === Que los resultados tengan sentido en el modelo de la IA
 
-    Una ves entrenado el modelo se trato de verificar su precision pero este en ves de dar resultados de 0 o 1 para determinar la enfermedad ocular presente daba un valor superior a 1
+    Una ves entrenado el modelo se trato de verificar su precision pero este en ves de dar resultados de 0 o 1. Para determinar la enfermedad ocular presente daba un valor superior a 1
 
 === Cambio de Dataset
 
-    se cambio el dataset para poder tratar de generar un modelo mas preciso
+    Se cambio el dataset para poder tratar de generar un modelo mas preciso
 
 === Presicion del modelo
 
