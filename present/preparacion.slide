@@ -26,15 +26,21 @@ Objetivos:
 
 35000 imágenes de fondo de ojos clasificadas según la serveridad de la enfermedad
 
-* Modelo utilizado
+* Modelos utilizados
+
+Aprendizaje Supervisado
 
 Deep Learning
 
-Redes neuronales convolucionales
+- Redes neuronales densas
 
-* Entrenamiento de modelo
+- Redes neuronales convolucionales
 
-:(
+* Entrenamiento de modelos
+
+- Poca precisión en entrenamiento
+
+- Aún menos precisión en pruebas
 
 * Dataset
 
