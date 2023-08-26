@@ -22,13 +22,14 @@ El propósito central de nuestro sistema radica en la detección precisa de luna
 
 === Entrenamiento de modelos
 
-=== Dificultades
+==== Configuración de parámetros
 
-A lo largo de esta fase del proyecto, nos encontramos con diversas dificultades, entre las que se incluyen:
+...
 
-- Ordenamiento de datos...
+==== Modelo óptimo
 
 ...
 
 == Conclusión
 
+...
