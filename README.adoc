@@ -12,11 +12,15 @@ v1, {docdate}
 
 == Introducción
 
+En el presente documento, se abordará el propósito central de nuestro sistema, explicando las razones detrás de la elección del modelo de Deep Learning seleccionado, detallando las dificultades que enfrentamos durante el proceso y describiendo el procedimiento de entrenamiento del modelo.
+
 == Desarrollo
 
 === Detección de lunares benignos y malignos
 
 === Entrenamiento de modelos
+
+=== Dificultades
 
 == Conclusión
 
