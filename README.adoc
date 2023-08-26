@@ -24,5 +24,11 @@ El propósito central de nuestro sistema radica en la detección precisa de luna
 
 === Dificultades
 
+A lo largo de esta fase del proyecto, nos encontramos con diversas dificultades, entre las que se incluyen:
+
+- Ordenamiento de datos...
+
+...
+
 == Conclusión
 
