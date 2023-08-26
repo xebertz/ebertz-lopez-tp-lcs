@@ -22,6 +22,8 @@ El propósito central de nuestro sistema radica en la detección precisa de luna
 
 === Entrenamiento de modelos
 
+Realizamos el entrenamiento de redes neuronales densas y convolucionales, y a continuación, compartiremos las configuraciones de parámetros que empleamos para estas distintas redes, así como aquella que determinamos como el modelo óptimo.
+
 ==== Configuración de parámetros
 
 ...
