@@ -20,6 +20,23 @@ En el presente documento, se abordará el propósito central de nuestro sistema,
 
 El propósito central de nuestro sistema radica en la detección precisa de lunares benignos y malignos a través del análisis de imágenes. Estas imágenes son adquiridas de la página web https://www.kaggle.com/[Kaggle], concretamente del conjunto de datos disponible en https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign[Skin Cancer: Malignant vs. Benign]. Este conjunto específico consta de un total de 2637 imágenes utilizadas para el entrenamiento, distribuidas en 1440 imágenes de lunares benignos y 1197 imágenes de lunares malignos. Además, se dispone de 660 imágenes para llevar a cabo pruebas, compuestas por 360 imágenes de lunares benignos y 300 imágenes de lunares malignos.
 
+=== Pre-Entrenamiento
+
+Antes de llevar a cabo el entrenamiento del modelo, fue necesario ejecutar una serie de pasos mediante código para asegurar su viabilidad y efectividad.
+
+Inicialmente, procedimos a descargar todas las imágenes disponibles desde la página web previamente mencionada.
+
+Posteriormente, organizamos estas imágenes en listas separadas, categorizándolas en función de si serían destinadas para el entrenamiento o la fase de pruebas. Además, aplicamos una estandarización en las dimensiones, ajustando cada imagen a un formato de
+// TENEMOS QUE DEFINIRLO
+NxN.
+Este enfoque se eligió para evitar consumir excesiva memoria RAM en el entorno de Google Colab.
+
+Luego, cada imagen fue etiquetada en consecuencia. Aquellas que representaban lunares benignos se etiquetaron con un valor de 0, mientras que las imágenes de carácter maligno se etiquetaron con un valor de 1.
+
+Con el propósito de evitar sesgos en el modelo, implementamos una etapa de mezcla de las imágenes. Esta mezcla se llevó a cabo de manera que las etiquetas continuaran alineadas correctamente. De esta manera, se evitó que el modelo recibiera secuencias de imágenes en las que las muestras benignas o malignas estuvieran agrupadas en bloques.
+
+Una vez completados estos pasos, estuvimos en condiciones de comenzar con el proceso de entrenamiento y llevar a cabo pruebas para evaluar el rendimiento del modelo resultante.
+
 === Entrenamiento de modelos
 
 Realizamos el entrenamiento de redes neuronales densas y convolucionales, y a continuación, compartiremos las configuraciones de parámetros que empleamos para estas distintas redes, así como aquella que determinamos como el modelo óptimo.
