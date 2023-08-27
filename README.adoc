@@ -26,10 +26,7 @@ Antes de llevar a cabo el entrenamiento del modelo, fue necesario ejecutar una s
 
 Inicialmente, procedimos a descargar todas las imágenes disponibles desde la página web previamente mencionada.
 
-Posteriormente, organizamos estas imágenes en listas separadas, categorizándolas en función de si serían destinadas para el entrenamiento o la fase de pruebas. Además, aplicamos una estandarización en las dimensiones, ajustando cada imagen a un formato de JPG de 100x100 pixeles 
-// TENEMOS QUE DEFINIRLO
-NxN.
-Este enfoque se eligió para evitar consumir excesiva memoria RAM en el entorno de Google Colab.
+Posteriormente, organizamos estas imágenes en listas separadas, categorizándolas en función de si serían destinadas para el entrenamiento o la fase de pruebas. Además, aplicamos una estandarización en las dimensiones, ajustando cada imagen a un formato de 100x100. Este enfoque se eligió para evitar consumir excesiva memoria RAM en el entorno de Google Colab.
 
 Luego, cada imagen fue etiquetada en consecuencia. Aquellas que representaban lunares benignos se etiquetaron con un valor de 0, mientras que las imágenes de carácter maligno se etiquetaron con un valor de 1.
 
@@ -47,35 +44,35 @@ Realizamos el entrenamiento de redes neuronales densas y convolucionales, y a co
 
 ===== Red neuronal densa
 
-Esta red neuronal densa esta configurada de tal manera que se tiene una capa de entrada de 10.000 neuronas, correspondiendo cada una de estas a un pixel de la imagen de 100x100 pixeles.
+Esta red neuronal densa está configurada de tal manera que se tiene una capa de entrada de 10,000 neuronas, correspondiendo cada una de estas a un píxel de la imagen de 100x100 píxeles.
 
-Despues se tiene dos capas ocultas que contienen 150 neuronas cada una, las cuales se encargan de analizar los datos de las neuronas de entrada.
+Después se tienen dos capas ocultas que contienen 150 neuronas cada una, las cuales se encargan de analizar los datos de las neuronas de entrada.
 
-Por ultimo se encuentra una sola neurona de salida la cual determina con un 1 o un 0 (redondeando los resultados intermedios) si el lunar de la imagen analizada es maligno o benigno.
+Por último, se encuentra una sola neurona de salida, la cual determina con un 1 o un 0 (redondeando los resultados intermedios) si el lunar de la imagen analizada es maligno o benigno.
 
-por ende este modelo solo llega a alcanzar como maximo un 76/77% de presicion. La cual implicaria un alto nivel de presicion, pero por como actua la red neuronal densa es que pierde bastante el contexto de las imagenes dadas. Por lo tanto al procesar informacion la cual se encuentra fuera de los rasgos de las imagenes de entrenamiento pierde eficacia y precision.
+Por ende, este modelo solo llega a alcanzar como máximo un 76/77% de precisión. Lo cual implicaría un alto nivel de precisión, pero por cómo actúa la red neuronal densa es que pierde bastante el contexto de las imágenes dadas. Por lo tanto, al procesar información que se encuentra fuera de los rasgos de las imágenes de entrenamiento, pierde eficacia y precisión.
 
 ===== Red neuronal convolucional
 
-Esta red neuronal convolucional esta configura de tal manera la cual se tiene tres capas convolucionales en la entrada. Las cuales se encargan de observar la imagen en clusters de 3x3 pixeles 3 veces para poder comprimirlas manteniendo las caracteristicas mas importantes de la misma. Para asi poder procesarla mas rapido en las capas subsiguientes.
+Esta red neuronal convolucional está configurada de tal manera que se tienen tres capas convolucionales en la entrada. Las cuales se encargan de observar la imagen en clústers de 3x3 píxeles, 3 veces, para poder comprimirlas manteniendo las características más importantes de la misma. Para así poder procesarla más rápido en las capas subsiguientes.
 
-Despues se encuentra la capa de dropdown la cual modifica los resultados los nodos a los cuales se dirigen los resultados para evitar sobrecompensacion en los resultados. 
+Después se encuentra la capa de dropout, la cual modifica los resultados de los nodos a los cuales se dirigen los resultados, para evitar sobrecompensación en los resultados.
 
-Siguiente a esto se genera la capa de entrada que toma la imagen comprimida y genera una neurona de entrada por cada pixel de la misma imagen para asi poder porcesarla.
+Siguiendo a esto, se genera la capa de entrada, que toma la imagen comprimida y genera una neurona de entrada por cada píxel de la misma imagen, para así poder procesarla.
 
-A continuacion se encuentra una capa oculta de 25 neuronas para poder procesar los datos de las imagenes.
+A continuación, se encuentra una capa oculta de 25 neuronas para poder procesar los datos de las imágenes.
 
-Por ultimo se encuentra la capa de salida la cual es una sola neurona la cual determina con un 1 o un 0 si el lunar es maligno o benigno.
+Por último, se encuentra la capa de salida, la cual es una sola neurona que determina con un 1 o un 0 si el lunar es maligno o benigno.
 
-Por las caracteristicas de las capas convolucionales se puede intuir que es recomendable usarla para el analizis de imagenes ya que estas le permiten añadir contexto espacial a la prediccion del modelo neuronal. Por esto mismo, el modelo que estamos usando llega a una presicion del 80/81% 
+Dadas las características de las capas convolucionales, se puede intuir que es recomendable usarlas para el análisis de imágenes, ya que permiten añadir contexto espacial a la predicción del modelo neuronal. Por esto mismo, el modelo que estamos usando llega a una precisión del 80/81%.
 
 ==== Modelo óptimo
 
-Por lo mencionado previamente en la explicacin de los modelos usados, se puede finalmente llegar a a conclucion que para la tarea a completar, la cual consiste en analizar fotos, es mas optima la red neuronal convolucional. Esto se deve a que presenta un nivel mayor de presicion y permite que con el entrenamiento presentado para el modelo pueda intuir y determinar un resultado de una imagen con la cual no entreno y no sea completamente similiar a un dato de entrenamiento.
+Por lo mencionado previamente en la explicación de los modelos usados, se puede llegar finalmente a la conclusión de que para la tarea a completar, la cual consiste en analizar fotos, es más óptima la red neuronal convolucional. Esto se debe a que presenta un nivel mayor de precisión y permite que con el entrenamiento presentado para el modelo pueda intuir y determinar un resultado de una imagen con la cual no entrenó y que no sea completamente similar a un dato de entrenamiento.
 
-Entrando en mas detalle, la red neuronal densa en su aprendisaje puede llegar a un 78% de presicion pero este resultado no se presenta en el testeo con datos aleatorios de los cuales no aprendio, lo que genera una variacion grande en los resultados de sus prediciones.
+Entrando en más detalle, la red neuronal densa en su aprendizaje puede llegar a un 78% de precisión, pero este resultado no se presenta en el testeo con datos aleatorios de los cuales no aprendió, lo que genera una variación grande en los resultados de sus predicciones.
 
-Por otra parte la red neuronal convolucional quiza tarde mas en su entrenamiento pero llega a un porcentaje de presicion del 81% el cual tambien se traslada a ejemplos del mundo real con datos aleatorios de los cuales no se encontraban en los datos de entrenamiento. a su ves por el tipo de aprendisaje de contexto en las imagenes permite una mayor consistencia en sus resultados el cual tambien es 81%.
+Por otra parte, la red neuronal convolucional quizá tarde más en su entrenamiento, pero llega a un porcentaje de precisión del 81%, el cual también se traslada a ejemplos del mundo real con datos aleatorios que no se encontraban en los datos de entrenamiento. A su vez, por el tipo de aprendizaje de contexto en las imágenes, permite una mayor consistencia en sus resultados, el cual también es 81%.
 
 == Conclusión
 
