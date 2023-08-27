@@ -35,6 +35,8 @@ Luego, cada imagen fue etiquetada en consecuencia. Aquellas que representaban lu
 
 Con el propósito de evitar sesgos en el modelo, implementamos una etapa de mezcla de las imágenes. Esta mezcla se llevó a cabo de manera que las etiquetas continuaran alineadas correctamente. De esta manera, se evitó que el modelo recibiera secuencias de imágenes en las que las muestras benignas o malignas estuvieran agrupadas en bloques.
 
+Además, llevamos a cabo una etapa de normalización en las imágenes. Esta normalización ajustó los valores de los píxeles en un rango entre 0 y 1, lo que resulta fundamental para un procesamiento y entrenamiento más eficiente del modelo.
+
 Una vez completados estos pasos, estuvimos en condiciones de comenzar con el proceso de entrenamiento y llevar a cabo pruebas para evaluar el rendimiento del modelo resultante.
 
 === Entrenamiento de modelos
