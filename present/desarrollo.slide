@@ -13,6 +13,8 @@ gonzagonzalopez20@gmail.com
 
 Detectar si un lunar es benigno o maligno, según una imagen
 
+Dataset utilizado:
+
 * Datos
 
 * Preparación de datos
@@ -21,17 +23,34 @@ Detectar si un lunar es benigno o maligno, según una imagen
 2) Normalización
 3) Mezcla de datos, para mejor entrenamiento de la IA
 
+! No se modificó la cantidad de imágenes, ya que las clases estan balanceadas
+
 * Aumento de datos
 
 Imágenes modificadas: zoom, movimiento, inclinación, rotación
 
+Ventajas:
+- Mayor distribución de muestras
+- Aprendizaje variado
+-
+
 * Modelos de IA
 
 * Modelo Convolucional
+.image img/red-cnn.png 450 _
+
+* Resultados
+
 
 * Modelo Denso
+.image img/red-densa.png 450 _
+
+* Resultados
 
 * Modelo Convolucional con Aumento de Datos
+.image img/red-cnn-ad.png 450 _
+
+* Resultados
 
 * Repositorio
 
