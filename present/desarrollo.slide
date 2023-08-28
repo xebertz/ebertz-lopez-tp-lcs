@@ -11,7 +11,7 @@ gonzagonzalopez20@gmail.com
 
 * Objetivo
 
-Detectar si un lunar es benigno o maligno, según una imagen
+Detectar si un lunar es benigno o maligno
 
 *Dataset* *utilizado:*
 .link https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign
@@ -60,10 +60,15 @@ Imágenes modificadas: zoom, movimiento, inclinación, rotación
 
 * Comparación
 
-* ¿Cuál es mejor?
+* Precisión
 El modelo convolucional fue el que arrojó mejores resultados: 85% de precisión
 
 .image img/precision-entr-comparacion-lunares.png
+
+* Erorr
+El modelo convolucional fue el que arrojó mejores resultados: ~45% de error
+
+.image img/perdida-entr-comparacion-lunares.png
 
 * Testing
 
