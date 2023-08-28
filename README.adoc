@@ -18,7 +18,7 @@ En este documento, abordaremos las distintas dificultades encontradas en el entr
 
 Principalmente, nuestro objetivo fue analizar imágenes de fondo de ojo. Trabajamos con un dataset con gran cantidad de muestras, a alta resolución. Estas imágenes estaban etiquetadas mediante un archivo csv denominado `trainLabels_cropped`, que contenía el nombre de la imagen y su nivel de retinopatía diabética. Para trabajar con esta información, como primer instancia, limpiamos y le dimos el formato necesario a nuestros datos.
 
-Para esto, como primera instancia calculamos la cantidad de clases y su tamaño, segun la información del archivo `trainLabels_cropped`. Como se puede ver teníamos cinco clases: 0, 1, 2, 3 y 4. Los datos estaban desbalanceados, lo que en el entrenamiento de nuestra IA generaría resultados desfavorables.
+Para esto, como primera instancia calculamos la cantidad de clases y su tamaño, según la información del archivo `trainLabels_cropped`. Como se puede ver teníamos cinco clases: 0, 1, 2, 3 y 4. Los datos estaban desbalanceados, lo que en el entrenamiento de nuestra IA generaría resultados desfavorables.
 
 .tamaño de clases
 image::informes/img/distribucion-clases-oculares.png[distribucion, 350, 200, align="center"]
@@ -30,7 +30,7 @@ image::informes/img/distribucion-clases-oculares-recorte.png[nueva distribucion,
 
 En este caso, las clases siguen estando desbalanceadas, pero como las clases 3 y 4 tienen muy pocos elementos y no queríamos minimizar tanto la cantidad de datos, decidimos probar con esta distribución para ver si funcionaba.
 
-Luego leimos las imágenes, guardándolas a todas en una lista. Acá es donde surgió el primer problema: la lectura para imágenes de más de 100x100 pixeles no se podía hacer, ya que se llenaba la memoria y se cortaba la ejecución del programa. Las imágenes de 100x100 pixeles tardaban demasiado en cargar, lo que hacía que el programa sea inutilizable. Por este motivo, decidimos que la resolución de las imágenes sea de 50x50 pixeles.
+Luego leímos las imágenes, guardándolas a todas en una lista. Acá es donde surgió el primer problema: la lectura para imágenes de más de 100x100 pixeles no se podía hacer, ya que se llenaba la memoria y se cortaba la ejecución del programa. Las imágenes de 100x100 pixeles tardaban demasiado en cargar, lo que hacía que el programa sea inutilizable. Por este motivo, decidimos que la resolución de las imágenes sea de 50x50 pixeles.
 
 Dividimos a las imágenes y sus etiquetas en tres conjuntos, uno de entrenamiento, otro de validación, y otro de prueba. El conjunto de entrenamiento se utiliza para que la IA aprenda y reconozca patrones. El de validación se utiliza para que, en su entrenamiento, la IA analice esas imágenes, con la finalidad de calcular su nivel de error. El conjunto de prueba se utiliza para, luego del entrenamiento, utilizar a la IA para que prediga los resultados de estas imágenes, y verificar su funcionamiento.
 El conjunto de entrenamiento corresponde a un 65% de la totalidad de las imágenes, el de validación corresponde a un 15%, y el de prueba corresponde al 20% restante. Cada imagen fue normalizada, es decir, los valores de todos los pixeles fueron establecidos en el rango [0, 1].
@@ -49,11 +49,11 @@ El entrenamiento de ambos modelos fue demasiado lento, y con niveles de exactitu
 |===
 
 
-Agregar o eliminar capas de neuronas, balancear más las clases o reconfigurar los hipeparámetros de ambos modelos no sirvió, por lo que probamos con una técnica llamada _aumento de datos_. Esta técnica consiste en "deformar" las imágenes, cambiando su iluminación, zoom, rotación, etcétera. Se utiliza para mejorar el entrenamiento de los modelos de IA de análisis de imágenes, ya que aumenta el número de imágenes de entrenamiento y su variedad. Sin embargo, esto tampoco funcionó.
+Agregar o eliminar capas de neuronas, balancear más las clases o reconfigurar los hiperparámetros de ambos modelos no sirvió, por lo que probamos con una técnica llamada _aumento de datos_. Esta técnica consiste en "deformar" las imágenes, cambiando su iluminación, zoom, rotación, etcétera. Se utiliza para mejorar el entrenamiento de los modelos de IA de análisis de imágenes, ya que aumenta el número de imágenes de entrenamiento y su variedad. Sin embargo, esto tampoco funcionó.
 
 Luego de analizar y probar diversas técnicas, determinamos que el problema elegido escapa nuestro alcance, ya que las imágenes deberían analizarse a mayor resolución, por lo que se necesitan mas recursos, que no tenemos.
 
-Como el objetivo del trabajo es crear un modelo de IA con fines médicos, decidimos cambiar el enfoque del proyecto. Nuestro nuevo objetivo es detectar si un lunar es benigno o maligno a partir de una imagen. Debido a que seguimos utilizando imagenes, podemos reutilizar todo el trabajo ya desarrollado, cambiando la fuente de datos. Esto hace que el tiempo final de desarrollo se reduzca considerablemente.
+Como el objetivo del trabajo es crear un modelo de IA con fines médicos, decidimos cambiar el enfoque del proyecto. Nuestro nuevo objetivo es detectar si un lunar es benigno o maligno a partir de una imagen. Debido a que seguimos utilizando imágenes, podemos reutilizar todo el trabajo ya desarrollado, cambiando la fuente de datos. Esto hace que el tiempo final de desarrollo se reduzca considerablemente.
 
 
 == Detección de lunares benignos y malignos
@@ -76,7 +76,7 @@ Una vez completados estos pasos, estuvimos en condiciones de comenzar con el pro
 
 === Entrenamiento de modelos
 
-Realizamos el entrenamiento de redes neuronales densas y convolucionales. Este caso no es un caso de clasificación multiclase, si no, que es un caso de clasificación binaria. Es decir, debemos determinar si un lunar el benigno o no, por lo que hay solo dos opciones. En consecuencia, todos los modelos desarrollados tienen la misma capa de salida: una capa densa, con una neurona, y función de activación Sigmoid, que se utiliza para clasificación binaria. También, los modelos están compilados con la métrica `loss='binary_crossentropy`, por este mismo motivo, y en su compilación, se utiliza el optimizador `adam`, ya que en las pruebas arrojó mejores resultados.
+Realizamos el entrenamiento de redes neuronales densas y convolucionales. Este caso no es un caso de clasificación multiclase, si no, que es un caso de clasificación binaria. Es decir, debemos determinar si un lunar el benigno o no, por lo que hay solo dos opciones. En consecuencia, todos los modelos desarrollados tienen la misma capa de salida: una capa densa, con una neurona, y función de activación Sigmoid, que se utiliza para clasificación binaria. También, los modelos están compilados con la métrica `loss='binary_crossentropy'`, por este mismo motivo, y en su compilación, se utiliza el optimizador `adam`, ya que en las pruebas arrojó mejores resultados.
 
 Las métricas que analizaremos de cada modelo son:
 
@@ -118,9 +118,9 @@ La precisión máxima a la que se llegó con este modelo, con 20 vueltas de entr
 
 ==== Red neuronal convolucional
 
-La red neuronal convolucional tiene una capa de entrada de tipo _convolucional_. Esta capa analiza la imagen en clústeres de 3x3 píxeles, asignándole un valor numérico a cada pixel. Luego, la capa de _pooling_ comprime la imagen, manteniendo las características más importantes de la misma, dadas por los valores de los pixeles. Esta información paésa a través de la capa de _dropout_, la cual modifica los resultados de los nodos a los cuales se dirigen los resultados, para evitar sobrecompensación en los resultados.
+La red neuronal convolucional tiene una capa de entrada de tipo _convolucional_. Esta capa analiza la imagen en clústeres de 3x3 píxeles, asignándole un valor numérico a cada pixel. Luego, la capa de _pooling_ comprime la imagen, manteniendo las características más importantes de la misma, dadas por los valores de los pixeles. Esta información pasa a través de la capa de _dropout_, la cual modifica los resultados de los nodos a los cuales se dirigen los resultados, para evitar sobrecompensación en los resultados.
 
-Para que los datos puedan ser analizados por las capas densas de la red, deben estar en una dimensión. La capa _flatten_ transforma el vector de tres canales correspondiente a la imagen, en un vector de un canal. Luego, las capas densas procesan la información, llevandola a la capa de salida. Ésta consta de una sola neurona que determina con un 1 o un 0 si el lunar es maligno o benigno.
+Para que los datos puedan ser analizados por las capas densas de la red, deben estar en una dimensión. La capa _flatten_ transforma el vector de tres canales correspondiente a la imagen, en un vector de un canal. Luego, las capas densas procesan la información, llevándola a la capa de salida. Ésta consta de una sola neurona que determina con un 1 o un 0 si el lunar es maligno o benigno.
 
 .arquitectura de la red convolucional
 [source, python]
@@ -235,7 +235,6 @@ Si comparamos gráficamente los tres modelos podemos observar que el que mejores
 
 Con una prueba de 660 imágenes, siendo 360 de tipo 0 y 300 de tipo 1, obtuvimos los siguientes resultados:
 
-.resultado de ejecución
 ----
 Predicciones del modelo denso
 21/21 [==============================] - 0s 22ms/step
