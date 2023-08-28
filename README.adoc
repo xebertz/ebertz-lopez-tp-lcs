@@ -82,9 +82,7 @@ Realizamos el entrenamiento de redes neuronales densas y convolucionales. Este c
 
 A continuación, compartiremos las configuraciones específicas de parámetros que empleamos para estas distintas redes, así como aquella que determinamos como el modelo óptimo.
 
-==== Configuración de parámetros
-
-===== Red neuronal densa
+==== Red neuronal densa
 
 La red neuronal densa tiene una capa de entrada de 10,000 neuronas, correspondiendo cada una de estas a un píxel de la imagen de 100x100 píxeles. Cuenta con tres canales, para analizar imágenes a color. A continuación se tienen dos capas ocultas que contienen 150 neuronas cada una, las cuales analizan los datos de las neuronas de entrada. Por último, como se mencionó, consta de una sola neurona de salida, la cual determina con un 1 o un 0 (redondeando los resultados intermedios) si el lunar de la imagen analizada es maligno o benigno.
 
@@ -119,7 +117,7 @@ Este modelo es simple, ya que, después de diversas pruebas, determinamos que es
 
 La precisión máxima a la que se llegó con este modelo, con 20 vueltas de entrenamiento, es de 78%. Esto implicaría un alto nivel de precisión, pero las redes neuronales densas pierden el contexto de las imágenes dadas, por lo que al procesar información que se encuentra fuera de los rasgos de las imágenes de entrenamiento pierde eficacia y precisión.
 
-===== Red neuronal convolucional
+==== Red neuronal convolucional
 
 La red neuronal convolucional tiene una capa de entrada de tipo _convolucional_. Esta capa analiza la imagen en clústeres de 3x3 píxeles, asignándole un valor numérico a cada pixel. Luego, la capa de _pooling_ comprime la imagen, manteniendo las características más importantes de la misma, dadas por los valores de los pixeles. Esta información paésa a través de la capa de _dropout_, la cual modifica los resultados de los nodos a los cuales se dirigen los resultados, para evitar sobrecompensación en los resultados.
 
@@ -159,11 +157,11 @@ Dadas las características de las capas convolucionales, se puede intuir que es 
 
 Este modelo, por sí solo, es lo suficientemente eficaz para nuestro problema. Sin embargo, realizamos unas pruebas utilizando aumento de datos con la finalidad de mejorar incluso más estos resultados.
 
-===== Red neuronal convolucional con aumento de datos
+==== Red neuronal convolucional con aumento de datos
 
 
 
-==== Modelo óptimo
+=== Modelo óptimo
 
 Por lo mencionado previamente en la explicación de los modelos usados, se puede llegar finalmente a la conclusión de que para la tarea a completar, la cual consiste en analizar fotos, es más óptima la red neuronal convolucional. Esto se debe a que presenta un nivel mayor de precisión y permite que con el entrenamiento presentado para el modelo pueda intuir y determinar un resultado de una imagen con la cual no entrenó y que no sea completamente similar a un dato de entrenamiento.
 
