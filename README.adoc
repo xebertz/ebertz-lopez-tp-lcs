@@ -12,8 +12,6 @@ v1, {docdate}
 
 == Introducción
 
-En el presente documento, se abordará el propósito central de nuestro sistema, explicando las razones detrás de la elección del modelo de Deep Learning seleccionado, detallando las dificultades que enfrentamos durante el proceso y describiendo el procedimiento de entrenamiento del modelo.
-
 En este documento, abordaremos las distintas dificultades encontradas en el entrenamiento del modelo de inteligencia artificial seleccionado, para detectar el nivel de retinopatía diabética a partir de imágenes de fondo de ojo. Explicaremos por qué este proyecto está fuera de nuestro alcance, y brindaremos una segunda alternativa para nuestro objetivo de desarrollar un modelo de inteligencia artificial con fines médicos. Detallaremos, también, el procedimiento realizado para llevar a cabo el desarrollo de esta alternativa.
 
 == Detección de nivel de Retinopatía Diabética a través de imágenes de fondo de ojo
@@ -47,10 +45,7 @@ Ambos modelos tenían los mismos resultados, lo que no debería suceder ya que s
 
 Luego de analizar y probar diversas técnicas, determinamos que el problema elegido escapa nuestro alcance, ya que las imágenes deberían analizarse a mayor resolución, por lo que se necesitan mas recursos, que no tenemos.
 
-Como el objetivo del trabajo es crear un modelo de IA con fines médicos, decidimos cambiar el proyecto.
-
-Nuestro nuevo objetivo es detectar si un lunar es benigno o maligno a partir de una imagen. Debido a que seguimos utilizando imagenes, podemos reutilizar todo el trabajo ya desarrollado, cambiando la fuente de datos.
-
+Como el objetivo del trabajo es crear un modelo de IA con fines médicos, decidimos cambiar el enfoque del proyecto. Nuestro nuevo objetivo es detectar si un lunar es benigno o maligno a partir de una imagen. Debido a que seguimos utilizando imagenes, podemos reutilizar todo el trabajo ya desarrollado, cambiando la fuente de datos. Esto hace que el tiempo final de desarrollo se reduzca considerablemente.
 
 
 == Desarrollo
