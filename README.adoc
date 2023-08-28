@@ -1,4 +1,4 @@
-= TP Inicial - Laboratorio de Construcción de Software
+= TP Inicial - Laboratorio de Construcción de Software - Entrega 3
 Ebertz Ximena <xebertz@campus.ungs.edu.ar>; Gross Pablo <pablorubengross@gmail.com>; López Gonzalo <gonzagonzalopez20@gmail.com>
 v1, {docdate}
 :toc:
@@ -13,6 +13,30 @@ v1, {docdate}
 == Introducción
 
 En el presente documento, se abordará el propósito central de nuestro sistema, explicando las razones detrás de la elección del modelo de Deep Learning seleccionado, detallando las dificultades que enfrentamos durante el proceso y describiendo el procedimiento de entrenamiento del modelo.
+
+En este documento, abordaremos las distintas dificultades encontradas en el entrenamiento del modelo de inteligencia artificial seleccionado, para detectar el nivel de retinopatía diabética a partir de imágenes de fondo de ojo. Explicaremos por qué este proyecto está fuera de nuestro alcance, y brindaremos una segunda alternativa para nuestro objetivo de desarrollar un modelo de inteligencia artificial con fines médicos. Detallaremos, también, el procedimiento realizado para llevar a cabo el desarrollo de esta alternativa.
+
+== Detección de nivel de Retinopatía Diabética a través de imágenes de fondo de ojo
+
+Principalmente, nuestro objetivo fue analizar imágenes de fondo de ojo. Trabajamos con un dataset con gran cantidad de muestras, a alta resolución. Estas imágenes estaban etiquetadas mediante un archivo csv denominado `trainLabels_cropped`, que contenía el nombre de la imagen y su nivel de retinopatía diabética. Para trabajar con esta información, como primer instancia, limpiamos y le dimos el formato necesario a nuestros datos.
+
+Para esto, como primera instancia calculamos la cantidad de clases y su tamaño, segun la información del archivo `trainLabels_cropped`. Como se puede ver teníamos cinco clases: 0, 1, 2, 3 y 4. Los datos estaban desbalanceados, lo que en el entrenamiento de nuestra IA generaría resultados desfavorables.
+
+IMAGEN DE TAMAÑO DE CLASES
+
+Como la clase 0 tiene muchos elementos, decidimos recortarlos, y dejar un aproximado de 4000 imágenes. Esto hizo que la distribución de las imágenes sea mas pareja.
+
+IMAGEN DE TAMAÑO DE CLASES MEJORADO
+
+Luego, leimos las imágenes, guardándolas a todas en un array. Acá es donde surgió el primer problema: la lectura para imágenes de más de 100x100 pixeles no se podía hacer, ya que se llenaba la memoria y se cortaba la ejecución del programa.
+
+
+
+
+Desarrollamos dos modelos de inteligencia artificial: un modelo denso y un modelo convolucional.
+
+
+
 
 == Desarrollo
 
