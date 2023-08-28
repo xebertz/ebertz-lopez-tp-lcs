@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://localhost:3999/desarrollo.slide#1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Desarrollo de IA - Detección de lunares benignos y malignos</title>
+    
+    <script>
+      var notesEnabled =  false ;
+    </script>
+    <script src="./desarrollo_files/slides.js"></script>
+
+    
+
+    <script>
+      
+      if (window["location"] && window["location"]["hostname"] == "talks.golang.org") {
+        var _gaq = _gaq || [];
+        _gaq.push(["_setAccount", "UA-11222381-6"]);
+        _gaq.push(["b._setAccount", "UA-49880327-6"]);
+        window.trackPageview = function() {
+          _gaq.push(["_trackPageview", location.pathname+location.hash]);
+          _gaq.push(["b._trackPageview", location.pathname+location.hash]);
+        };
+        window.trackPageview();
+        window.trackEvent = function(category, action, opt_label, opt_value, opt_noninteraction) {
+          _gaq.push(["_trackEvent", category, action, opt_label, opt_value, opt_noninteraction]);
+          _gaq.push(["b._trackEvent", category, action, opt_label, opt_value, opt_noninteraction]);
+        };
+      }
+    </script>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"></head>
+
+  <body style="display: none" class="loaded">
+
+    <section class="slides layout-widescreen" style="transform: scale(0.862667);">
+
+      <article class="current">
+        <h1>Desarrollo de IA - Detección de lunares benignos y malignos</h1>
+        
+        
+        
+          <div class="presenter">
+            
+  
+  <p>
+    Ebertz, Ximena
+  </p>
+  
+
+          </div>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    Gross, Pablo
+  </p>
+  
+
+          </div>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    López, Gonzalo
+  </p>
+  
+
+          </div>
+        
+      </article>
+
+  
+  
+      <article class="next">
+      
+        <h3>Objetivo</h3>
+        
+  
+  <p>
+    Detectar si un lunar es benigno o maligno
+  </p>
+  
+
+  
+  <p>
+    <b>Dataset</b> <b>utilizado:</b>
+  </p>
+  
+<p class="link"><a href="https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign" target="_blank">www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign</a></p>
+      
+      <span class="pagenumber">2</span>
+      </article>
+  
+  
+  
+      <article class="far-next">
+      
+        <h2>Datos</h2>
+      
+      <span class="pagenumber">3</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Preparación de datos</h3>
+        
+  
+  <p>
+    1. Lectura de imágenes, estableciendo su etiqueta
+<br>
+
+    2. Normalización
+<br>
+
+    3. Mezcla de datos, para mejor entrenamiento de la IA
+  </p>
+  
+
+  
+  <p>
+    ⚠︎ No se modificó la cantidad de imágenes, ya que las clases están balanceadas
+  </p>
+  
+
+      
+      <span class="pagenumber">4</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Aumento de datos</h3>
+        
+  
+  <p>
+    Imágenes modificadas: zoom, movimiento, inclinación, rotación
+  </p>
+  
+
+  
+  <p>
+    <b>Ventajas:</b>
+<br>
+
+    - Mayor distribución de muestras
+<br>
+
+    - Aprendizaje variado
+  </p>
+  
+
+  
+  <p>
+    <b>Desventajas:</b>
+<br>
+
+    - Más trabajo de preprocesamiento
+<br>
+
+    - Mayor complejidad temporal en entrenamiento
+  </p>
+  
+
+      
+      <span class="pagenumber">5</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h2>Modelos de IA</h2>
+      
+      <span class="pagenumber">6</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Modelo Convolucional</h3>
+        
+<div class="image">
+  <img src="./desarrollo_files/red-cnn.png" height="450">
+</div>
+
+      
+      <span class="pagenumber">7</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Resultados</h3>
+        
+<div class="image">
+  <img src="./desarrollo_files/resultados-cnn.png">
+</div>
+
+      
+      <span class="pagenumber">8</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Modelo Denso</h3>
+        
+<div class="image">
+  <img src="./desarrollo_files/red-densa.png" height="450">
+</div>
+
+      
+      <span class="pagenumber">9</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Resultados</h3>
+        
+<div class="image">
+  <img src="./desarrollo_files/resultados-denso.png">
+</div>
+
+      
+      <span class="pagenumber">10</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Modelo Convolucional con Aumento de Datos</h3>
+        
+<div class="image">
+  <img src="./desarrollo_files/red-cnn-ad.png" height="450">
+</div>
+
+      
+      <span class="pagenumber">11</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Resultados</h3>
+        
+<div class="image">
+  <img src="./desarrollo_files/resultados-cnn-ad.png">
+</div>
+
+      
+      <span class="pagenumber">12</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h2>Comparación</h2>
+      
+      <span class="pagenumber">13</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Precisión</h3>
+        
+  
+  <p>
+    El modelo convolucional fue el que arrojó mejores resultados: 85% de precisión
+  </p>
+  
+
+<div class="image">
+  <img src="./desarrollo_files/precision-entr-comparacion-lunares.png">
+</div>
+
+      
+      <span class="pagenumber">14</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Erorr</h3>
+        
+  
+  <p>
+    El modelo convolucional fue el que arrojó mejores resultados: ~45% de error
+  </p>
+  
+
+<div class="image">
+  <img src="./desarrollo_files/perdida-entr-comparacion-lunares.png">
+</div>
+
+      
+      <span class="pagenumber">15</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Testing</h3>
+        
+  
+  <div class="code"><pre>Predicciones del modelo denso
+21/21 [==============================] - 0s 22ms/step
+Predicciones: 660
+Tipo 0: 289 correctas, 71 incorrectas
+Tipo 1: 178 correctas, 122 incorrectas
+Total: 467 correctas, 193 incorrectas
+
+Predicciones del modelo convolutivo
+21/21 [==============================] - 1s 53ms/step
+Predicciones: 660
+Tipo 0: 298 correctas, 62 incorrectas
+Tipo 1: 263 correctas, 37 incorrectas
+Total: 561 correctas, 99 incorrectas
+
+Predicciones del modelo convolutivo con aumento de datos
+21/21 [==============================] - 1s 62ms/step
+Predicciones: 660
+Tipo 0: 299 correctas, 61 incorrectas
+Tipo 1: 254 correctas, 46 incorrectas
+Total: 553 correctas, 107 incorrectas</pre></div>
+  
+
+      
+      <span class="pagenumber">16</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Conclusión</h3>
+        
+  
+  <p>
+    El modelo convolucional es el más óptimo, ya que
+  </p>
+  
+
+  <ul>
+  
+    <li>tiene mayor precisión</li>
+  
+    <li>presenta un menor porcentaje de error</li>
+  
+    <li>tarda menos en ejecutar y entrenar que el modelo con aumento de datos</li>
+  
+    <li>su nivel de pecisión se mantiene en las pruebas</li>
+  
+  </ul>
+
+      
+      <span class="pagenumber">17</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Repositorio</h3>
+        <p class="link"><a href="https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git" target="_blank">github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git</a></p>
+      
+      <span class="pagenumber">18</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>¿Preguntas?</h3>
+        
+  
+  <p>
+    <i></i>
+<br>
+
+    <i></i>
+<br>
+
+    <i></i>
+<br>
+
+    <i></i>
+  </p>
+  
+
+<div class="image">
+  <img src="./desarrollo_files/pregunta.png" height="200">
+</div>
+
+      
+      <span class="pagenumber">19</span>
+      </article>
+  
+  
+
+      <article class="">
+        <h3>Thank you</h3>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    Ebertz, Ximena
+  </p>
+  
+<p class="link"><a href="mailto:xebertz@campus.ungs.edu.ar" target="_blank">xebertz@campus.ungs.edu.ar</a></p>
+          </div>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    Gross, Pablo
+  </p>
+  
+<p class="link"><a href="mailto:pablorubengross@gmail.com" target="_blank">pablorubengross@gmail.com</a></p>
+          </div>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    López, Gonzalo
+  </p>
+  
+<p class="link"><a href="mailto:gonzagonzalopez20@gmail.com" target="_blank">gonzagonzalopez20@gmail.com</a></p>
+          </div>
+        
+      </article>
+
+    <div class="slide-area" id="prev-slide-area"></div><div class="slide-area" id="next-slide-area"></div></section>
+
+    <div id="help" style="display: none;">
+      Use the left and right arrow keys or click the left and right
+      edges of the page to navigate between slides.<br>
+      (Press 'H' or navigate to hide this message.)
+    </div>
+
+    
+    <script src="./desarrollo_files/play.js"></script>
+    
+
+    <script>
+      (function() {
+        
+        if (window["location"] && window["location"]["hostname"] == "talks.golang.org") {
+          var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+          ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+          var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+        }
+      })();
+    </script>
+  
+
+<link rel="stylesheet" type="text/css" href="./desarrollo_files/css"><link rel="stylesheet" type="text/css" href="./desarrollo_files/styles.css"></body></html>
