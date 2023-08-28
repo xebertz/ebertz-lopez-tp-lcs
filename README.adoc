@@ -20,7 +20,8 @@ Principalmente, nuestro objetivo fue analizar imágenes de fondo de ojo. Trabaja
 
 Para esto, como primera instancia calculamos la cantidad de clases y su tamaño, segun la información del archivo `trainLabels_cropped`. Como se puede ver teníamos cinco clases: 0, 1, 2, 3 y 4. Los datos estaban desbalanceados, lo que en el entrenamiento de nuestra IA generaría resultados desfavorables.
 
-IMAGEN DE TAMAÑO DE CLASES
+.tamaño de clases
+image::/imgs/distribucion-clases-oculares.png[]
 
 Como la clase 0 tiene muchos elementos, decidimos recortarlos, y dejar un aproximado de 4000 imágenes. Esto hizo que la distribución de las imágenes sea mas pareja.
 
