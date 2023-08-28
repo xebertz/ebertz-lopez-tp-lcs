@@ -21,12 +21,14 @@ Principalmente, nuestro objetivo fue analizar imágenes de fondo de ojo. Trabaja
 Para esto, como primera instancia calculamos la cantidad de clases y su tamaño, segun la información del archivo `trainLabels_cropped`. Como se puede ver teníamos cinco clases: 0, 1, 2, 3 y 4. Los datos estaban desbalanceados, lo que en el entrenamiento de nuestra IA generaría resultados desfavorables.
 
 .tamaño de clases
-image::../informes/img/distribucion-clases-oculares.png[]
-
+image::distribucion-clases-oculares.png[]
 
 Como la clase 0 tiene muchos elementos, decidimos recortarlos, y dejar un aproximado de 4000 imágenes. Esto hizo que la distribución de las imágenes sea mas pareja.
 
-IMAGEN DE TAMAÑO DE CLASES MEJORADO
+.tamaño de clases con menos elementos de tipo 0
+image::distribucion-clases-oculares-recorte.png[]
+
+En este caso, las clases siguen estando desbalanceadas, pero como las clases 3 y 4 tienen muy pocos elementos, decidimos probar con esta distribución para ver si funcionaba.
 
 Luego leimos las imágenes, guardándolas a todas en una lista. Acá es donde surgió el primer problema: la lectura para imágenes de más de 100x100 pixeles no se podía hacer, ya que se llenaba la memoria y se cortaba la ejecución del programa. Las imágenes de 100x100 pixeles tardaban demasiado en cargar, lo que hacía que el programa sea inutilizable. Por este motivo, decidimos que la resolución de las imágenes sea de 50x50 pixeles.
 
@@ -41,7 +43,7 @@ El entrenamiento de ambos modelos fue demasiado lento, y con niveles de exactitu
 
 AGREGAR GRÁFICOS DE MÉTRICAS
 
-Agregar o eliminar capas de neuronas o configurar los hipeparámetros de ambos modelos no sirvió, por lo que probamos con una técnica llamada _aumento de datos_. Esta técnica consiste en "deformar" las imágenes, cambiando su iluminación, zoom, rotación, etcétera. Se utiliza para mejorar el entrenamiento de los modelos de IA de análisis de imágenes, ya que aumenta el número de imágenes de entrenamiento y su variedad. Sin embargo, esto tampoco funcionó.
+Agregar o eliminar capas de neuronas, balancear mejor las clases o configurar los hipeparámetros de ambos modelos no sirvió, por lo que probamos con una técnica llamada _aumento de datos_. Esta técnica consiste en "deformar" las imágenes, cambiando su iluminación, zoom, rotación, etcétera. Se utiliza para mejorar el entrenamiento de los modelos de IA de análisis de imágenes, ya que aumenta el número de imágenes de entrenamiento y su variedad. Sin embargo, esto tampoco funcionó.
 
 Ambos modelos tenían los mismos resultados, lo que no debería suceder ya que son modelos distintos.
 
