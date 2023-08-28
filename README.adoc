@@ -39,7 +39,8 @@ Luego, las imágenes y etiquetas fueron convertidas a un formato reconocible por
 
 Cuando visualizamos las imágenes, nos dimos cuenta que la resolución de las imágenes era demasiado baja para que los humanos podamos detectar alguna anomalía en ellas. Sin embargo, procedimos igualmente a analizarlas con un modelo convolucional y uno denso.
 
-El entrenamiento de ambos modelos fue demasiado lento, y con niveles de exactitud muy bajos, y niveles de error tenía una tendencia a descender, pero seguía en valores altos. Esto sugería que la IA no aprendía.
+El entrenamiento de ambos modelos fue demasiado lento, y con niveles de exactitud muy bajos, y niveles de error tenía una tendencia a descender, pero seguía en valores altos. Esto sugería que la IA no aprendía. Ambos modelos tenían resultados muy similares, lo que no debería suceder ya que son modelos distintos.
+
 
 [cols="a,a", frame=none, grid=none, role=right]
 |===
@@ -48,9 +49,7 @@ El entrenamiento de ambos modelos fue demasiado lento, y con niveles de exactitu
 |===
 
 
-Agregar o eliminar capas de neuronas, balancear mejor las clases o configurar los hipeparámetros de ambos modelos no sirvió, por lo que probamos con una técnica llamada _aumento de datos_. Esta técnica consiste en "deformar" las imágenes, cambiando su iluminación, zoom, rotación, etcétera. Se utiliza para mejorar el entrenamiento de los modelos de IA de análisis de imágenes, ya que aumenta el número de imágenes de entrenamiento y su variedad. Sin embargo, esto tampoco funcionó.
-
-Ambos modelos tenían los mismos resultados, lo que no debería suceder ya que son modelos distintos.
+Agregar o eliminar capas de neuronas, balancear más las clases o reconfigurar los hipeparámetros de ambos modelos no sirvió, por lo que probamos con una técnica llamada _aumento de datos_. Esta técnica consiste en "deformar" las imágenes, cambiando su iluminación, zoom, rotación, etcétera. Se utiliza para mejorar el entrenamiento de los modelos de IA de análisis de imágenes, ya que aumenta el número de imágenes de entrenamiento y su variedad. Sin embargo, esto tampoco funcionó.
 
 Luego de analizar y probar diversas técnicas, determinamos que el problema elegido escapa nuestro alcance, ya que las imágenes deberían analizarse a mayor resolución, por lo que se necesitan mas recursos, que no tenemos.
 
@@ -87,27 +86,82 @@ A continuación, compartiremos las configuraciones específicas de parámetros q
 
 ===== Red neuronal densa
 
-La red neuroonal densa tiene una capa de entrada de 10,000 neuronas, correspondiendo cada una de estas a un píxel de la imagen de 100x100 píxeles. Cuenta con tres canales, para analizar imágenes a color.
+La red neuronal densa tiene una capa de entrada de 10,000 neuronas, correspondiendo cada una de estas a un píxel de la imagen de 100x100 píxeles. Cuenta con tres canales, para analizar imágenes a color. A continuación se tienen dos capas ocultas que contienen 150 neuronas cada una, las cuales analizan los datos de las neuronas de entrada. Por último, como se mencionó, consta de una sola neurona de salida, la cual determina con un 1 o un 0 (redondeando los resultados intermedios) si el lunar de la imagen analizada es maligno o benigno.
 
-A continuación se tienen dos capas ocultas que contienen 150 neuronas cada una, las cuales analizan los datos de las neuronas de entrada.
+En su compilación se utiliza el optimizador `adam`, ya que, en las pruebas, arrojó mejores resultados.
 
-Por último, como se mencionó, consta de una sola neurona de salida, la cual determina con un 1 o un 0 (redondeando los resultados intermedios) si el lunar de la imagen analizada es maligno o benigno.
+//lo dejamos??
 
-Este modelo es simple, ya que, después de diversas pruebas, determinamos que es el que mejor funciona dentro de los modelos densos que analizamos. La precisión máxima que alcanzó es de 78%. Esto implicaría un alto nivel de precisión, pero las redes neuronales densas pierden el contexto de las imágenes dadas, por lo que al procesar información que se encuentra fuera de los rasgos de las imágenes de entrenamiento pierde eficacia y precisión.
+
+.arquitectura de la red densa
+[source, python]
+----
+modelo_denso = tf.keras.models.Sequential([
+    tf.keras.layers.Flatten(input_shape = (100, 100, 3)),
+    tf.keras.layers.Dense(150, activation = 'relu'),
+    tf.keras.layers.Dense(150, activation = 'relu'),
+    tf.keras.layers.Dense(1, activation = 'sigmoid'),
+])
+
+#Compilación
+modelo_denso.compile(optimizer='adam',
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+----
+
+Este modelo es simple, ya que, después de diversas pruebas, determinamos que es el que mejor funciona dentro de los modelos densos que analizamos. Sin embargo, los resultados obtenidos en el entrenamiento son muy favorables. Podemos observar que la precisión llegó casi al 80%, tanto en entrenamiento como en pruebas; y la pérdida está debajo del 60%.
+
+[cols="a,a", frame=none, grid=none, role=right]
+|===
+|   image:informes/img/precision-entr-denso-lunares.png[220, 240, align="left"]
+|   image:informes/img/perdida-entr-denso-lunares.png[220, 233, align="right"]
+|===
+
+La precisión máxima a la que se llegó con este modelo, con 20 vueltas de entrenamiento, es de 78%. Esto implicaría un alto nivel de precisión, pero las redes neuronales densas pierden el contexto de las imágenes dadas, por lo que al procesar información que se encuentra fuera de los rasgos de las imágenes de entrenamiento pierde eficacia y precisión.
 
 ===== Red neuronal convolucional
 
-Esta red neuronal convolucional está configurada de tal manera que se tienen tres capas convolucionales en la entrada. Las cuales se encargan de observar la imagen en clústers de 3x3 píxeles, 3 veces, para poder comprimirlas manteniendo las características más importantes de la misma. Para así poder procesarla más rápido en las capas subsiguientes.
+La red neuronal convolucional tiene una capa de entrada de tipo _convolucional_. Esta capa analiza la imagen en clústeres de 3x3 píxeles, asignándole un valor numérico a cada pixel. Luego, la capa de _pooling_ comprime la imagen, manteniendo las características más importantes de la misma, dadas por los valores de los pixeles. Esta información paésa a través de la capa de _dropout_, la cual modifica los resultados de los nodos a los cuales se dirigen los resultados, para evitar sobrecompensación en los resultados.
 
-Después se encuentra la capa de dropout, la cual modifica los resultados de los nodos a los cuales se dirigen los resultados, para evitar sobrecompensación en los resultados.
+Para que los datos puedan ser analizados por las capas densas de la red, deben estar en una dimensión. La capa _flatten_ transforma el vector de tres canales correspondiente a la imagen, en un vector de un canal. Luego, las capas densas procesan la información, llevandola a la capa de salida. Ésta consta de una sola neurona que determina con un 1 o un 0 si el lunar es maligno o benigno.
 
-Siguiendo a esto, se genera la capa de entrada, que toma la imagen comprimida y genera una neurona de entrada por cada píxel de la misma imagen, para así poder procesarla.
+.arquitectura de la red convolucional
+[source, python]
+----
+modelo_cnn = tf.keras.models.Sequential([
+    tf.keras.layers.Conv2D(16, (3, 3), activation = 'relu', input_shape = (100, 100, 3)),
+    tf.keras.layers.MaxPooling2D(3, 3),
 
-A continuación, se encuentra una capa oculta de 25 neuronas para poder procesar los datos de las imágenes.
+    tf.keras.layers.Dropout(0.5),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(64, activation = 'relu'),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(32, activation = 'relu'),
+    tf.keras.layers.Dropout(0.5),
+    tf.keras.layers.Dense(1, activation = 'sigmoid')
+])
 
-Por último, se encuentra la capa de salida, la cual es una sola neurona que determina con un 1 o un 0 si el lunar es maligno o benigno.
+#Compilación
+modelo_cnn.compile(optimizer=opt,
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+----
 
-Dadas las características de las capas convolucionales, se puede intuir que es recomendable usarlas para el análisis de imágenes, ya que permiten añadir contexto espacial a la predicción del modelo neuronal. Por esto mismo, el modelo que estamos usando llega a una precisión del 80/81%.
+Esta arquitectura fue elegida luego de diversas pruebas con distintos tipos de arquitectura para un modelo de este tipo. Dado nuestro problema, es la que mas rápido se entrena, ya que a mayor cantidad de capas mayor tiempo de entrenamiento; y es la que arrojó mejores resultados.
+
+Dadas las características de las capas convolucionales, se puede intuir que es recomendable usarlas para el análisis de imágenes, ya que permiten añadir contexto espacial a la predicción del modelo neuronal. Los resultados obtenidos fueron muy favorables, ya que llegó a un 85% de precisión, con 20 vueltas de entrenamiento. El nivel de error se mantuvo, tanto en entrenamiento como en pruebas, por debajo del 40%. Esto es una mejora considerable con respecto al modelo anterior.
+
+[cols="a,a", frame=none, grid=none, role=right]
+|===
+|   image:informes/img/precision-entr-cnn-lunares.png[220, 240, align="left"]
+|   image:informes/img/perdida-entr-cnn-lunares.png[220, 233, align="right"]
+|===
+
+Este modelo, por sí solo, es lo suficientemente eficaz para nuestro problema. Sin embargo, realizamos unas pruebas utilizando aumento de datos con la finalidad de mejorar incluso más estos resultados.
+
+===== Red neuronal convolucional con aumento de datos
+
+
 
 ==== Modelo óptimo
 
