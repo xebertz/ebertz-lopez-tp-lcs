@@ -48,11 +48,12 @@ Luego de analizar y probar diversas técnicas, determinamos que el problema eleg
 Como el objetivo del trabajo es crear un modelo de IA con fines médicos, decidimos cambiar el enfoque del proyecto. Nuestro nuevo objetivo es detectar si un lunar es benigno o maligno a partir de una imagen. Debido a que seguimos utilizando imagenes, podemos reutilizar todo el trabajo ya desarrollado, cambiando la fuente de datos. Esto hace que el tiempo final de desarrollo se reduzca considerablemente.
 
 
-== Desarrollo
+== Detección de lunares benignos y malignos
 
-=== Detección de lunares benignos y malignos
 
 El propósito central de nuestro sistema radica en la detección precisa de lunares benignos y malignos a través del análisis de imágenes. Estas imágenes son adquiridas de la página web https://www.kaggle.com/[Kaggle], concretamente del conjunto de datos disponible en https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign[Skin Cancer: Malignant vs. Benign]. Este conjunto específico consta de un total de 2637 imágenes utilizadas para el entrenamiento, distribuidas en 1440 imágenes de lunares benignos y 1197 imágenes de lunares malignos. Además, se dispone de 660 imágenes para llevar a cabo pruebas, compuestas por 360 imágenes de lunares benignos y 300 imágenes de lunares malignos.
+
+=== Desarrollo
 
 === Pre-Entrenamiento
 
