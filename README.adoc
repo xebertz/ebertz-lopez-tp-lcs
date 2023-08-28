@@ -21,12 +21,12 @@ Principalmente, nuestro objetivo fue analizar imágenes de fondo de ojo. Trabaja
 Para esto, como primera instancia calculamos la cantidad de clases y su tamaño, segun la información del archivo `trainLabels_cropped`. Como se puede ver teníamos cinco clases: 0, 1, 2, 3 y 4. Los datos estaban desbalanceados, lo que en el entrenamiento de nuestra IA generaría resultados desfavorables.
 
 .tamaño de clases
-image::distribucion-clases-oculares.png[distribucion, 450, 300, align="center"]
+image::informes/img/distribucion-clases-oculares.png[distribucion, 350, 200, align="center"]
 
 Como la clase 0 tiene muchos elementos, decidimos recortarlos, y dejar un aproximado de 4000 imágenes. Esto hizo que la distribución de las imágenes sea mas pareja.
 
 .tamaño de clases con menos elementos de tipo 0
-image::distribucion-clases-oculares-recorte.png[nueva distribucion, 450, 300, align="center"]
+image::informes/img/distribucion-clases-oculares-recorte.png[nueva distribucion, 350, 200, align="center"]
 
 En este caso, las clases siguen estando desbalanceadas, pero como las clases 3 y 4 tienen muy pocos elementos y no queríamos minimizar tanto la cantidad de datos, decidimos probar con esta distribución para ver si funcionaba.
 
@@ -41,10 +41,10 @@ Cuando visualizamos las imágenes, nos dimos cuenta que la resolución de las im
 
 El entrenamiento de ambos modelos fue demasiado lento, y con niveles de exactitud muy bajos, y niveles de error muy altos. Esto sugería que la IA no aprendía.
 
-[cols="a,a", frame=none, grid=none, role=center]
+[cols="a,a", frame=none, grid=none, role=right]
 |===
-|   image:precision-entr-ocular.png[220, 240, align="left"]
-|   image:perdida-entr-ocular.png[215, 240, align="right"]
+|   image:informes/img/precision-entr-ocular.png[220, 240, align="left"]
+|   image:informes/img/perdida-entr-ocular.png[214, 240, align="right"]
 |===
 
 
