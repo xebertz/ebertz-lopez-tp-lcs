@@ -26,10 +26,10 @@ Como la clase 0 tiene muchos elementos, decidimos recortarlos, y dejar un aproxi
 
 IMAGEN DE TAMAÑO DE CLASES MEJORADO
 
-Luego leimos las imágenes, guardándolas a todas en un array. Acá es donde surgió el primer problema: la lectura para imágenes de más de 100x100 pixeles no se podía hacer, ya que se llenaba la memoria y se cortaba la ejecución del programa. Las imágenes de 100x100 pixeles tardaban demasiado en cargar, lo que hacía que el programa sea inutilizable. Por este motivo, decidimos que la resolución de las imágenes sea de 50x50 pixeles.
+Luego leimos las imágenes, guardándolas a todas en una lista. Acá es donde surgió el primer problema: la lectura para imágenes de más de 100x100 pixeles no se podía hacer, ya que se llenaba la memoria y se cortaba la ejecución del programa. Las imágenes de 100x100 pixeles tardaban demasiado en cargar, lo que hacía que el programa sea inutilizable. Por este motivo, decidimos que la resolución de las imágenes sea de 50x50 pixeles.
 
 Dividimos a las imágenes y sus etiquetas en tres conjuntos, uno de entrenamiento, otro de validación, y otro de prueba. El conjunto de entrenamiento se utiliza para que la IA aprenda y reconozca patrones. El de validación se utiliza para que, en su entrenamiento, la IA analice esas imágenes, con la finalidad de calcular su nivel de error. El conjunto de prueba se utiliza para, luego del entrenamiento, utilizar a la IA para que prediga los resultados de estas imágenes, y verificar su funcionamiento.
-El conjunto de entrenamiento corresponde a un 65% de la totalidad de las imágenes, el de validación corresponde a un 15%, y el de prueba corresponde al 20% restante.
+El conjunto de entrenamiento corresponde a un 65% de la totalidad de las imágenes, el de validación corresponde a un 15%, y el de prueba corresponde al 20% restante. Cada imagen fue normalizada, es decir, los valores de todos los pixeles fueron establecidos en el rango [0, 1].
 
 Luego, las imágenes y etiquetas fueron convertidas a un formato reconocible por la IA, llamado _tensor_.
 
@@ -50,14 +50,11 @@ Como el objetivo del trabajo es crear un modelo de IA con fines médicos, decidi
 
 == Detección de lunares benignos y malignos
 
-
-El propósito central de nuestro sistema radica en la detección precisa de lunares benignos y malignos a través del análisis de imágenes. Estas imágenes son adquiridas de la página web https://www.kaggle.com/[Kaggle], concretamente del conjunto de datos disponible en https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign[Skin Cancer: Malignant vs. Benign]. Este conjunto específico consta de un total de 2637 imágenes utilizadas para el entrenamiento, distribuidas en 1440 imágenes de lunares benignos y 1197 imágenes de lunares malignos. Además, se dispone de 660 imágenes para llevar a cabo pruebas, compuestas por 360 imágenes de lunares benignos y 300 imágenes de lunares malignos.
-
-=== Desarrollo
+El nuevo propósito de nuestro sistema radica en la detección precisa de lunares benignos y malignos a través del análisis de imágenes. Estas imágenes son adquiridas de la página web https://www.kaggle.com/[Kaggle], concretamente del conjunto de datos disponible en https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign[Skin Cancer: Malignant vs. Benign]. Este conjunto específico consta de un total de 2637 imágenes utilizadas para el entrenamiento, distribuidas en 1440 imágenes de lunares benignos y 1197 imágenes de lunares malignos. Además, se dispone de 660 imágenes para llevar a cabo pruebas, compuestas por 360 imágenes de lunares benignos y 300 imágenes de lunares malignos.
 
 === Pre-Entrenamiento
 
-Antes de llevar a cabo el entrenamiento del modelo, fue necesario ejecutar una serie de pasos mediante código para asegurar su viabilidad y efectividad.
+Antes de llevar a cabo el entrenamiento del modelo, fue necesario ejecutar una serie de pasos para asegurar su viabilidad y efectividad.
 
 Inicialmente, procedimos a descargar todas las imágenes disponibles desde la página web previamente mencionada.
 
