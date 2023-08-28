@@ -28,17 +28,28 @@ Como la clase 0 tiene muchos elementos, decidimos recortarlos, y dejar un aproxi
 
 IMAGEN DE TAMAÑO DE CLASES MEJORADO
 
-Luego, leimos las imágenes, guardándolas a todas en un array. Acá es donde surgió el primer problema: la lectura para imágenes de más de 100x100 pixeles no se podía hacer, ya que se llenaba la memoria y se cortaba la ejecución del programa. Las imágenes de 100x100 pixeles tardaban demasiado en cargar, lo que hacía que el programa sea inutilizable. Por este motivo, decidimos que la resolución de las imágenes sea de 50x50 pixeles.
+Luego leimos las imágenes, guardándolas a todas en un array. Acá es donde surgió el primer problema: la lectura para imágenes de más de 100x100 pixeles no se podía hacer, ya que se llenaba la memoria y se cortaba la ejecución del programa. Las imágenes de 100x100 pixeles tardaban demasiado en cargar, lo que hacía que el programa sea inutilizable. Por este motivo, decidimos que la resolución de las imágenes sea de 50x50 pixeles.
 
 Dividimos a las imágenes y sus etiquetas en tres conjuntos, uno de entrenamiento, otro de validación, y otro de prueba. El conjunto de entrenamiento se utiliza para que la IA aprenda y reconozca patrones. El de validación se utiliza para que, en su entrenamiento, la IA analice esas imágenes, con la finalidad de calcular su nivel de error. El conjunto de prueba se utiliza para, luego del entrenamiento, utilizar a la IA para que prediga los resultados de estas imágenes, y verificar su funcionamiento.
 El conjunto de entrenamiento corresponde a un 65% de la totalidad de las imágenes, el de validación corresponde a un 15%, y el de prueba corresponde al 20% restante.
 
+Luego, las imágenes y etiquetas fueron convertidas a un formato reconocible por la IA, llamado _tensor_.
 
+Cuando visualizamos las imágenes, nos dimos cuenta que la resolución de las imágenes era demasiado baja para que los humanos podamos detectar alguna anomalía en ellas. Sin embargo, procedimos igualmente a analizarlas con un modelo convolucional y uno denso.
 
+El entrenamiento de ambos modelos fue demasiado lento, y con niveles de exactitud muy bajos, y niveles de error muy altos. Esto sugería que la IA no aprendía.
 
+AGREGAR GRÁFICOS DE MÉTRICAS
 
-Desarrollamos dos modelos de inteligencia artificial: un modelo denso y un modelo convolucional.
+Agregar o eliminar capas de neuronas o configurar los hipeparámetros de ambos modelos no sirvió, por lo que probamos con una técnica llamada _aumento de datos_. Esta técnica consiste en "deformar" las imágenes, cambiando su iluminación, zoom, rotación, etcétera. Se utiliza para mejorar el entrenamiento de los modelos de IA de análisis de imágenes, ya que aumenta el número de imágenes de entrenamiento y su variedad. Sin embargo, esto tampoco funcionó.
 
+Ambos modelos tenían los mismos resultados, lo que no debería suceder ya que son modelos distintos.
+
+Luego de analizar y probar diversas técnicas, determinamos que el problema elegido escapa nuestro alcance, ya que las imágenes deberían analizarse a mayor resolución, por lo que se necesitan mas recursos, que no tenemos.
+
+Como el objetivo del trabajo es crear un modelo de IA con fines médicos, decidimos cambiar el proyecto.
+
+Nuestro nuevo objetivo es detectar si un lunar es benigno o maligno a partir de una imagen. Debido a que seguimos utilizando imagenes, podemos reutilizar todo el trabajo ya desarrollado, cambiando la fuente de datos.
 
 
 
