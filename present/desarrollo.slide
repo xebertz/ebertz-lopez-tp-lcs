@@ -37,20 +37,22 @@ Ventajas:
 * Modelos de IA
 
 * Modelo Convolucional
-.image img/red-cnn.png 450 _
+.image img/red-cnn2.png 450 _
 
 * Resultados
-
+.image img/resultados-cnn.png
 
 * Modelo Denso
 .image img/red-densa.png 450 _
 
 * Resultados
+.image img/resultados-denso.png
 
 * Modelo Convolucional con Aumento de Datos
 .image img/red-cnn-ad.png 450 _
 
 * Resultados
+.image img/resultados-cnn-ad.png
 
 * Repositorio
 
