@@ -13,26 +13,30 @@ gonzagonzalopez20@gmail.com
 
 Detectar si un lunar es benigno o maligno, según una imagen
 
-Dataset utilizado:
+*Dataset* *utilizado:*
+.link https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign
 
 * Datos
 
 * Preparación de datos
 
-1) Lectura de imágenes, estableciendo su etiqueta
-2) Normalización
-3) Mezcla de datos, para mejor entrenamiento de la IA
+1. Lectura de imágenes, estableciendo su etiqueta
+2. Normalización
+3. Mezcla de datos, para mejor entrenamiento de la IA
 
-! No se modificó la cantidad de imágenes, ya que las clases estan balanceadas
+⚠︎ No se modificó la cantidad de imágenes, ya que las clases están balanceadas
 
 * Aumento de datos
 
 Imágenes modificadas: zoom, movimiento, inclinación, rotación
 
-Ventajas:
+*Ventajas:*
 - Mayor distribución de muestras
 - Aprendizaje variado
--
+
+*Desventajas:*
+- Más trabajo de preprocesamiento
+- Mayor complejidad temporal en entrenamiento
 
 * Modelos de IA
 
@@ -53,6 +57,45 @@ Ventajas:
 
 * Resultados
 .image img/resultados-cnn-ad.png
+
+* Comparación
+
+* ¿Cuál es mejor?
+El modelo convolucional fue el que arrojó mejores resultados: 85% de precisión
+
+.image img/precision-entr-comparacion-lunares.png
+
+* Testing
+
+    Predicciones del modelo denso
+    21/21 [==============================] - 0s 22ms/step
+    Predicciones: 660
+    Tipo 0: 289 correctas, 71 incorrectas
+    Tipo 1: 178 correctas, 122 incorrectas
+    Total: 467 correctas, 193 incorrectas
+
+    Predicciones del modelo convolutivo
+    21/21 [==============================] - 1s 53ms/step
+    Predicciones: 660
+    Tipo 0: 298 correctas, 62 incorrectas
+    Tipo 1: 263 correctas, 37 incorrectas
+    Total: 561 correctas, 99 incorrectas
+
+    Predicciones del modelo convolutivo con aumento de datos
+    21/21 [==============================] - 1s 62ms/step
+    Predicciones: 660
+    Tipo 0: 299 correctas, 61 incorrectas
+    Tipo 1: 254 correctas, 46 incorrectas
+    Total: 553 correctas, 107 incorrectas
+
+* Conclusión
+El modelo convolucional es el más óptimo, ya que
+
+- tiene mayor precisión
+- presenta un menor porcentaje de error
+- tarda menos en ejecutar y entrenar que el modelo con aumento de datos
+- su nivel de pecisión se mantiene en las pruebas
+
 
 * Repositorio
 
