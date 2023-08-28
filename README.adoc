@@ -39,7 +39,7 @@ Luego, las imágenes y etiquetas fueron convertidas a un formato reconocible por
 
 Cuando visualizamos las imágenes, nos dimos cuenta que la resolución de las imágenes era demasiado baja para que los humanos podamos detectar alguna anomalía en ellas. Sin embargo, procedimos igualmente a analizarlas con un modelo convolucional y uno denso.
 
-El entrenamiento de ambos modelos fue demasiado lento, y con niveles de exactitud muy bajos, y niveles de error muy altos. Esto sugería que la IA no aprendía.
+El entrenamiento de ambos modelos fue demasiado lento, y con niveles de exactitud muy bajos, y niveles de error tenía una tendencia a descender, pero seguía en valores altos. Esto sugería que la IA no aprendía.
 
 [cols="a,a", frame=none, grid=none, role=right]
 |===
@@ -87,13 +87,13 @@ A continuación, compartiremos las configuraciones específicas de parámetros q
 
 ===== Red neuronal densa
 
-Esta red neuronal densa está configurada de tal manera que se tiene una capa de entrada de 10,000 neuronas, correspondiendo cada una de estas a un píxel de la imagen de 100x100 píxeles.
+La red neuroonal densa tiene una capa de entrada de 10,000 neuronas, correspondiendo cada una de estas a un píxel de la imagen de 100x100 píxeles. Cuenta con tres canales, para analizar imágenes a color.
 
-Después se tienen dos capas ocultas que contienen 150 neuronas cada una, las cuales se encargan de analizar los datos de las neuronas de entrada.
+A continuación se tienen dos capas ocultas que contienen 150 neuronas cada una, las cuales analizan los datos de las neuronas de entrada.
 
-Por último, se encuentra una sola neurona de salida, la cual determina con un 1 o un 0 (redondeando los resultados intermedios) si el lunar de la imagen analizada es maligno o benigno.
+Por último, como se mencionó, consta de una sola neurona de salida, la cual determina con un 1 o un 0 (redondeando los resultados intermedios) si el lunar de la imagen analizada es maligno o benigno.
 
-Por ende, este modelo solo llega a alcanzar como máximo un 76/77% de precisión. Lo cual implicaría un alto nivel de precisión, pero por cómo actúa la red neuronal densa es que pierde bastante el contexto de las imágenes dadas. Por lo tanto, al procesar información que se encuentra fuera de los rasgos de las imágenes de entrenamiento, pierde eficacia y precisión.
+Este modelo es simple, ya que, después de diversas pruebas, determinamos que es el que mejor funciona dentro de los modelos densos que analizamos. La precisión máxima que alcanzó es de 78%. Esto implicaría un alto nivel de precisión, pero las redes neuronales densas pierden el contexto de las imágenes dadas, por lo que al procesar información que se encuentra fuera de los rasgos de las imágenes de entrenamiento pierde eficacia y precisión.
 
 ===== Red neuronal convolucional
 
