@@ -41,7 +41,12 @@ Cuando visualizamos las imágenes, nos dimos cuenta que la resolución de las im
 
 El entrenamiento de ambos modelos fue demasiado lento, y con niveles de exactitud muy bajos, y niveles de error muy altos. Esto sugería que la IA no aprendía.
 
-AGREGAR GRÁFICOS DE MÉTRICAS
+[cols="a,a", frame=none, grid=none, role=center]
+|===
+|   image:precision-entr-ocular.png[220, 240, align="left"]
+|   image:perdida-entr-ocular.png[215, 240, align="right"]
+|===
+
 
 Agregar o eliminar capas de neuronas, balancear mejor las clases o configurar los hipeparámetros de ambos modelos no sirvió, por lo que probamos con una técnica llamada _aumento de datos_. Esta técnica consiste en "deformar" las imágenes, cambiando su iluminación, zoom, rotación, etcétera. Se utiliza para mejorar el entrenamiento de los modelos de IA de análisis de imágenes, ya que aumenta el número de imágenes de entrenamiento y su variedad. Sin embargo, esto tampoco funcionó.
 
