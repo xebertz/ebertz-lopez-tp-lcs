@@ -1,0 +1,45 @@
+Desarrollo de IA - Detección de lunares benignos y malignos
+
+Ebertz, Ximena
+xebertz@campus.ungs.edu.ar
+
+Gross, Pablo
+pablorubengross@gmail.com
+
+López, Gonzalo
+gonzagonzalopez20@gmail.com
+
+* Objetivo
+
+Detectar si un lunar es benigno o maligno, según una imagen
+
+* Datos
+
+* Preparación de datos
+
+1) Lectura de imágenes, estableciendo su etiqueta
+2) Normalización
+3) Mezcla de datos, para mejor entrenamiento de la IA
+
+* Aumento de datos
+
+Imágenes modificadas: zoom, movimiento, inclinación, rotación
+
+* Modelos de IA
+
+* Modelo Convolucional
+
+* Modelo Denso
+
+* Modelo Convolucional con Aumento de Datos
+
+* Repositorio
+
+.link https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git
+
+* ¿Preguntas?
+__
+__
+__
+__
+.image img/pregunta.png 200 _
