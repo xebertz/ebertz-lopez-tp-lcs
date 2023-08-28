@@ -160,11 +160,10 @@ Este modelo, por sí solo, es lo suficientemente eficaz para nuestro problema. S
 
 Para realizar esta prueba, definimos el siguiente generador de datos:
 
-//ver que todo está en español y esto en inglés
 .generador de datos
 [source, python]
 ----
-datagen = ImageDataGenerator(
+generador_datos = ImageDataGenerator(
     rotation_range = 50,
     width_shift_range = 0.1,
     height_shift_range = 0.1,
@@ -174,14 +173,18 @@ datagen = ImageDataGenerator(
     vertical_flip = True
 )
 
-datagen.fit(imagenes_entrenamiento)
+generador_datos.fit(imagenes_entrenamiento)
 ----
 
 Este generador define diversos valores de cambio para las imágenes, que luego son procesadas mediante el método `fit()`.
 
 Estas imágenes fueron utilizadas para entrenar al modelo convolucional visto anteriormente. Sin embargo, no dio los resultados esperados.
 
-AGREGAR GRAFICOS
+[cols="a,a", frame=none, grid=none, role=right]
+|===
+|   image:informes/img/precision-entr-cnn-ad-lunares-antes.png[255, 275, align="left"]
+|   image:informes/img/perdida-entr-cnn-ad-lunares-antes.png[255, 268, align="right"]
+|===
 
 Como podemos ver, no hay una mejora con respecto al modelo convolucional antes visto, por lo que nos propusimos mejorar estos resultados modificando la red neuronal.
 
