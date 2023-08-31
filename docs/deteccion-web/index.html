@@ -12,81 +12,14 @@
     <header>
       <h1>Detección de lunares benignos y malignos</h1>
     </header>
-
-    <section id="imagen-seccion">
-      <h2>Suba una imagen</h2>
-      <input type="file" id="imagen-input" /><br />
-      <img id="imagen-subida" src="#" />
-      <p id="prediccion"></p>
-    </section>
-
-    <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function () {
-        const imagenInput = document.getElementById("imagen-input");
-        const imagenSubida = document.getElementById("imagen-subida");
-        const textoPrediccion = document.getElementById("prediccion");
-
-        let modelo = null;
-
-        (async () => {
-          console.log("Cargando modelo...");
-          modelo = await tf.loadLayersModel("./model.json");
-          console.log("Modelo cargado");
-        })();
-
-        async function predecir(imagen) {
-          if (modelo != null) {
-            const img = new Image();
-            img.src = URL.createObjectURL(imagen);
-            await img.decode();
-
-            const canvas = document.createElement("canvas");
-            canvas.width = 100;
-            canvas.height = 100;
-
-            const ctx = canvas.getContext("2d");
-            ctx.drawImage(img, 0, 0, 100, 100);
-
-            const imgData = ctx.getImageData(0, 0, 100, 100);
-
-            let arr = [];
-            let arr100 = [];
-
-            for (let p = 0; p < imgData.data.length; p += 4) {
-              let rojo = imgData.data[p] / 255;
-              let verde = imgData.data[p + 1] / 255;
-              let azul = imgData.data[p + 2] / 255;
-
-              arr100.push([rojo, verde, azul]);
-              if (arr100.length == 100) {
-                arr.push(arr100);
-                arr100 = [];
-              }
-            }
-
-            arr = [arr];
-
-            const tensor = tf.tensor(arr);
-            const prediccion = modelo.predict(tensor).dataSync();
-
-            if (prediccion <= 0.5) {
-              respuesta = "Benigno";
-            } else if (prediccion > 0.5) {
-              respuesta = "Maligno";
-            }
-            
-            textoPrediccion.textContent = "Predicción: " + respuesta;
-          }
-        }
-
-        imagenInput.addEventListener("change", async function () {
-          const imagenElegida = imagenInput.files[0];
-          if (imagenElegida) {
-            imagenSubida.src = URL.createObjectURL(imagenElegida);
-            predecir(imagenElegida);
-          }
-        });
-      });
-    </script>
+    <main>
+      <section id="imagen-seccion">
+        <h3>Seleccione una imagen para analizar</h3>
+        <input type="file" id="imagen-input" /><br />
+        <img id="imagen-subida" src="#" />
+        <p id="prediccion"></p>
+      </section>
+    </main>
+    <script src="./script.js"></script>
   </body>
 </html>
