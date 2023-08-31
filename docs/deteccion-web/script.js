@@ -63,8 +63,12 @@ async function main() {
   const botonAnalizar = document.getElementById("boton-analizar");
 
   botonAnalizar.addEventListener("click", async function () {
-    const prediccion = await predecir(imagenElegida, modelo);
-    mostrarResultado(prediccion, textoResultado);
+    if (imagenElegida) {
+      const prediccion = await predecir(imagenElegida, modelo);
+      mostrarResultado(prediccion, textoResultado);
+    } else {
+      alert("Seleccione una imagen para analizar")
+    }
   });
 }
 
