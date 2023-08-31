@@ -44,6 +44,10 @@ label {
   margin: 0.4rem 0;
 }
 
+img {
+  border-radius: 5px;
+}
+
 #imagen-seccion {
   background-color: white;
   border-radius: 10px;

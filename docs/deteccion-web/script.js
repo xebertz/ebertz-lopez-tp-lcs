@@ -43,13 +43,29 @@ async function predecir(imagen, modelo) {
   }
 }
 
+function mostrarResultado(prediccion, elemento) {
+  const probabilidad = prediccion[0];
+  let respuesta;
+  let colorRespuesta;
+  if (probabilidad <= 0.5) {
+    respuesta = "BENIGNO";
+    colorRespuesta = "green";
+  } else {
+    respuesta = "MALIGNO";
+    colorRespuesta = "red";
+  }
+  elemento.innerHTML = `Resultado: <br />
+   <span style="color:${colorRespuesta}; font-weight: bold;">${respuesta}</span> <br />
+   (${(probabilidad * 100).toFixed(2)}% de que sea maligno)`;
+}
+
 async function main() {
   const imagenInput = document.getElementById("imagen-input");
   const imagenSubida = document.getElementById("imagen-subida");
   const textoResultado = document.getElementById("resultado");
   let imagenElegida;
 
-  imagenInput.addEventListener("change", async function () {
+  imagenInput.addEventListener("change", function () {
     imagenElegida = imagenInput.files[0];
     if (imagenElegida) {
       imagenSubida.src = URL.createObjectURL(imagenElegida);
@@ -70,22 +86,6 @@ async function main() {
       alert("Seleccione una imagen para analizar")
     }
   });
-}
-
-function mostrarResultado(prediccion, elemento) {
-  const probabilidad = prediccion[0];
-  let respuesta;
-  let colorRespuesta;
-  if (probabilidad <= 0.5) {
-    respuesta = "BENIGNO";
-    colorRespuesta = "green";
-  } else {
-    respuesta = "MALIGNO";
-    colorRespuesta = "red";
-  }
-  elemento.innerHTML = `Resultado: <br />
-   <span style="color:${colorRespuesta}; font-weight: bold;">${respuesta}</span> <br />
-   (${(probabilidad * 100).toFixed(2)}% de que sea maligno)`;
 }
 
 document.addEventListener("DOMContentLoaded", main);
