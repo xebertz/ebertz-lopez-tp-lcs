@@ -1,8 +1,6 @@
 async function cargarModelo() {
   try {
-    console.log("Cargando modelo...");
     const modelo = await tf.loadLayersModel("./model.json");
-    console.log("Modelo cargado");
     return modelo;
   } catch (error) {
     console.error("Error al cargar el modelo:", error);
@@ -45,26 +43,45 @@ async function predecir(imagen, modelo) {
   }
 }
 
-async function manejarCargaImagen() {
+async function main() {
   const imagenInput = document.getElementById("imagen-input");
   const imagenSubida = document.getElementById("imagen-subida");
-  const textoPrediccion = document.getElementById("prediccion");
-  const modelo = await cargarModelo();
+  const textoResultado = document.getElementById("resultado");
+  let imagenElegida;
 
   imagenInput.addEventListener("change", async function () {
-    const imagenElegida = imagenInput.files[0];
+    imagenElegida = imagenInput.files[0];
     if (imagenElegida) {
       imagenSubida.src = URL.createObjectURL(imagenElegida);
-      const prediccion = await predecir(imagenElegida, modelo);
-      mostrarPrediccion(prediccion, textoPrediccion);
+    } else {
+      imagenSubida.src = "";
     }
+    textoResultado.innerHTML = "";
+  });
+
+  const modelo = await cargarModelo();
+  const botonAnalizar = document.getElementById("boton-analizar");
+
+  botonAnalizar.addEventListener("click", async function () {
+    const prediccion = await predecir(imagenElegida, modelo);
+    mostrarResultado(prediccion, textoResultado);
   });
 }
 
-function mostrarPrediccion(prediccion, elemento) {
+function mostrarResultado(prediccion, elemento) {
   const probabilidad = prediccion[0];
-  let respuesta = probabilidad <= 0.5 ? "Benigno" : "Maligno";
-  elemento.textContent = `Predicción: ${respuesta} (${(probabilidad * 100).toFixed(2)}% de porcentaje maligno)`;
+  let respuesta;
+  let colorRespuesta;
+  if (probabilidad <= 0.5) {
+    respuesta = "BENIGNO";
+    colorRespuesta = "green";
+  } else {
+    respuesta = "MALIGNO";
+    colorRespuesta = "red";
+  }
+  elemento.innerHTML = `Resultado: <br />
+   <span style="color:${colorRespuesta}; font-weight: bold;">${respuesta}</span> <br />
+   (${(probabilidad * 100).toFixed(2)}% de que sea maligno)`;
 }
 
-document.addEventListener("DOMContentLoaded", manejarCargaImagen);
+document.addEventListener("DOMContentLoaded", main);

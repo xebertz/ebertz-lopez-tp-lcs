@@ -48,7 +48,7 @@ label {
   background-color: white;
   border-radius: 10px;
   min-width: 300px;
-  height: 250px;
+  min-height: 250px;
   text-align: center;
   padding: 20px;
   box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
@@ -104,4 +104,8 @@ label {
   top: 0;
   opacity: 0;
   cursor: pointer;
+}
+
+#resultado {
+  line-height: 1.5;
 }
