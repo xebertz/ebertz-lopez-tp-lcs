@@ -14,10 +14,21 @@
     </header>
     <main>
       <section id="imagen-seccion">
-        <h3>Seleccione una imagen para analizar</h3>
-        <input type="file" id="imagen-input" /><br />
-        <img id="imagen-subida" src="#" />
+        <div class="custom-file-input">
+          <label for="imagen-input">Seleccionar imagen a analizar</label>
+          <input
+            type="file"
+            id="imagen-input"
+            name="imagen-input"
+            accept=".jpg, .jpeg, .png"
+            multiple
+          />
+        </div>
+
+        <br />
+        <img id="imagen-subida" />
         <p id="prediccion"></p>
+        <button id="boton-analizar">Analizar</button>
       </section>
     </main>
     <script src="./script.js"></script>

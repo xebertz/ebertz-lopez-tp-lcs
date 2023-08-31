@@ -11,18 +11,23 @@ body {
 }
 
 h1 {
-  font-size: 4vh;
+  font-size: 2.5vh;
   font-weight: 700;
   line-height: 1.1;
-  margin: 40px 0;
+  padding: 25px;
 }
 
-header,
-footer {
+header {
+  background-color: white;
+  min-width: 340px;
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 10px;
+  height: 50px;
+  padding: 0;
+  margin: 0 0 20px 0;
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
 }
 
 main {
@@ -30,11 +35,20 @@ main {
   justify-content: center;
 }
 
+label {
+  display: block;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+
 #imagen-seccion {
   background-color: white;
   border-radius: 10px;
   min-width: 300px;
-  height: 300px;
+  height: 250px;
   text-align: center;
   padding: 20px;
   box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
@@ -45,4 +59,49 @@ main {
   height: 100px;
   object-fit: cover;
   margin-top: 20px;
+}
+
+#boton-analizar {
+  display: inline-block;
+  padding: 0.5em 1.7em;
+  margin: 20px;
+  border: 0.16em solid rgba(255, 255, 255, 0);
+  background-color: #36a2eb;
+  border-radius: 1em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+  cursor: pointer;
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+}
+
+#boton-analizar:hover {
+  border-color: rgb(255, 255, 255);
+}
+
+.custom-file-input {
+  display: inline-block;
+  position: relative;
+}
+
+.custom-file-input label {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  padding: 8px;
+  border-radius: 1em;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+}
+
+.custom-file-input input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
 }
