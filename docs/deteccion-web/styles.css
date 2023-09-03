@@ -8,6 +8,7 @@ body {
   font-size: 18px;
   background-color: white;
   font-family: Lato, sans-serif;
+  min-width: 320px;
 }
 
 h1 {
@@ -20,7 +21,7 @@ h1 {
 header {
   background-color: white;
   color: #37bbed;
-  min-width: 400px;
+  min-width: 320px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +40,7 @@ header img {
 main {
   display: flex;
   justify-content: center;
-  min-width: 400px;
+  min-width: 320px;
 }
 
 label {
@@ -86,7 +87,7 @@ img {
 
 #imagen-seccion {
   /*border-radius: 10px;*/
-  min-width: 300px;
+  width: 320px;
   border-top: solid rgb(219, 219, 219) 1px;
   min-height: 250px;
   text-align: center;
@@ -159,8 +160,9 @@ img {
   text-align: center;
   color: rgb(37, 37, 37);
   width: 700px;
-  margin: 0px 0px 25px 0px;
-  padding: 0px 30px;
+  min-width: 320px;
+  padding: 0px;
+  margin: 0 0 25px 0;
   line-height: 1.5;
   font-size: 20px;
 }
@@ -188,6 +190,7 @@ img {
 }
 
 #lugar-ejemplo {
+  min-width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
