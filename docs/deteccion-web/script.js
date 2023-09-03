@@ -63,20 +63,25 @@ async function main() {
   const imagenInput = document.getElementById("imagen-input");
   const imagenSubida = document.getElementById("imagen-subida");
   const textoResultado = document.getElementById("resultado");
+  const botonAnalizar = document.getElementById("boton-analizar");
   let imagenElegida;
 
   imagenInput.addEventListener("change", function () {
     imagenElegida = imagenInput.files[0];
     if (imagenElegida) {
       imagenSubida.src = URL.createObjectURL(imagenElegida);
+      imagenSubida.hidden = false;
+      botonAnalizar.style.scale = 1;
     } else {
       imagenSubida.src = "";
+      imagenSubida.hidden = true;
+      botonAnalizar.style.scale = 0;
     }
     textoResultado.innerHTML = "";
   });
 
   const modelo = await cargarModelo();
-  const botonAnalizar = document.getElementById("boton-analizar");
+  
 
   botonAnalizar.addEventListener("click", async function () {
     if (imagenElegida) {
