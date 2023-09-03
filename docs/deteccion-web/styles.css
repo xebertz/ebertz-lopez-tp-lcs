@@ -150,3 +150,48 @@ img {
 #resultado {
   line-height: 1.5;
 }
+
+#titulo-ejemplo{
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+  padding: 10px;
+}
+
+#titulo-ejemplo-sec{
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 25%);
+  padding: 10px;
+}
+
+#lugar-ejemplo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#info-container{
+  display: flex;
+  flex-direction: row;
+}
+#img-container{
+  background-color: white;
+  border-radius: 10px;
+  min-width: 200px;
+  min-height: 250px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+}
+
+#imagen-ejemplo{
+  width: 175px;
+  height: 175px;
+  object-fit: cover;
+  margin-top: 20px;
+}
