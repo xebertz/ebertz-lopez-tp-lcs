@@ -12,13 +12,13 @@ body {
 
 h1 {
   font-size: 3vh;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.1;
   padding: 25px;
 }
 
 header {
-  background-color: #36a2eb;
+  background-color: #37BBED;
   color: white;
   min-width: 400px;
   display: flex;
@@ -72,7 +72,7 @@ img {
   padding: 0.5em 1.7em;
   margin: 20px;
   border: 0.16em solid rgba(255, 255, 255, 0);
-  background-color: #36a2eb;
+  background-color: #37BBED;
   border-radius: 1em;
   box-sizing: border-box;
   text-decoration: none;
@@ -96,7 +96,7 @@ img {
 
 .custom-file-input label {
   background-color: rgb(255, 255, 255);
-  color: black;
+  color: rgb(75, 75, 75);
   padding: 8px;
   border-radius: 1em;
   font-size: 14px;
