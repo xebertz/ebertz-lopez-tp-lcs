@@ -6,7 +6,7 @@
 html,
 body {
   font-size: 18px;
-  background-color: #f5f6f7;
+  background-color: white;
   font-family: Lato, sans-serif;
 }
 
@@ -86,13 +86,13 @@ img {
 }
 
 #imagen-seccion {
-  background-color: white;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   min-width: 300px;
+  border-top: solid rgb(219, 219, 219) 1px;
   min-height: 250px;
   text-align: center;
   padding: 20px;
-  box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+  /*box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);*/
 }
 
 #imagen-subida {
@@ -145,6 +145,24 @@ img {
   top: 0;
   opacity: 0;
   cursor: pointer;
+}
+
+#contenedor-aclaracion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#aclaracion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(37, 37, 37);
+  width: 500px;
+  margin: 0px 0px 25px 0px;
+  padding: 0px 30px;
+  line-height: 1.5;
 }
 
 #resultado {
