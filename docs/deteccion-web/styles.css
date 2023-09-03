@@ -19,7 +19,7 @@ h1 {
 
 header {
   background-color: white;
-  color: #37BBED;
+  color: #37bbed;
   min-width: 400px;
   display: flex;
   justify-content: center;
@@ -30,7 +30,6 @@ header {
   margin: 0;
   box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
 }
-
 
 header img {
   width: 50px;
@@ -58,7 +57,7 @@ img {
 
 #titulo-imagen {
   position: relative; /* Necesario para que la superposición sea relativa a este elemento */
-  background-image: url('./images/fondo.jpg');
+  background-image: url("./images/fondo.jpg");
   background-size: cover;
   background-position: center center;
   color: white;
@@ -107,7 +106,7 @@ img {
   padding: 0.5em 1.7em;
   margin: 20px;
   border: 0.16em solid rgba(255, 255, 255, 0);
-  background-color: #37BBED;
+  background-color: #37bbed;
   border-radius: 1em;
   box-sizing: border-box;
   text-decoration: none;
@@ -159,17 +158,18 @@ img {
   align-items: center;
   text-align: center;
   color: rgb(37, 37, 37);
-  width: 500px;
+  width: 700px;
   margin: 0px 0px 25px 0px;
   padding: 0px 30px;
   line-height: 1.5;
+  font-size: 20px;
 }
 
 #resultado {
   line-height: 1.5;
 }
 
-#titulo-ejemplo{
+#titulo-ejemplo {
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: center;
@@ -179,7 +179,7 @@ img {
   padding: 10px;
 }
 
-#titulo-ejemplo-sec{
+#titulo-ejemplo-sec {
   text-align: center;
   background-color: white;
   border-radius: 10px;
@@ -187,29 +187,31 @@ img {
   padding: 10px;
 }
 
-#lugar-ejemplo{
+#lugar-ejemplo {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#info-container{
+
+#info-container {
   display: flex;
   flex-direction: row;
 }
-#img-container{
+
+#img-container {
   background-color: white;
   border-radius: 10px;
-  min-width: 200px;
-  min-height: 250px;
+  min-width: 100px;
+  min-height: 150px;
   text-align: center;
   padding: 20px;
   margin: 20px;
   box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
 }
 
-#imagen-ejemplo{
-  width: 175px;
-  height: 175px;
+#imagen-ejemplo {
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   margin-top: 20px;
 }
