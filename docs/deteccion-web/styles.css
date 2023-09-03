@@ -14,12 +14,11 @@ h1 {
   font-size: 3vh;
   font-weight: bold;
   line-height: 1.1;
-  padding: 25px;
 }
 
 header {
-  background-color: #37BBED;
-  color: white;
+  background-color: white;
+  color: #37BBED;
   min-width: 400px;
   display: flex;
   justify-content: center;
@@ -27,8 +26,14 @@ header {
   text-align: center;
   height: 75px;
   padding: 0;
-  margin: 0 0 20px 0;
+  margin: 0;
   box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+}
+
+
+header img {
+  width: 80px;
+  height: 75px;
 }
 
 main {
@@ -48,6 +53,35 @@ label {
 
 img {
   border-radius: 5px;
+}
+
+#titulo-imagen {
+  position: relative; /* Necesario para que la superposición sea relativa a este elemento */
+  background-image: url('./fondo1.jpg');
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  text-align: center;
+  padding: 100px;
+  margin-bottom: 40px;
+}
+
+#titulo-imagen::before {
+  content: ""; /* Crea un contenido falso para la superposición */
+  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo semitransparente */
+  position: absolute; /* Coloca la superposición sobre la imagen de fondo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#titulo-imagen h1 {
+  position: relative; /* Necesario para que la superposición sea relativa a este elemento */
+  color: white;
+  font-size: 35px;
+  padding: 0;
+  margin: 0;
 }
 
 #imagen-seccion {
