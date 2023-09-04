@@ -74,10 +74,9 @@ Durante las pruebas, el modelo respondió mejor que el anterior, lo que supuso u
 
 Sin embargo, decidimos mejorarlo para garantizar un mayor nivel de precisión.
 
-
-
-
 === Nuevos datos
+
+Los datos añadidos fueron meramente exploratorios. Es decir, la elección de la cantidad de imágenes a añadir y en qué conjunto deben ser añadidas, fue casi completamente al azar. Por lo tanto, decidimos relizar un análisis más completo sobre estos puntos.
 
 === Nuevo modelo
 
