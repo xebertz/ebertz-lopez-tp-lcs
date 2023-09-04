@@ -164,12 +164,17 @@ Esto se traduce a un porcentaje de error de 13.3%, lo que es una mejora signific
 
 Debido a que el modelo respondió bien, lo probamos en la nube.
 
-La página web está hosteada en _GitHub_, y consta de una sección con información, el cuadro de selección de imagen, y dos imágenes de ejemplo. La decisión de utilizar una sección se tomó debido a que, además de simplificar el diseño, agrupa toda la información en un lugar visible, ya que creemos que el usuario *debe* leerla, ya que es altamente importante informar que nuestro objetivo no es reemplazar el diagnóstico médico; si no que es brindar una referencia para el usuario.
+La página web está hosteada en _GitHub_, y consta de una sección con información, el cuadro de selección de imagen, y dos imágenes de ejemplo. La decisión de utilizar una sección se tomó debido a que, además de simplificar el diseño, agrupa toda la información en un lugar visible, ya que creemos que el usuario *debe* leerla, ya que es altamente importante informar que nuestro objetivo no es reemplazar el diagnóstico médico; si no que es brindar una referencia para el usuario. 
+
+La página web se encuentra en el siguiente enlace: https://ximeeb.github.io/ebertz-gross-lopez-tp-lcs/deteccion-web/[Detección de lunares benignos y malignos].
 
 .página web
 image::informes/img/pagina-web.png[distribucion, 566, 737, align="center"]
 
-
-
+Luego de implementarlo, lo probamos con diversas imágenes y los resultados fueron mucho mejores. Como tiene un porcentaje de error, los resultados no son 100% certeros, pero son lo suficientemente buenos para lograr nuestro objetivo. 
 
 == Conclusión
+
+En conclusión, logramos desarrollar una inteligencia artificial que determina si un lunar es benigno o maligno a partir de una imagen, con un alto porcentaje de precisión. Determinamos, también, que la precisión no garantiza que el modelo haga buenas predicciones, por lo que también logramos un alto porcentaje de precisión en las pruebas.
+
+Durante el desarrollo del modelo tuvimos diversos problemas, pero los supimos solucionar mediante distintas técnicas y muchas pruebas.
