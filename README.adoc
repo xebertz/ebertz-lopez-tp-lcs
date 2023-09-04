@@ -16,7 +16,66 @@ En este documento, abordaremos los distintos pasos y los problemas surgidos en l
 
 == Desarrollo
 
+Como primer paso, partiendo desde nuestro modelo convolucional generado en la _entrega 3_, procedimos a su implementación en la nube.
+
+.arquitectura de la red convolucional generada en la tercer entrega
+[source, python]
+----
+modelo_cnn = tf.keras.models.Sequential([
+    tf.keras.layers.Conv2D(16, (3, 3), activation = 'relu', input_shape = (100, 100, 3)),
+    tf.keras.layers.MaxPooling2D(3, 3),
+
+    tf.keras.layers.Dropout(0.5),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(64, activation = 'relu'),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(32, activation = 'relu'),
+    tf.keras.layers.Dropout(0.5),
+    tf.keras.layers.Dense(1, activation = 'sigmoid')
+])
+
+#Compilación
+modelo_cnn.compile(optimizer='adam',
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+
+----
+
+Este modelo tiene una precisión del 85%, y un nivel de error de menos del 40%, lo que lo hace lo suficientemente bueno para su implementación. Sin embargo, nos encontramos con un nuevo problema: el modelo no era lo suficientemente preciso con imágenes brindadas por el usuario. Las predicciones tendían a ser mayoritariamente malignas, con lunares benignos. Esto hizo que realicemos distintas pruebas para mejorar su precisión y corregir esta tendencia.
+
 === Pruebas
+
+En principio, decidimos agregar más imágenes de entrenamiento, ya que creimos que las imágenes no eran suficientes para lograr resultados altamente confiables. Por lo tanto, complementamos nuestro dataset con uno nuevo, también perteneciente a https://www.kaggle.com/[Kaggle]. Este dataset es llamado https://www.kaggle.com/datasets/andrewmvd/isic-2019[Skin Lesion Images for Melanoma Classification]. Cuenta imágenes de lesiones de la piel, y está preparado para utilizarse en la detección de las siguientes enfermedades de la piel:
+
+* Melanoma
+* Nevo melanocítico
+* Carcinoma de células basales
+* Queratosis actínica
+* Queratosis benigna (lentigo solar / queratosis seborreica / queratosis tipo liquen plano)
+* Dermatofibroma
+* Lesión vascular
+* Carcinoma de células escamosas
+* Ninguno de los anteriores
+
+Esta información es mayor a la necesaria para nuestro problema. Sin embargo, la información de _queratosis benigna_ complementa a la de nuestro dataset, por lo que decidimos utilizar únicamente esta información.
+
+Para filtrar los datos relevantes, partimos del archivo `ISIC_2019_Training_GroundTruth.csv`. Este archivo contiene todas las etiquetas de las imágenes. De allí, obtuvimos dos columnas: `image` y `BKL`. En `image` tenemos los nombres de las imágenes, y en `BKL` tenemos dos posibles valores: 0, si el lunar no es benigno, y 1 si lo es. Es decir, las etiquetas están a la inversa de las que manejamos con el dataset https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign[Skin Cancer: Malignant vs. Benign].
+
+Analizamos el tamaño de las clases, y obtuvimos que el dataset no está balanceado con respecto a estas categorías, ya que hay 22707 imágenes de lunares malignos, y 2624 imágenes de benignos.
+
+.tamaño de clases de dataset ISIC
+image::informes/img/distribucion-clases-dataset-isic.png[distribucion, 450, 300, align="center"]
+
+Para realizar una prueba rápida, tomamos 2000 imágenes por clase y las agregamos a las imágenes de entrenamiento, copiándolas desde su directorio inicial hacia el directorio `content/skin-cancer-malignant-vs-benign/train`, donde se encuentran las imágenes del dataset previamente seleccionado. Esto es debido a que la lectura de las imágenes se simplifica si se encuentran todas en un mismo directorio.
+
+Cuando entrenamos el modelo, obtuvimos una precisión de al rededor del 80%. Este nivel de precisión es menor al previamente obtenido, pero decidimos probar el modelo en la nube para ver cómo se comporta.
+
+Durante las pruebas, el modelo respondió mejor que el anterior, lo que supuso un gran avance. Este modelo ya estaba en condiciones de ser utilizado por usuarios finales.
+
+Sin embargo, decidimos mejorarlo para garantizar un mayor nivel de precisión.
+
+
+
 
 === Nuevos datos
 
