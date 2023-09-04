@@ -89,7 +89,8 @@ img {
   /*border-radius: 10px;*/
   width: 320px;
   border-top: solid rgb(219, 219, 219) 1px;
-  min-height: 250px;
+  border-bottom: solid rgb(219, 219, 219) 1px;;
+  height: 60px;
   text-align: center;
   padding: 20px;
   /*box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);*/
@@ -97,13 +98,12 @@ img {
 
 #imagen-subida {
   width: 100px;
-  height: 100px;
   object-fit: cover;
   margin-top: 20px;
+  scale: 0;
 }
 
 #boton-analizar {
-  scale: 0;
   display: inline-block;
   padding: 0.5em 1.7em;
   margin: 20px;
@@ -119,6 +119,7 @@ img {
   transition: all 0.2s;
   cursor: pointer;
   box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+  scale: 0;
 }
 
 #boton-analizar:hover {
@@ -128,16 +129,22 @@ img {
 .custom-file-input {
   display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 
 .custom-file-input label {
-  background-color: rgb(255, 255, 255);
-  color: rgb(75, 75, 75);
-  padding: 8px;
+  background-color: #37bbed;
+  color: white;
+  padding: 0.5em 1.7em;
+  border: 0.16em solid rgba(255, 255, 255, 0);
   border-radius: 1em;
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
   box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);
+}
+
+.custom-file-input label:hover {
+  border-color: rgb(255, 255, 255);
 }
 
 .custom-file-input input[type="file"] {
@@ -145,7 +152,6 @@ img {
   left: 0;
   top: 0;
   opacity: 0;
-  cursor: pointer;
 }
 
 #contenedor-aclaracion {

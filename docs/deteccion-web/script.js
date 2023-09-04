@@ -60,6 +60,7 @@ function mostrarResultado(prediccion, elemento) {
 }
 
 async function main() {
+  const seccionImagen = document.getElementById("imagen-seccion");
   const imagenInput = document.getElementById("imagen-input");
   const imagenSubida = document.getElementById("imagen-subida");
   const textoResultado = document.getElementById("resultado");
@@ -70,21 +71,24 @@ async function main() {
     imagenElegida = imagenInput.files[0];
     if (imagenElegida) {
       imagenSubida.src = URL.createObjectURL(imagenElegida);
-      imagenSubida.hidden = false;
+      imagenSubida.style.scale = 1;
       botonAnalizar.style.scale = 1;
+      seccionImagen.style.height = "250px";
     } else {
       imagenSubida.src = "";
-      imagenSubida.hidden = true;
+      imagenSubida.style.scale = 0;
       botonAnalizar.style.scale = 0;
+      seccionImagen.style.height = "60px";
     }
     textoResultado.innerHTML = "";
   });
 
   const modelo = await cargarModelo();
-  
 
   botonAnalizar.addEventListener("click", async function () {
     if (imagenElegida) {
+      seccionImagen.style.height = "340px";
+      
       const prediccion = await predecir(imagenElegida, modelo);
       mostrarResultado(prediccion, textoResultado);
     } else {
