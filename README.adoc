@@ -138,11 +138,27 @@ Para reducir las imágenes, volvimos a nuestra estructura de directorios anterio
 
 Determinamos, luego de diversas pruebas, que el entrenamiento era más óptimo con 2000 imágenes extra por clase para entrenamiento, y las imágenes extra necesarias para balancear las clases. Es decir, si en `/train/benign` tenemos 1550 imágenes, y en `/tran/malignant` tenemos 2130, se agregan 2000 imágenes extra por directorio, y se al directorio `/train/benign` se le añaden 580, para que tengan exactamente la misma cantidad. Para el testing, añadimos 300 imágenes extra por clase, sin balancear, ya que en este caso no es necesario.
 
-Esto hacía que el modelo mejore su performance en el entrenamiento, aunque todavía había que mejorarlo, para que genere mejores predicciones.
+IMAGEN CLASES BALANCEADAS
+
+Esto hacía que el modelo mejore su performance en el entrenamiento, aunque todavía había que mejorarlo para que genere mejores predicciones.
 
 === Nuevo modelo
 
-=== Pruebas
+En la modificación de la estructura, debíamos mantener simple el modelo para no bajar la performance, y mejorar su precisión. Probamos distintas configuraciones: menos neuronas, más capas de _dropout_, más capas densas, mayor y menor cantidad de filtros. Lo que mejor funcionó fue añadir una capa extra de _convolución_ y otra de _pooling_. Esto logró muy buenos resultados, llegando hasta casi un 90% de precisión, con un nivel de error menor a 35%.
+
+IMAGEN PRECISION
+
+Este modelo fue el que mejor resultados arrojó hasta el momento. Con una prueba de 1270 imágenes, siendo 660 de tipo 0 y 600 de tipo 1,  obtuvimos los siguientes resultados:
+
+----
+59/59 [==============================] - 3s 85ms/step
+Predicciones: 1270
+Tipo 0: 570 correctas, 90 incorrectas
+Tipo 1: 521 correctas, 79 incorrectas
+Total: 1091 correctas, 169 incorrectas
+----
+
+Esto se traduce a un porcentaje de error de 13.3%.
 
 === Implementación en la nube
 
