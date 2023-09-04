@@ -56,6 +56,13 @@ img {
   border-radius: 5px;
 }
 
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 #titulo-imagen {
   position: relative; /* Necesario para que la superposición sea relativa a este elemento */
   background-image: url("./images/fondo.jpg");
