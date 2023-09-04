@@ -147,7 +147,11 @@ Esto hacía que el modelo mejore su performance en el entrenamiento, aunque toda
 
 En la modificación de la estructura, debíamos mantener simple el modelo para no bajar la performance, y mejorar su precisión. Probamos distintas configuraciones: menos neuronas, más capas de _dropout_, más capas densas, mayor y menor cantidad de filtros. Lo que mejor funcionó fue añadir una capa extra de _convolución_ y otra de _pooling_. Esto logró muy buenos resultados, llegando hasta casi un 90% de precisión, con un nivel de error menor a 35%.
 
-image:informes/img/cnn-mejorada-precision.png[255, 275, align="left"]
+[cols="a,a", frame=none, grid=none, role=right]
+|===
+|   image:informes/img/cnn-mejorada-precision.png[255, 275, align="left"]
+|   image:informes/img/cnn-mejorada-perdida.png[255, 275, align="left"]
+|===
 
 Este modelo fue el que mejor resultados arrojó hasta el momento. Con una prueba de 1270 imágenes, siendo 660 de tipo 0 y 600 de tipo 1,  obtuvimos los siguientes resultados:
 
