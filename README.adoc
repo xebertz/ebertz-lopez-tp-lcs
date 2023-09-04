@@ -129,11 +129,16 @@ Del total de imágenes, determinamos que la cantidad de imágenes de testing deb
 
 Luego, nos encontramos con un problema. El entrenamiento era demasiado lento. Los niveles de precisión aumentaban, pero no aumentaban los niveles de precisión en el testing. Es decir, la IA estaba haciendo _overfitting_, se estaba "acostumbrando" a las imágenes de entrenamiento, y no podía predecir bien para imágenes nuevas.
 
-Esto no es deseable ya que por más que tenga buenos resultados numéricos, no funciona con nuevos casos. Entonces, decidimos hacer dos modificaciones:
+Esto no es deseable ya que por más que tenga buenos resultados numéricos, no funciona con nuevos casos. Entonces, decidimos realizar dos modificaciones:
 
 1. Reducir la cantidad de imágenes, para acelerar el entrenamento
 2. Modificar la estructura del modelo, para adaptarse a la nueva información
 
+Para reducir las imágenes, volvimos a nuestra estructura de directorios anterior. Creíamos que el entrenamiento tardaba demasiado por la cantidad de imágenes que recibía, por lo que eliminamos el directorio `/valid`, y trabajamos con los directorios `/train` y `test`.
+
+Determinamos, luego de diversas pruebas, que el entrenamiento era más óptimo con 2000 imágenes extra por clase para entrenamiento, y las imágenes extra necesarias para balancear las clases. Es decir, si en `/train/benign` tenemos 1550 imágenes, y en `/tran/malignant` tenemos 2130, se agregan 2000 imágenes extra por directorio, y se al directorio `/train/benign` se le añaden 580, para que tengan exactamente la misma cantidad. Para el testing, añadimos 300 imágenes extra por clase, sin balancear, ya que en este caso no es necesario.
+
+Esto hacía que el modelo mejore su performance en el entrenamiento, aunque todavía había que mejorarlo, para que genere mejores predicciones.
 
 === Nuevo modelo
 
