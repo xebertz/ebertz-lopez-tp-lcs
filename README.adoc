@@ -127,7 +127,12 @@ Realizamos una división contando la cantidad de imágenes disponibles por cada 
 
 Del total de imágenes, determinamos que la cantidad de imágenes de testing debe representar un 20%, las de validación deben representar un 15%, y las de entrenamiento el 65% restante.
 
+Luego, nos encontramos con un problema. El entrenamiento era demasiado lento. Los niveles de precisión aumentaban, pero no aumentaban los niveles de precisión en el testing. Es decir, la IA estaba haciendo _overfitting_, se estaba "acostumbrando" a las imágenes de entrenamiento, y no podía predecir bien para imágenes nuevas.
 
+Esto no es deseable ya que por más que tenga buenos resultados numéricos, no funciona con nuevos casos. Entonces, decidimos hacer dos modificaciones:
+
+1) Reducir la cantidad de imágenes, para acelerar el entrenamento
+2) Modificar la estructura del modelo, para adaptarse a la nueva información
 
 
 === Nuevo modelo
