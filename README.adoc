@@ -78,6 +78,23 @@ Sin embargo, decidimos mejorarlo para garantizar un mayor nivel de precisión.
 
 Los datos añadidos fueron meramente exploratorios. Es decir, la elección de la cantidad de imágenes a añadir y en qué conjunto deben ser añadidas, fue casi completamente al azar. Por lo tanto, decidimos relizar un análisis más completo sobre estos puntos.
 
+La estructura de directorios del dataset .. es la siguiente:
+
+[source]
+----
+skin-cancer-malignant-vs-benign/
+│
+├── test/
+│   ├── benign/
+│   │
+│   └── malignant/
+├── train/
+│   ├── benign/
+│   │
+│   └── malignant/
+└──
+----
+
 === Nuevo modelo
 
 === Pruebas
