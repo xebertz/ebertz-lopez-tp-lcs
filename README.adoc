@@ -66,6 +66,13 @@ Analizamos el tamaño de las clases, y obtuvimos que el dataset no está balance
 .tamaño de clases de dataset ISIC
 image::informes/img/distribucion-clases-dataset-isic.png[distribucion, 450, 300, align="center"]
 
+Para realizar una prueba rápida, tomamos 2000 imágenes por clase y las agregamos a las imágenes de entrenamiento, copiándolas desde su directorio inicial hacia el directorio `content/skin-cancer-malignant-vs-benign/train`, donde se encuentran las imágenes del dataset previamente seleccionado. Esto es debido a que la lectura de las imágenes se simplifica si se encuentran todas en un mismo directorio.
+
+Cuando entrenamos el modelo, obtuvimos una precisión de al rededor del 80%. Este nivel de precisión es menor al previamente obtenido, pero decidimos probar el modelo en la nube para ver cómo se comporta.
+
+Durante las pruebas, el modelo respondió mejor que el anterior, lo que supuso un gran avance. Este modelo ya estaba en condiciones de ser utilizado por usuarios finales.
+
+Sin embargo, decidimos mejorarlo para garantizar un mayor nivel de precisión.
 
 
 
