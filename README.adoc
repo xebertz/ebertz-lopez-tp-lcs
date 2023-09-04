@@ -138,7 +138,8 @@ Para reducir las imágenes, volvimos a nuestra estructura de directorios anterio
 
 Determinamos, luego de diversas pruebas, que el entrenamiento era más óptimo con 2000 imágenes extra por clase para entrenamiento, y las imágenes extra necesarias para balancear las clases. Es decir, si en `/train/benign` tenemos 1550 imágenes, y en `/tran/malignant` tenemos 2130, se agregan 2000 imágenes extra por directorio, y se al directorio `/train/benign` se le añaden 580, para que tengan exactamente la misma cantidad. Para el testing, añadimos 300 imágenes extra por clase, sin balancear, ya que en este caso no es necesario.
 
-IMAGEN CLASES BALANCEADAS
+.tamaño de clases de dataset ISIC
+image::informes/img/clases-balanceadas.png[distribucion, 450, 300, align="center"]
 
 Esto hacía que el modelo mejore su performance en el entrenamiento, aunque todavía había que mejorarlo para que genere mejores predicciones.
 
@@ -146,7 +147,7 @@ Esto hacía que el modelo mejore su performance en el entrenamiento, aunque toda
 
 En la modificación de la estructura, debíamos mantener simple el modelo para no bajar la performance, y mejorar su precisión. Probamos distintas configuraciones: menos neuronas, más capas de _dropout_, más capas densas, mayor y menor cantidad de filtros. Lo que mejor funcionó fue añadir una capa extra de _convolución_ y otra de _pooling_. Esto logró muy buenos resultados, llegando hasta casi un 90% de precisión, con un nivel de error menor a 35%.
 
-IMAGEN PRECISION
+image:informes/img/cnn-mejorada-precision.png[255, 275, align="left"]
 
 Este modelo fue el que mejor resultados arrojó hasta el momento. Con una prueba de 1270 imágenes, siendo 660 de tipo 0 y 600 de tipo 1,  obtuvimos los siguientes resultados:
 
@@ -159,6 +160,31 @@ Total: 1091 correctas, 169 incorrectas
 ----
 
 Esto se traduce a un porcentaje de error de 13.3%, lo que es una mejora significativa con respecto al modelo anterior.
+
+.arquitectura de la nueva red convolucional
+[source, python]
+----
+modelo_cnn = tf.keras.models.Sequential([
+    tf.keras.layers.Conv2D(16, (3, 3), activation = 'relu', input_shape = (100, 100, 3)),
+    tf.keras.layers.MaxPooling2D(3, 3),
+    tf.keras.layers.Conv2D(16, (3, 3), activation = 'relu'),
+    tf.keras.layers.MaxPooling2D(2, 2),
+
+    tf.keras.layers.Dropout(0.5),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(64, activation = 'relu'),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(32, activation = 'relu'),
+    tf.keras.layers.Dropout(0.5),
+    tf.keras.layers.Dense(1, activation = 'sigmoid')
+])
+
+#Compilación
+modelo_cnn.compile(optimizer='adam',
+              loss='binary_crossentropy',
+              metrics=['accuracy'])
+
+----
 
 === Implementación en la nube
 
