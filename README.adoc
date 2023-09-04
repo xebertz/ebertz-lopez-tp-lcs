@@ -57,7 +57,15 @@ En principio, decidimos agregar más imágenes de entrenamiento, ya que creimos 
 * Carcinoma de células escamosas
 * Ninguno de los anteriores
 
-Esta información es mayor a la necesaria para nuestro problema. Sin embargo, la información de _Queratosis benigna_ complementa a la de nuestro dataset, por lo que decidimos utilizar únicamente esta información.
+Esta información es mayor a la necesaria para nuestro problema. Sin embargo, la información de _queratosis benigna_ complementa a la de nuestro dataset, por lo que decidimos utilizar únicamente esta información.
+
+Para filtrar los datos relevantes, partimos del archivo `ISIC_2019_Training_GroundTruth.csv`. Este archivo contiene todas las etiquetas de las imágenes. De allí, obtuvimos dos columnas: `image` y `BKL`. En `image` tenemos los nombres de las imágenes, y en `BKL` tenemos dos posibles valores: 0, si el lunar no es benigno, y 1 si lo es. Es decir, las etiquetas están a la inversa de las que manejamos con el dataset https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign[Skin Cancer: Malignant vs. Benign].
+
+Analizamos el tamaño de las clases, y obtuvimos los siguientes resultados:
+
+
+
+
 
 === Nuevos datos
 
