@@ -12,6 +12,8 @@ v1, {docdate}
 
 == Introducción
 
+En este documento, abordaremos los distintos pasos y los problemas surgidos en la implementación en la nube de nuestro modelo de clasificación de lunares. Explicaremos por qué debimos realizar un cambio en la arquitectura de nuestro modelo, motivo estrictamente relacionado con los datos utilizados para el entrenamiento. Finalmente, analizaremos el nuevo modelo y su implementación en la nube.
+
 == Desarrollo
 
 === Pruebas
