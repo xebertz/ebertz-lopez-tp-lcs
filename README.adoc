@@ -131,8 +131,8 @@ Luego, nos encontramos con un problema. El entrenamiento era demasiado lento. Lo
 
 Esto no es deseable ya que por más que tenga buenos resultados numéricos, no funciona con nuevos casos. Entonces, decidimos hacer dos modificaciones:
 
-1) Reducir la cantidad de imágenes, para acelerar el entrenamento
-2) Modificar la estructura del modelo, para adaptarse a la nueva información
+1. Reducir la cantidad de imágenes, para acelerar el entrenamento
+2. Modificar la estructura del modelo, para adaptarse a la nueva información
 
 
 === Nuevo modelo
