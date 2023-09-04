@@ -158,8 +158,18 @@ Tipo 1: 521 correctas, 79 incorrectas
 Total: 1091 correctas, 169 incorrectas
 ----
 
-Esto se traduce a un porcentaje de error de 13.3%.
+Esto se traduce a un porcentaje de error de 13.3%, lo que es una mejora significativa con respecto al modelo anterior.
 
 === Implementación en la nube
+
+Debido a que el modelo respondió bien, lo probamos en la nube.
+
+La página web está hosteada en _GitHub_, y consta de una sección con información, el cuadro de selección de imagen, y dos imágenes de ejemplo. La decisión de utilizar una sección se tomó debido a que, además de simplificar el diseño, agrupa toda la información en un lugar visible, ya que creemos que el usuario *debe* leerla, ya que es altamente importante informar que nuestro objetivo no es reemplazar el diagnóstico médico; si no que es brindar una referencia para el usuario.
+
+.página web
+image::informes/img/pagina-web.png[distribucion, 566, 737, align="center"]
+
+
+
 
 == Conclusión
