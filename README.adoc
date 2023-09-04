@@ -63,8 +63,10 @@ Para filtrar los datos relevantes, partimos del archivo `ISIC_2019_Training_Grou
 
 Analizamos el tamaño de las clases, y obtuvimos que el dataset no está balanceado con respecto a estas categorías, ya que hay 22707 imágenes de lunares malignos, y 2624 imágenes de benignos.
 
-.tamaño de clases
-image::informes/img/distribucion-clases-dataset-isic.png[distribucion, 350, 200, align="center"]
+.tamaño de clases de dataset ISIC
+image::informes/img/distribucion-clases-dataset-isic.png[distribucion, 450, 300, align="center"]
+
+
 
 
 
