@@ -9,7 +9,7 @@ pablorubengross@gmail.com
 López, Gonzalo
 gonzagonzalopez20@gmail.com
 
-* Actualización de datos
+* Nuevos datos
 
 - Más imágenes
 
@@ -18,7 +18,7 @@ gonzagonzalopez20@gmail.com
 *Dataset* *utilizado:*
 .link https://www.kaggle.com/datasets/andrewmvd/isic-2019
 
-* Modelo convolucional mejorado
+* Nuevo modelo convolucional
 __
 __
 .image img/red-cnn-mejorada.png
@@ -36,6 +36,8 @@ Nos quedamos con un archivo del modelo en formato JSON
 - HTML, JS y CSS
 
 - Utilizamos TensorFlow.js para hacer predicciones con JavaScript
+
+.image https://www.tensorflow.org/static/site-assets/images/project-logos/tensorflow-js-logo-social.png?hl=es-419 400 700
 
 * Deploy
 
