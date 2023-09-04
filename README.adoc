@@ -66,7 +66,7 @@ Analizamos el tamaño de las clases, y obtuvimos que el dataset no está balance
 .tamaño de clases de dataset ISIC
 image::informes/img/distribucion-clases-dataset-isic.png[distribucion, 450, 300, align="center"]
 
-Para realizar una prueba rápida, tomamos 2000 imágenes por clase y las agregamos a las imágenes de entrenamiento, copiándolas desde su directorio inicial hacia el directorio `content/skin-cancer-malignant-vs-benign/train`, donde se encuentran las imágenes del dataset previamente seleccionado. Esto es debido a que la lectura de las imágenes se simplifica si se encuentran todas en un mismo directorio.
+Para realizar una prueba rápida, tomamos 2000 imágenes por clase y las agregamos a las imágenes de entrenamiento, copiándolas desde su directorio inicial hacia el directorio `content/skin-cancer-malignant-vs-benign/train`, donde se encuentran las imágenes del dataset previamente seleccionado. Esto es debido a que la lectura de las imágenes se simplifica si se encuentran todas en un mismo directorio, y es más beneficioso copiar las imágenes del dataset nuevo al previo, debido a que el nuevo tiene datos no relevantes.
 
 Cuando entrenamos el modelo, obtuvimos una precisión de al rededor del 80%. Este nivel de precisión es menor al previamente obtenido, pero decidimos probar el modelo en la nube para ver cómo se comporta.
 
@@ -78,7 +78,7 @@ Sin embargo, decidimos mejorarlo para garantizar un mayor nivel de precisión.
 
 Los datos añadidos fueron meramente exploratorios. Es decir, la elección de la cantidad de imágenes a añadir y en qué conjunto deben ser añadidas, fue casi completamente al azar. Por lo tanto, decidimos relizar un análisis más completo sobre estos puntos.
 
-La estructura de directorios del dataset .. es la siguiente:
+La estructura de directorios del dataset *Skin Cancer: Malignant vs. Benign* es la siguiente:
 
 [source]
 ----
@@ -88,12 +88,47 @@ skin-cancer-malignant-vs-benign/
 │   ├── benign/
 │   │
 │   └── malignant/
+│
 ├── train/
 │   ├── benign/
 │   │
 │   └── malignant/
 └──
 ----
+
+Hasta este punto, copiábamos imágenes del dataset *Skin Lesion Images for Melanoma Classification* al directorio `content/skin-cancer-malignant-vs-benign/train`. Eso nos dejaba con más imágenes de entrenamiento, y muy pocas de prueba.
+
+Entonces, decidimos dividir las imágenes y balancear la cantidad de lunares benignos y malignos para cada conjunto de imágenes. También, definimos otro conjunto: un conjunto de validación, para utilizar durante el entrenamiento. Para el proceso de validación, utilizábamos las imágenes de prueba ya que teníamos una cantidad reducida de imágenes. Esto no está mal, pero pensamos en probar distintas alternativas.
+
+De esta forma, la estructura de directorios pasó a ser de la siguiente manera:
+
+[source]
+----
+skin-cancer-malignant-vs-benign/
+│
+├── test/
+│   ├── benign/
+│   │
+│   └── malignant/
+│
+├── train/
+│   ├── benign/
+│   │
+│   └── malignant/
+│
+├── valid/
+│   ├── benign/
+│   │
+│   └── malignant/
+└──
+----
+
+Realizamos una división contando la cantidad de imágenes disponibles por cada directorio, y añadiendo las necesarias para que cada conjunto tenga exactamente la misma cantidad de datos para lunares benignos y para malignos. Tomamos todas las imágenes del dataset *Skin Cancer: Malignant vs. Benign*, y seleccionamos la cantidad de imágenes de la clase con menor información; para tomar la máxima cantidad de imágenes posible y que no se desbalanceen las clases.
+
+Del total de imágenes, determinamos que la cantidad de imágenes de testing debe representar un 20%, las de validación deben representar un 15%, y las de entrenamiento el 65% restante.
+
+
+
 
 === Nuevo modelo
 
