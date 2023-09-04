@@ -199,10 +199,10 @@ La página web está hosteada en _GitHub_, y consta de una sección con informac
 La página web se encuentra en el siguiente enlace: https://ximeeb.github.io/ebertz-gross-lopez-tp-lcs/deteccion-web/[Detección de lunares benignos y malignos].
 
 .página web
-image::informes/img/captura-web1.png[distribucion, 566, 737, align="center"]
+image::informes/img/captura-web1.png[distribucion, align="center"]
 
 .página web
-image::informes/img/captura-web2.png[distribucion, 566, 737, align="center"]
+image::informes/img/captura-web2.png[distribucion, align="center"]
 
 Luego de implementarlo, lo probamos con diversas imágenes y los resultados fueron mucho mejores. Como tiene un porcentaje de error, los resultados no son 100% certeros, pero son lo suficientemente buenos para lograr nuestro objetivo. 
 
