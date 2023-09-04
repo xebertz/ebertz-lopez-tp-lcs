@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://127.0.0.1:3999/implementacion.slide#1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Mejora de IA e implementación en la nube</title>
+    
+    <script>
+      var notesEnabled =  false ;
+    </script>
+    <script src="./implementacion_files/slides.js"></script>
+
+    
+
+    <script>
+      
+      if (window["location"] && window["location"]["hostname"] == "talks.golang.org") {
+        var _gaq = _gaq || [];
+        _gaq.push(["_setAccount", "UA-11222381-6"]);
+        _gaq.push(["b._setAccount", "UA-49880327-6"]);
+        window.trackPageview = function() {
+          _gaq.push(["_trackPageview", location.pathname+location.hash]);
+          _gaq.push(["b._trackPageview", location.pathname+location.hash]);
+        };
+        window.trackPageview();
+        window.trackEvent = function(category, action, opt_label, opt_value, opt_noninteraction) {
+          _gaq.push(["_trackEvent", category, action, opt_label, opt_value, opt_noninteraction]);
+          _gaq.push(["b._trackEvent", category, action, opt_label, opt_value, opt_noninteraction]);
+        };
+      }
+    </script>
+  <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"></head>
+
+  <body style="display: none" class="loaded">
+
+    <section class="slides layout-widescreen" style="transform: scale(0.937333);">
+
+      <article class="current">
+        <h1>Mejora de IA e implementación en la nube</h1>
+        
+        
+        
+          <div class="presenter">
+            
+  
+  <p>
+    Ebertz, Ximena
+  </p>
+  
+
+          </div>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    Gross, Pablo
+  </p>
+  
+
+          </div>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    López, Gonzalo
+  </p>
+  
+
+          </div>
+        
+      </article>
+
+  
+  
+      <article class="next">
+      
+        <h3>Nuevos datos</h3>
+        
+  <ul>
+  
+    <li>Más imágenes</li>
+  
+  </ul>
+
+  <ul>
+  
+    <li>Balanceo de datos</li>
+  
+  </ul>
+
+  
+  <p>
+    <b>Dataset</b> <b>utilizado:</b>
+  </p>
+  
+<p class="link"><a href="https://www.kaggle.com/datasets/andrewmvd/isic-2019" target="_blank">www.kaggle.com/datasets/andrewmvd/isic-2019</a></p>
+      
+      <span class="pagenumber">2</span>
+      </article>
+  
+  
+  
+      <article class="far-next">
+      
+        <h3>Nuevo modelo convolucional</h3>
+        
+  
+  <p>
+    <i></i>
+<br>
+
+    <i></i>
+  </p>
+  
+
+<div class="image">
+  <img src="./implementacion_files/red-cnn-mejorada.png">
+</div>
+
+      
+      <span class="pagenumber">3</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Resultado del nuevo modelo</h3>
+        
+  
+  <p>
+    Mejores resultados: 89% de precisión y 26% de error
+<br>
+
+    <i></i>
+  </p>
+  
+
+<div class="image">
+  <img src="./implementacion_files/resultados-cnn-mejorada.png">
+</div>
+
+      
+      <span class="pagenumber">4</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h2>Implementación en la nube</h2>
+      
+      <span class="pagenumber">5</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Exportación del modelo convolucional</h3>
+        
+<div class="image">
+  <img src="./implementacion_files/exportacion-modelo.png">
+</div>
+
+  
+  <p>
+    Nos quedamos con un archivo del modelo en formato JSON
+  </p>
+  
+
+      
+      <span class="pagenumber">6</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Frontend</h3>
+        
+  <ul>
+  
+    <li>HTML, JS y CSS</li>
+  
+  </ul>
+
+  <ul>
+  
+    <li>Utilizamos TensorFlow.js para hacer predicciones con JavaScript</li>
+  
+  </ul>
+
+<div class="image">
+  <img src="./implementacion_files/tensorflow-js-logo-social.png" height="400" width="700">
+</div>
+
+      
+      <span class="pagenumber">7</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Deploy</h3>
+        
+<div class="image">
+  <img src="./implementacion_files/3uy5od7tw2jf4fh7ldlv.jpeg" height="500" width="500">
+</div>
+
+      
+      <span class="pagenumber">8</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Página web - Detección IA</h3>
+        <p class="link"><a href="https://ximeeb.github.io/ebertz-gross-lopez-tp-lcs/deteccion-web/index.html" target="_blank">ximeeb.github.io/ebertz-gross-lopez-tp-lcs/deteccion-web/index.html</a></p>
+<div class="image">
+  <img src="./implementacion_files/captura-pagina-web.png" height="600" width="800">
+</div>
+
+      
+      <span class="pagenumber">9</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>Repositorio</h3>
+        <p class="link"><a href="https://github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git" target="_blank">github.com/ximeeb/ebertz-gross-lopez-tp-lcs.git</a></p>
+  
+  <p>
+    <i></i>
+<br>
+
+    <i></i>
+  </p>
+  
+
+<div class="image">
+  <img src="./implementacion_files/GitHub_Invertocat_Logo.svg">
+</div>
+
+      
+      <span class="pagenumber">10</span>
+      </article>
+  
+  
+  
+      <article class="">
+      
+        <h3>¿Preguntas?</h3>
+        
+  
+  <p>
+    <i></i>
+<br>
+
+    <i></i>
+<br>
+
+    <i></i>
+<br>
+
+    <i></i>
+  </p>
+  
+
+<div class="image">
+  <img src="./implementacion_files/pregunta.png" height="200">
+</div>
+
+      
+      <span class="pagenumber">11</span>
+      </article>
+  
+  
+
+      <article class="">
+        <h3>Thank you</h3>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    Ebertz, Ximena
+  </p>
+  
+<p class="link"><a href="mailto:xebertz@campus.ungs.edu.ar" target="_blank">xebertz@campus.ungs.edu.ar</a></p>
+          </div>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    Gross, Pablo
+  </p>
+  
+<p class="link"><a href="mailto:pablorubengross@gmail.com" target="_blank">pablorubengross@gmail.com</a></p>
+          </div>
+        
+          <div class="presenter">
+            
+  
+  <p>
+    López, Gonzalo
+  </p>
+  
+<p class="link"><a href="mailto:gonzagonzalopez20@gmail.com" target="_blank">gonzagonzalopez20@gmail.com</a></p>
+          </div>
+        
+      </article>
+
+    <div class="slide-area" id="prev-slide-area"></div><div class="slide-area" id="next-slide-area"></div></section>
+
+    <div id="help" style="display: none;">
+      Use the left and right arrow keys or click the left and right
+      edges of the page to navigate between slides.<br>
+      (Press 'H' or navigate to hide this message.)
+    </div>
+
+    
+    <script src="./implementacion_files/play.js"></script>
+    
+
+    <script>
+      (function() {
+        
+        if (window["location"] && window["location"]["hostname"] == "talks.golang.org") {
+          var ga = document.createElement("script"); ga.type = "text/javascript"; ga.async = true;
+          ga.src = ("https:" == document.location.protocol ? "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+          var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ga, s);
+        }
+      })();
+    </script>
+  
+
+<link rel="stylesheet" type="text/css" href="./implementacion_files/css"><link rel="stylesheet" type="text/css" href="./implementacion_files/styles.css"></body></html>
