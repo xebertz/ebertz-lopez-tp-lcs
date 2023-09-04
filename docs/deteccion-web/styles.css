@@ -214,6 +214,7 @@ div {
 }
 
 #img-container {
+  flex-direction: column;
   background-color: white;
   border-radius: 10px;
   min-width: 100px;
