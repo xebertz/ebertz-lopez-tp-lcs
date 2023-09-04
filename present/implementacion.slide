@@ -23,6 +23,12 @@ __
 __
 .image img/red-cnn-mejorada.png
 
+* Resultado del nuevo modelo
+
+Mejores resultados: 89% de precisión y 26% de error
+__
+.image img/resultados-cnn-mejorada.png
+
 * Implementación en la nube
 
 * Exportación del modelo convolucional
