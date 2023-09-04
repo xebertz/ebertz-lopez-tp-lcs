@@ -86,14 +86,12 @@ img {
 }
 
 #imagen-seccion {
-  /*border-radius: 10px;*/
   width: 320px;
   border-top: solid rgb(219, 219, 219) 1px;
   border-bottom: solid rgb(219, 219, 219) 1px;;
   height: 60px;
   text-align: center;
   padding: 20px;
-  /*box-shadow: 0 3px 13px 1px rgb(0 0 0 / 9%);*/
 }
 
 #imagen-subida {
@@ -167,8 +165,8 @@ img {
   text-align: center;
   color: rgb(37, 37, 37);
   width: 700px;
-  min-width: 320px;
-  padding: 0px;
+  min-width: 280px;
+  padding: 20px;
   margin: 0 0 25px 0;
   line-height: 1.5;
   font-size: 20px;
