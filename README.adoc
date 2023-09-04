@@ -45,7 +45,7 @@ Este modelo tiene una precisión del 85%, y un nivel de error de menos del 40%, 
 
 === Pruebas
 
-En principio, decidimos agregar más imágenes de entrenamiento, ya que creimos que las imágenes no eran suficientes para lograr resultados altamente confiables. Por lo tanto, complementamos nuestro dataset con uno nuevo, también perteneciente a https://www.kaggle.com/[Kaggle]. Este dataset es llamado https://www.kaggle.com/datasets/andrewmvd/isic-2019[Skin Lesion Images for Melanoma Classification]. Cuenta imágenes de lesiones de la piel, y está preparado para utilizarse en la detección de las siguientes enfermedades de la piel:
+En principio, decidimos agregar más imágenes de entrenamiento, ya que creímos que las imágenes no eran suficientes para lograr resultados altamente confiables. Por lo tanto, complementamos nuestro dataset con uno nuevo, también perteneciente a https://www.kaggle.com/[Kaggle]. Este dataset es llamado https://www.kaggle.com/datasets/andrewmvd/isic-2019[Skin Lesion Images for Melanoma Classification]. Cuenta imágenes de lesiones de la piel, y está preparado para utilizarse en la detección de las siguientes enfermedades de la piel:
 
 * Melanoma
 * Nevo melanocítico
@@ -131,7 +131,7 @@ Luego, nos encontramos con un problema. El entrenamiento era demasiado lento. Lo
 
 Esto no es deseable ya que por más que tenga buenos resultados numéricos, no funciona con nuevos casos. Entonces, decidimos realizar dos modificaciones:
 
-1. Reducir la cantidad de imágenes, para acelerar el entrenamento
+1. Reducir la cantidad de imágenes, para acelerar el entrenamiento
 2. Modificar la estructura del modelo, para adaptarse a la nueva información
 
 Para reducir las imágenes, volvimos a nuestra estructura de directorios anterior. Creíamos que el entrenamiento tardaba demasiado por la cantidad de imágenes que recibía, por lo que eliminamos el directorio `/valid`, y trabajamos con los directorios `/train` y `test`.
