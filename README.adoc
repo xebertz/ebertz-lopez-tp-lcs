@@ -150,7 +150,7 @@ En la modificación de la estructura, debíamos mantener simple el modelo para n
 [cols="a,a", frame=none, grid=none, role=right]
 |===
 |   image:informes/img/cnn-mejorada-precision.png[255, 275, align="left"]
-|   image:informes/img/cnn-mejorada-perdida.png[240, 260, align="left"]
+|   image:informes/img/cnn-mejorada-perdida.png[243, 263, align="left"]
 |===
 
 Este modelo fue el que mejor resultados arrojó hasta el momento. Con una prueba de 1270 imágenes, siendo 660 de tipo 0 y 600 de tipo 1,  obtuvimos los siguientes resultados:
