@@ -87,8 +87,8 @@ async function main() {
 
   botonAnalizar.addEventListener("click", async function () {
     if (imagenElegida) {
-      seccionImagen.style.height = "340px";
-      
+      seccionImagen.style.height = "350px";
+
       const prediccion = await predecir(imagenElegida, modelo);
       mostrarResultado(prediccion, textoResultado);
     } else {
