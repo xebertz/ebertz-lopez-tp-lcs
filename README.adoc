@@ -61,9 +61,10 @@ Esta información es mayor a la necesaria para nuestro problema. Sin embargo, la
 
 Para filtrar los datos relevantes, partimos del archivo `ISIC_2019_Training_GroundTruth.csv`. Este archivo contiene todas las etiquetas de las imágenes. De allí, obtuvimos dos columnas: `image` y `BKL`. En `image` tenemos los nombres de las imágenes, y en `BKL` tenemos dos posibles valores: 0, si el lunar no es benigno, y 1 si lo es. Es decir, las etiquetas están a la inversa de las que manejamos con el dataset https://www.kaggle.com/datasets/fanconic/skin-cancer-malignant-vs-benign[Skin Cancer: Malignant vs. Benign].
 
-Analizamos el tamaño de las clases, y obtuvimos los siguientes resultados:
+Analizamos el tamaño de las clases, y obtuvimos que el dataset no está balanceado con respecto a estas categorías, ya que hay 22707 imágenes de lunares malignos, y 2624 imágenes de benignos.
 
-
+.tamaño de clases
+image::informes/img/distribucion-clases-dataset-isic.png[distribucion, 350, 200, align="center"]
 
 
 
